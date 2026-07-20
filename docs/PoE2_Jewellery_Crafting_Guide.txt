@@ -1,0 +1,2024 @@
+================================================================================
+        PATH OF EXILE 2 — UNIVERSAL JEWELLERY CRAFTING GUIDE
+                 6x T1 Modifier Mirror-Tier Jewellery
+================================================================================
+
+This guide covers crafting rare rings, amulets, and belts with all Tier 1
+modifiers for mirror-tier results. All strategies use Perfect-tier currency
+orbs for maximizing T1 outcomes. No essence-based strategies.
+
+Last updated: 2026-07-19
+Data sourced from: poe2db.tw
+
+================================================================================
+TABLE OF CONTENTS
+================================================================================
+
+ 1. KEY DIFFERENCES — Jewellery vs Weapons/Armour
+ 2. CURRENCY REFERENCE
+    2.1  Rarity Upgrade Currency
+    2.2  Rare Item Modification Currency
+    2.3  Economy Data
+ 3. OMEN REFERENCE
+ 4. DESECRATION REFERENCE
+ 5. REFORGING BENCH
+ 6. MODIFIER MECHANICS (Prefixes vs Suffixes, ilvl, Tiers, Mod Pools)
+ 7. S-TIER MOD LISTS (jewellery-specific)
+    7.1  Ring S-Tier Mods
+    7.2  Amulet S-Tier Mods
+    7.3  Belt S-Tier Mods
+ 8. THE CRAFTING PROCESS
+    8.1  Phase 1: Acquire & Prepare Base
+    8.2  Phase 2: Magic Stage — Perfect Transmutation & Augmentation
+    8.3  Phase 3: Regal to Rare & Isolate a T1 Mod
+    8.4  Phase 4: Fracture
+    8.5  Phase 5: Clean Up
+    8.6  Phase 6: Fill Remaining Slots with Perfect Exalts
+    8.7  Phase 7: Whittling — Replace Non-T1 Mods
+    8.8  Phase 8: Divine for Perfect Rolls
+    8.9  Phase 9: Finalize — Jewellery-Specific
+ 9. QUICK-REFERENCE FLOWCHART
+10. COST ESTIMATION
+11. ALTERNATIVE ROUTES
+    11.1 Desecration Crafting (Collarbone-based)
+    11.2 Fracture-Skip Route
+    11.3 Catalyst-First vs Catalyst-Last
+12. COMMON MISTAKES
+13. GLOSSARY
+
+================================================================================
+1. KEY DIFFERENCES — JEWELLERY VS WEAPONS/ARMOUR
+================================================================================
+
+  Jewellery (rings, amulets, belts) differs fundamentally from weapons
+  and armour in crafting and functionality:
+
+  ┌──────────────────────────┬────────────────────────────────────────────┐
+  │ Feature                  │ Jewellery Behaviour                        │
+  ├──────────────────────────┼────────────────────────────────────────────┤
+  │ Sockets & Runes          │ NO sockets. NO runes. Jewellery cannot     │
+  │                          │ have either, ever.                         │
+  ├──────────────────────────┼────────────────────────────────────────────┤
+  │ Quality                  │ Applied via CATALYSTS (not Whetstones or   │
+  │                          │ Scraps). Each catalyst targets a specific  │
+  │                          │ modifier type. Max 20% quality.            │
+  ├──────────────────────────┼────────────────────────────────────────────┤
+  │ Catalyst Quality Effect  │ Quality % directly ENHANCES the numeric    │
+  │                          │ values of matching modifiers. 20% quality  │
+  │                          │ → modifiers of the catalyst type gain 20%  │
+  │                          │ more effect. This is multiplicative with   │
+  │                          │ other bonuses.                             │
+  ├──────────────────────────┼────────────────────────────────────────────┤
+  │ Anointing (Amulets)      │ Amulets can be ANOINTED at the Blight      │
+  │                          │ Altar using Distilled Emotions. This adds  │
+  │                          │ a Notable Passive Skill permanently.       │
+  ├──────────────────────────┼────────────────────────────────────────────┤
+  │ +Level of Skill Gems     │ Amulets CAN roll +Level to all Skill Gems  │
+  │                          │ (prefix). This is one of the most valuable │
+  │                          │ mods in the entire game.                   │
+  ├──────────────────────────┼────────────────────────────────────────────┤
+  │ Mod Pool Size            │ Rings have the WIDEST mod pool of any item │
+  │                          │ slot in the game. This makes Whittling     │
+  │                          │ significantly harder and more expensive.   │
+  ├──────────────────────────┼────────────────────────────────────────────┤
+  │ Belt Utility             │ Belts provide Flask/Charm utility mods     │
+  │                          │ unique to the belt slot. No other item     │
+  │                          │ type can roll these.                       │
+  ├──────────────────────────┼────────────────────────────────────────────┤
+  │ Desecration Currency     │ Jewellery uses COLLARBONES (not Jawbones   │
+  │                          │ or Ribs) for Desecration crafting.         │
+  └──────────────────────────┴────────────────────────────────────────────┘
+
+================================================================================
+2. CURRENCY REFERENCE
+================================================================================
+
+2.1 — RARITY UPGRADE CURRENCY
+
+  Currency              Effect
+  ────────────────────  ──────────────────────────────────────────────
+  Orb of Transmutation  Normal → Magic (+1 random affix)
+  Greater Transmutation Normal → Magic (+1 affix, higher tier bias)
+  Perfect Transmutation Normal → Magic (+1 affix, highest tier bias)
+
+  Orb of Augmentation   Magic: adds 1 random affix (max 2)
+  Greater Augmentation  Magic: adds 1 affix, higher tier bias
+  Perfect Augmentation  Magic: adds 1 affix, highest tier bias
+
+  Regal Orb             Magic → Rare (+1 random affix)
+  Greater Regal Orb     Magic → Rare (+1 affix, higher tier bias)
+  Perfect Regal Orb     Magic → Rare (+1 affix, highest tier bias)
+
+  Orb of Alchemy        Normal → Rare (4 random affixes) [no variants]
+
+  Orb of Chance         Normal → Unique OR destroys the item
+
+2.2 — RARE ITEM MODIFICATION CURRENCY
+
+  Currency              Effect                       Min Mod Lvl
+  ────────────────────  ───────────────────────────  ──────────
+  Exalted Orb           Add 1 random mod to rare            1
+  Greater Exalted Orb   Add 1 mod, higher tier bias        35
+  Perfect Exalted Orb   Add 1 mod, highest tier bias       50
+
+  Chaos Orb             Remove 1 mod, add 1 mod             1
+  Greater Chaos Orb     Remove 1, add 1, higher tier       35
+  Perfect Chaos Orb     Remove 1, add 1, highest tier      50
+
+  Orb of Annulment      Remove 1 random mod                —
+  Divine Orb            Reroll numeric values in tier      —
+  Fracturing Orb        Lock 1 random mod (needs 4+ mods)  —
+
+  Vaal Orb              Corrupts item, unpredictable       —
+
+  IMPORTANT: Min Mod Level = the lowest ilvl an added mod can roll at.
+  Perfect orbs at min mod level 50 effectively filter out most low-tier
+  mods, dramatically increasing T1 probability.
+
+2.3 — ECONOMY DATA (approximate, live poe2db.tw market)
+
+  Currency               ~Divine Value   ~Chaos Value
+  ────────────────────   ─────────────   ────────────
+  Divine Orb              1.00             —
+  Perfect Chaos Orb        5.18             —
+  Perfect Exalted Orb      2.83             —
+  Greater Chaos Orb        0.38            14
+  Greater Exalted Orb      0.016           3
+  Chaos Orb                0.14            1
+  Exalted Orb              0.003           0.11
+  Orb of Annulment         0.66            25
+  Fracturing Orb          10.1             390
+  Orb of Alchemy           0.002           0.09
+
+  Perfect Chaos Orb       ≈ 38 regular Chaos Orbs
+  Perfect Exalted Orb     ≈ 967 regular Exalted Orbs
+
+================================================================================
+CATALYSTS — JEWELLERY QUALITY CURRENCY
+================================================================================
+
+  Catalysts are the quality currency for rings, amulets, and belts. Each
+  catalyst type enhances a specific family of modifiers. Applying a
+  catalyst adds 1% quality (max 20%) and increases the numeric values of
+  ALL matching modifiers on the item by the quality percentage.
+
+  ┌──────────────────────────┬────────────────────────────────────────────┐
+  │ Catalyst                 │ Target Modifier Type                       │
+  ├──────────────────────────┼────────────────────────────────────────────┤
+  │ Flesh Catalyst           │ Life modifiers (+Max Life, Life Regen,     │
+  │                          │ %Life Recovery, Life Leech)                │
+  ├──────────────────────────┼────────────────────────────────────────────┤
+  │ Neural Catalyst          │ Mana modifiers (+Max Mana, Mana Regen,     │
+  │                          │ %Mana Recovery, Mana Leech)                │
+  ├──────────────────────────┼────────────────────────────────────────────┤
+  │ Carapace Catalyst        │ Defence modifiers (+Armour, +Evasion,      │
+  │                          │ +Energy Shield, %Defences)                 │
+  ├──────────────────────────┼────────────────────────────────────────────┤
+  │ Uul-Netol's Catalyst     │ Physical damage modifiers (added flat      │
+  │                          │ phys, %phys, phys as extra)                │
+  ├──────────────────────────┼────────────────────────────────────────────┤
+  │ Xoph's Catalyst          │ Fire modifiers (added fire damage, %fire   │
+  │                          │ damage, fire resistance, ignite)           │
+  ├──────────────────────────┼────────────────────────────────────────────┤
+  │ Tul's Catalyst           │ Cold modifiers (added cold damage, %cold   │
+  │                          │ damage, cold resistance, chill/freeze)     │
+  ├──────────────────────────┼────────────────────────────────────────────┤
+  │ Esh's Catalyst           │ Lightning modifiers (added lightning       │
+  │                          │ damage, %lightning, lightning res, shock)  │
+  ├──────────────────────────┼────────────────────────────────────────────┤
+  │ Chayula's Catalyst       │ Chaos modifiers (added chaos damage,       │
+  │                          │ %chaos damage, chaos resistance)           │
+  ├──────────────────────────┼────────────────────────────────────────────┤
+  │ Reaver Catalyst          │ Attack modifiers (added attack damage,     │
+  │                          │ %attack damage, attack speed, accuracy)    │
+  ├──────────────────────────┼────────────────────────────────────────────┤
+  │ Sibilant Catalyst        │ Caster modifiers (%spell damage, cast      │
+  │                          │ speed, spell crit, spell mana cost)        │
+  ├──────────────────────────┼────────────────────────────────────────────┤
+  │ Skittering Catalyst      │ Speed modifiers (cast speed, attack speed, │
+  │                          │ movement speed)                            │
+  ├──────────────────────────┼────────────────────────────────────────────┤
+  │ Adaptive Catalyst        │ Attribute modifiers (+Strength, +Dexterity,│
+  │                          │ +Intelligence, +All Attributes)            │
+  ├──────────────────────────┼────────────────────────────────────────────┤
+  │ Necrotic Catalyst        │ Minion modifiers (minion damage, minion    │
+  │                          │ life, minion speed, minion resistances)    │
+  └──────────────────────────┴────────────────────────────────────────────┘
+
+  CRITICAL: Once a catalyst type is applied, it CANNOT be changed.
+  There is no way to reset catalyst quality or switch catalyst types.
+  Choose your catalyst BEFORE you begin crafting, based on your
+  PRIMARY desired modifier type.
+
+  Example: If your #1 wanted prefix is +Max Life T1, apply Flesh
+  Catalyst. At 20% quality, that T1 life roll gains +20% numeric value.
+
+  Approximate catalyst prices (20x for 20% quality):
+    Common catalysts (Flesh, Neural, Carapace): ~1-2 div total
+    Elemental catalysts (Xoph, Tul, Esh):       ~2-3 div total
+    Rare catalysts (Reaver, Sibilant, Chayula): ~3-5 div total
+    Premium catalysts (Skittering, Adaptive):   ~5-10 div total
+    Necrotic Catalyst:                          ~2-4 div total
+
+================================================================================
+3. OMEN REFERENCE
+================================================================================
+
+  Omens are consumable items that modify the behavior of the NEXT
+  currency used on an item. They are consumed automatically.
+
+  Omens work in a specific activation order. Only ONE omen can be
+  active at a time for a given action type. They are found in Ritual
+  and trade.
+
+3.1 — EXALTED ORB OMENS
+
+  Omen                          Effect
+  ────────────────────────────  ─────────────────────────────────────
+  Omen of Sinistral Exaltation  Next Exalted adds PREFIX only
+  Omen of Dextral Exaltation    Next Exalted adds SUFFIX only
+  Omen of Greater Exaltation    Next Exalted adds 2 AFFIXES at once
+  Omen of Homogenising          Next Exalted adds same type (prefix/
+  Exaltation                    suffix) as one already on the item
+
+3.2 — CHAOS ORB OMENS
+
+  Omen                          Effect
+  ────────────────────────────  ─────────────────────────────────────
+  Omen of Whittling             Next Chaos removes LOWEST ILVL affix
+  Omen of Sinistral Erasure     Next Chaos removes PREFIX only
+  Omen of Dextral Erasure       Next Chaos removes SUFFIX only
+
+3.3 — ANNULMENT OMENS
+
+  Omen                          Effect
+  ────────────────────────────  ─────────────────────────────────────
+  Omen of Sinistral Annulment   Next Annul removes PREFIX only
+  Omen of Dextral Annulment     Next Annul removes SUFFIX only
+  Omen of Greater Annulment     Next Annul removes 2 AFFIXES
+
+3.4 — REGAL ORB OMENS
+
+  Omen                          Effect
+  ────────────────────────────  ─────────────────────────────────────
+  Omen of Sinistral Coronation  Next Regal adds PREFIX only
+  Omen of Dextral Coronation    Next Regal adds SUFFIX only
+  Omen of Homogenising          Next Regal adds same type as existing
+  Coronation                    affix on the item
+
+3.5 — ALCHEMY OMENS
+
+  Omen                          Effect
+  ────────────────────────────  ─────────────────────────────────────
+  Omen of Sinistral Alchemy     Next Alchemy: max prefixes
+  Omen of Dextral Alchemy       Next Alchemy: max suffixes
+
+3.6 — CHANCE ORB OMENS
+
+  Omen                          Effect
+  ────────────────────────────  ─────────────────────────────────────
+  Omen of the Ancients          Next Chance: upgrades to random Unique
+                                of same base type
+  Omen of Chance                Next Chance: does not destroy the item
+
+3.7 — DESECRATION OMENS
+
+  Omen                          Effect
+  ────────────────────────────  ─────────────────────────────────────
+  Omen of Abyssal Echoes        Next Desecration: grants 1 reroll
+  Omen of Sinistral Necromancy  Next Desecration: suffix only
+  Omen of Dextral Necromancy    Next Desecration: prefix only
+  Omen of Putrefaction          Next Desecration: replaces ALL affixes
+                                with 6 desecrated mods, CORRUPTS item
+  Omen of the Blackblooded      Next Desecration: Kurgal affix
+                                (weapons and jewellery)
+  Omen of the Liege             Next Desecration: Amanamu affix
+                                (weapons and jewellery)
+  Omen of the Sovereign         Next Desecration: Ulaman affix
+                                (weapons and jewellery)
+  Omen of Light                 Next Annulment removes Desecrated mods
+                                only
+  Omen of Sinistral             Next Perfect/Corrupted Essence removes
+  Crystallisation               a PREFIX
+  Omen of Dextral               Next Perfect/Corrupted Essence removes
+  Crystallisation               a SUFFIX
+
+3.8 — APPROXIMATE OMEN PRICES
+
+  Omen                                ~Divine Value
+  ────────────────────────────────    ────────────
+  Omen of Whittling                    ~15
+  Omen of Sinistral Annulment          ~14
+  Omen of Dextral Annulment            ~14
+  Omen of Sinistral Erasure            ~10
+  Omen of Dextral Erasure              ~10
+  Omen of Sinistral Exaltation         ~6
+  Omen of Dextral Exaltation           ~6
+  Omen of Greater Exaltation           ~1
+  Omen of Abyssal Echoes               ~20
+  Omen of Greater Annulment            ~5
+
+================================================================================
+4. DESECRATION REFERENCE
+================================================================================
+
+  Desecration is an alternative crafting system using Abyss bone
+  currency. It replaces or adds desecrated modifiers to items.
+
+4.1 — DESECRATION CURRENCY (JEWELLERY-SPECIFIC)
+
+  Jewellery uses COLLARBONES for desecration, not Jawbones or Ribs.
+
+  Currency               Target Item Type          Effect
+  ────────────────────   ────────────────────────  ───────────────────
+  Ancient Collarbone     Rare Ring/Amulet/Belt     Applies Desecration
+  Preserved Collarbone   Rare Ring/Amulet/Belt     Applies Desecration
+  Gnawed Collarbone      Rare Ring/Amulet/Belt     Applies Desecration
+
+  (Weapons use Jawbones — Ancient, Preserved, Gnawed)
+  (Armour uses Ribs — Ancient, Preserved, Gnawed)
+  (Jewels use Cranium — Preserved)
+
+4.2 — DESECRATION AFFIX TYPES (via Omens)
+
+  Omen Type          Affix Family
+  ────────────────   ─────────────────────────────────────
+  Blackblooded       Kurgal affixes (weapon/jewellery)
+  Liege              Amanamu affixes (weapon/jewellery)
+  Sovereign          Ulaman affixes (weapon/jewellery)
+
+  These are unique modifier pools not available through normal crafting.
+
+================================================================================
+5. REFORGING BENCH
+================================================================================
+
+  The Reforging Bench allows you to sacrifice 3 rare items of the same
+  base type to create 1 new rare item of that base type with random
+  modifiers.
+
+  This is the primary way to recycle failed crafts. It is NOT a
+  deterministic crafting method — the result is entirely random.
+
+  Usage:
+    3x failed Rare Two-Stone Rings  → 1x new Rare Two-Stone Ring
+    3x failed Rare Amethyst Amulets → 1x new Rare Amethyst Amulet
+    3x failed Rare Leather Belts    → 1x new Rare Leather Belt
+
+  IMPORTANT: The 3 sacrificed items must share the exact same base
+  type. A Two-Stone Ring, Amethyst Ring, and Diamond Ring will NOT
+  combine — they are different base types.
+
+================================================================================
+6. MODIFIER MECHANICS
+================================================================================
+
+6.1 — PREFIXES VS SUFFIXES
+
+  A rare item can have a maximum of:
+    - 3 Prefixes
+    - 3 Suffixes
+    - 6 Total affixes
+
+  You can see which mods are prefixes/suffixes by holding ALT while
+  hovering the item in-game.
+
+6.2 — ITEM LEVEL (ilvl)
+
+  The item level determines which tiers of modifiers can roll on an
+  item. Higher ilvl = access to higher tiers.
+
+  Key ilvl thresholds (approximate, varies by mod):
+    ilvl 1-20   : Lowest tiers only
+    ilvl 21-40  : Mid tiers unlock
+    ilvl 41-60  : High tiers unlock
+    ilvl 61-75  : T2-T1 tiers unlock
+    ilvl 76-81  : Most T1 mods available
+    ilvl 82-84+ : ALL T1 mods available (including highest tier resists,
+                   top-tier attributes, +gem levels, and %max res)
+
+  RECOMMENDATION: Always start with ilvl 82+ for mirror-tier crafts.
+  ilvl 84+ is ideal if you can afford the base. For amulets specifically,
+  ilvl 84+ is non-negotiable if targeting +Level of all Skill Gems T1.
+
+6.3 — MODIFIER TIERS
+
+  Each modifier has multiple tiers (T1 = highest). The game rolls a
+  random tier within the available range for the item's ilvl.
+
+  Perfect orbs have a minimum mod level of 50, meaning they CANNOT
+  roll mods that require ilvl <50. This filters out the worst tiers
+  but does not guarantee T1 — it only removes the bottom ~half of
+  possible tiers from the pool.
+
+6.4 — JEWELLERY-SPECIFIC MOD POOLS
+
+  ───────────────────────────────────────────────────────────────────
+  RING PREFIXES:
+  ───────────────────────────────────────────────────────────────────
+    • +X to Maximum Life
+    • +X to Maximum Energy Shield
+    • Adds # to # Physical Damage to Attacks
+    • Adds # to # Fire Damage to Attacks
+    • Adds # to # Cold Damage to Attacks
+    • Adds # to # Lightning Damage to Attacks
+    • % Increased Fire Damage
+    • % Increased Cold Damage
+    • % Increased Lightning Damage
+    • % Increased Physical Damage
+    • % Increased Global Defences
+    • +X to Maximum Mana
+    • % Increased Rarity of Items Found (prefix on some base types)
+
+  RING SUFFIXES:
+    • +% Fire Resistance
+    • +% Cold Resistance
+    • +% Lightning Resistance
+    • +% Chaos Resistance
+    • +% All Elemental Resistances (rare ring-only mod)
+    • +X to Strength
+    • +X to Dexterity
+    • +X to Intelligence
+    • +X to All Attributes
+    • % Increased Cast Speed
+    • % Increased Attack Speed
+    • % Increased Critical Hit Chance
+    • +% to Critical Damage Multiplier
+    • % Increased Mana Regeneration Rate
+    • % Increased Rarity of Items Found
+    • #% of Physical Attack Damage Leeched as Life
+    • #% of Physical Attack Damage Leeched as Mana
+    • # Life Regeneration per second
+    • % Reduced Effect of Curses on you
+    • # Mana on Kill
+    • # Life on Kill
+
+  ───────────────────────────────────────────────────────────────────
+  AMULET PREFIXES:
+  ───────────────────────────────────────────────────────────────────
+    • +X to Level of all Skill Gems (THE most valuable jewellery mod)
+    • +X to Level of all Fire/Cold/Lightning/Chaos/Physical Skill Gems
+    • +X to Level of all Minion Skill Gems
+    • +X to Maximum Life
+    • +X to Maximum Energy Shield
+    • % Increased Global Defences
+    • % Increased Spell Damage
+    • % Increased Fire/Cold/Lightning/Chaos/Physical Damage
+    • Adds # to # Fire/Cold/Lightning Damage to Attacks
+    • +X to Maximum Mana
+    • % Increased Rarity of Items Found
+
+  AMULET SUFFIXES:
+    • +% Fire Resistance
+    • +% Cold Resistance
+    • +% Lightning Resistance
+    • +% Chaos Resistance
+    • +% All Elemental Resistances
+    • +X to Strength
+    • +X to Dexterity
+    • +X to Intelligence
+    • +X to All Attributes
+    • % Increased Cast Speed
+    • % Increased Attack Speed
+    • +% to Critical Damage Multiplier
+    • +% to Critical Hit Chance for Spells
+    • % Increased Mana Regeneration Rate
+    • % Increased Rarity of Items Found
+    • % Increased Maximum Fire Resistance (very rare, suffix)
+    • % Increased Maximum Cold Resistance (very rare, suffix)
+    • % Increased Maximum Lightning Resistance (very rare, suffix)
+    • #% of Damage Leeched as Life
+    • #% of Damage Leeched as Mana
+    • # Life Regeneration per second
+
+  ───────────────────────────────────────────────────────────────────
+  BELT PREFIXES:
+  ───────────────────────────────────────────────────────────────────
+    • +X to Maximum Life
+    • +X to Maximum Energy Shield
+    • % Increased Global Defences
+    • % Increased Flask Life Recovery Rate
+    • % Increased Flask Mana Recovery Rate
+    • +X to Maximum Mana
+    • +X to Armour
+    • +X to Evasion Rating
+    • +X to Energy Shield
+
+  BELT SUFFIXES:
+    • +% Fire Resistance
+    • +% Cold Resistance
+    • +% Lightning Resistance
+    • +% Chaos Resistance
+    • +X to Strength
+    • +X to Dexterity
+    • +X to Intelligence
+    • % Increased Flask Charges Gained
+    • % Reduced Flask Charges Used
+    • % Increased Flask Effect Duration
+    • % Increased Cooldown Recovery Rate
+    • % Increased Effect of Charms on you
+    • #% of Physical Attack Damage Leeched as Life
+    • % Increased Rarity of Items Found
+    • # Life Regeneration per second
+    • % Reduced Effect of Curses on you
+
+6.5 — CHECKING MOD POOLS ONLINE
+
+  Go to https://poe2db.tw/us/ and navigate to the Jewellery section:
+    - Rings
+    - Amulets
+    - Belts
+
+  Each page has a "Modifiers Calc" section showing ALL available
+  prefixes and suffixes for that jewellery type, including ilvl
+  requirements and tier ranges.
+
+================================================================================
+7. S-TIER MOD LISTS
+================================================================================
+
+  These are the mods you should be targeting at each crafting stage.
+  If your magic-stage result doesn't include at least one S-tier mod,
+  TRASH THE BASE and start over.
+
+7.1 — RING S-TIER MODS
+
+  Priority order for valuing ring mods:
+
+  ┌───────┬─────────────────────────────────────────────────────────┐
+  │ Rank  │ Mod                                                      │
+  ├───────┼─────────────────────────────────────────────────────────┤
+  │  #1   │ +X to Maximum Life (T1) — highest raw value prefix on   │
+  │       │ rings. Universal demand.                                 │
+  ├───────┼─────────────────────────────────────────────────────────┤
+  │  #2   │ Adds # to # [Element/Physical] Damage to Attacks (T1)   │
+  │       │ — must match your build's damage type. The flat damage   │
+  │       │ values on rings are substantial.                         │
+  ├───────┼─────────────────────────────────────────────────────────┤
+  │  #3   │ % Increased [Element] Damage (T1) — catalyst-compatible  │
+  │       │ with elemental catalysts for even more value.            │
+  ├───────┼─────────────────────────────────────────────────────────┤
+  │  #4   │ +% to All Elemental Resistances (T1) — suffix, saves     │
+  │       │ needing resists on other gear slots.                     │
+  ├───────┼─────────────────────────────────────────────────────────┤
+  │  #5   │ +% [Element] Resistance (T1) — single-element resists    │
+  │       │ can reach very high values on rings.                     │
+  ├───────┼─────────────────────────────────────────────────────────┤
+  │  #6   │ +X to [Attribute] or All Attributes (T1) — important for │
+  │       │ meeting gem/gear requirements; high roll thresholds.     │
+  ├───────┼─────────────────────────────────────────────────────────┤
+  │  #7   │ % Increased Attack/Cast Speed (T1) — suffix; DPS suffix. │
+  ├───────┼─────────────────────────────────────────────────────────┤
+  │  #8   │ +% to Critical Hit Chance / Critical Damage Bonus (T1)   │
+  │       │ — for crit builds, these are mandatory.                  │
+  ├───────┼─────────────────────────────────────────────────────────┤
+  │  #9   │ % Increased Rarity of Items Found (T1) — suffix; magic   │
+  │       │ find is always valuable.                                 │
+  ├───────┼─────────────────────────────────────────────────────────┤
+  │ #10   │ +X to Maximum Energy Shield (T1) — for ES builds, this   │
+  │       │ rivals +Life in value.                                   │
+  └───────┴─────────────────────────────────────────────────────────┘
+
+  CATALYST RECOMMENDATION FOR RINGS:
+  ───────────────────────────────────
+    Life builds:   Flesh Catalyst (boosts your +Life prefix)
+    Attack builds: Reaver Catalyst (boosts flat damage + attack speed)
+    Caster builds: Sibilant Catalyst (boosts spell dmg + cast speed)
+    Elemental:     Xoph/Tul/Esh Catalyst (match your damage type)
+    Stat stacking: Adaptive Catalyst (boosts attribute suffixes)
+
+7.2 — AMULET S-TIER MODS
+
+  Amulet ranking is completely dominated by +Gem Level:
+
+  ┌───────┬─────────────────────────────────────────────────────────┐
+  │ Rank  │ Mod                                                      │
+  ├───────┼─────────────────────────────────────────────────────────┤
+  │  #1   │ +X to Level of all Skill Gems (T1) — UNCONTESTED #1.   │
+  │       │ This mod alone can be worth more than an entire 6x T1   │
+  │       │ ring without gem levels. EVERY build wants this.         │
+  │       │ It has the lowest weighting of any amulet prefix.        │
+  │       │ REQUIRES ilvl 84+ for T1.                               │
+  ├───────┼─────────────────────────────────────────────────────────┤
+  │  #2   │ +X to Level of all [Type] Skill Gems (T1) — type-       │
+  │       │ specific gem level is slightly more common but still     │
+  │       │ extremely high value for matching builds.                │
+  ├───────┼─────────────────────────────────────────────────────────┤
+  │  #3   │ +X to Maximum Life (T1) — best raw defence prefix.      │
+  ├───────┼─────────────────────────────────────────────────────────┤
+  │  #4   │ % Increased [Element/Spell] Damage (T1) — scales with   │
+  │       │ elemental catalysts for even more output.                │
+  ├───────┼─────────────────────────────────────────────────────────┤
+  │  #5   │ +% to Critical Damage Multiplier (T1) — suffix; amulets │
+  │       │ can roll very high crit multi values, essential for crit │
+  │       │ builds.                                                 │
+  ├───────┼─────────────────────────────────────────────────────────┤
+  │  #6   │ +% All Elemental Resistances (T1) — very efficient       │
+  │       │ resistance suffix.                                      │
+  ├───────┼─────────────────────────────────────────────────────────┤
+  │  #7   │ +% Increased Maximum [Element] Resistance (T1) —        │
+  │       │ extremely rare mod, allows pushing max res beyond 75%.  │
+  │       │ Highly sought after for pinnacle bossing.               │
+  ├───────┼─────────────────────────────────────────────────────────┤
+  │  #8   │ +X to [Attribute] or All Attributes (T1) — amulets can  │
+  │       │ roll very high attribute values.                        │
+  ├───────┼─────────────────────────────────────────────────────────┤
+  │  #9   │ % Increased Cast/Attack Speed (T1) — DPS suffix.        │
+  ├───────┼─────────────────────────────────────────────────────────┤
+  │ #10   │ +X to Maximum Energy Shield (T1) — for ES builds.       │
+  └───────┴─────────────────────────────────────────────────────────┘
+
+  CATALYST RECOMMENDATION FOR AMULETS:
+  ──────────────────────────────────────
+    +Gem Level is NOT affected by any catalyst type. This means your
+    catalyst choice should be based on your SECONDARY priority mods:
+
+    Life-based:    Flesh Catalyst (boosts +Life prefix, life regen)
+    ES-based:      Carapace Catalyst (boosts +ES, %defences)
+    Damage focus:  Match element to your damage type (Xoph/Tul/Esh)
+    Stat stacking: Adaptive Catalyst (boosts attribute suffixes)
+    Crit caster:   Sibilant Catalyst (boosts %spell dmg + cast speed)
+
+    IMPORTANT: If your primary chase is +Level of all Skill Gems,
+    understand that catalyst quality will NOT enhance it. Choose your
+    catalyst based on which of your remaining 5 mods benefit most.
+
+7.3 — BELT S-TIER MODS
+
+  Belts have a smaller, more focused mod pool:
+
+  ┌───────┬─────────────────────────────────────────────────────────┐
+  │ Rank  │ Mod                                                      │
+  ├───────┼─────────────────────────────────────────────────────────┤
+  │  #1   │ +X to Maximum Life (T1) — universal defence prefix.     │
+  │       │ Highest demand, highest value on belts.                  │
+  ├───────┼─────────────────────────────────────────────────────────┤
+  │  #2   │ % Increased Flask Life Recovery Rate (T1) — prefix;     │
+  │       │ mandatory for life-based builds. Directly multiplies     │
+  │       │ life flask effectiveness.                                │
+  ├───────┼─────────────────────────────────────────────────────────┤
+  │  #3   │ % Increased Flask Mana Recovery Rate (T1) — prefix;     │
+  │       │ mandatory for mana-heavy/MoM builds.                     │
+  ├───────┼─────────────────────────────────────────────────────────┤
+  │  #4   │ % Increased Cooldown Recovery Rate (T1) — suffix; used  │
+  │       │ by almost every build. Reduces travel skill cooldowns    │
+  │       │ and other cooldown-based abilities.                      │
+  ├───────┼─────────────────────────────────────────────────────────┤
+  │  #5   │ +X to Maximum Energy Shield (T1) — for ES builds.       │
+  ├───────┼─────────────────────────────────────────────────────────┤
+  │  #6   │ % Increased Effect of Charms (T1) — suffix; directly    │
+  │       │ multiplies the power of equipped charms. Major QoL.      │
+  ├───────┼─────────────────────────────────────────────────────────┤
+  │  #7   │ +% [Element]/Chaos Resistance (T1) — single-element      │
+  │       │ resists. Belts can roll high resist values.              │
+  ├───────┼─────────────────────────────────────────────────────────┤
+  │  #8   │ % Reduced Flask Charges Used / %Increased Flask Charges  │
+  │       │ Gained (T1) — suffix; flask sustain for mapping.         │
+  ├───────┼─────────────────────────────────────────────────────────┤
+  │  #9   │ +X to [Attribute] (T1) — suffix; meets requirements.    │
+  ├───────┼─────────────────────────────────────────────────────────┤
+  │ #10   │ % Increased Global Defences (T1) — prefix; for hybrid   │
+  │       │ defence builds.                                         │
+  └───────┴─────────────────────────────────────────────────────────┘
+
+  CATALYST RECOMMENDATION FOR BELTS:
+  ────────────────────────────────────
+    Life builds:       Flesh Catalyst (boosts +Life + Flask Life)
+    Mana/MoM builds:   Neural Catalyst (boosts +Mana + Flask Mana)
+    ES builds:         Carapace Catalyst (boosts +ES + %Defences)
+    Flask-focused:     Flesh or Neural (match your flask priority)
+
+================================================================================
+8. THE CRAFTING PROCESS
+================================================================================
+
+  This is the main method. It assumes you are targeting a 6x T1 rare
+  jewellery item and have an effectively unlimited budget. Adjust for
+  lower budgets by accepting T2-T3 mods at the Whittling stage.
+
+================================================================================
+8.1 — PHASE 1: ACQUIRE AND PREPARE THE BASE
+================================================================================
+
+  Step 1: Choose the right base type
+  ────────────────────────────────────
+    JEWELLERY IMPLICITS MATTER. Unlike weapons where base damage is the
+    main factor, jewellery implicit mods provide meaningful stats:
+
+    RING BASE TYPES:
+      Iron Ring          — +(10-20)% to Physical Attack Damage
+      Gold Ring          — +(6-15)% Rarity of Items Found
+      Amethyst Ring      — +(7-13)% to Chaos Resistance
+      Diamond Ring       — +(10-20)% to Global Critical Hit Chance
+      Two-Stone Ring     — +(12-16)% to two specific Elemental Resistances
+      (varies by combo: Fire+Cold, Fire+Lightning, Cold+Lightning)
+      Sapphire Ring      — +(20-30)% to Cold Resistance
+      Topaz Ring         — +(20-30)% to Lightning Resistance
+      Ruby Ring          — +(20-30)% to Fire Resistance
+
+    AMULET BASE TYPES:
+      Amber Amulet       — +(20-30) to Strength
+      Jade Amulet        — +(20-30) to Dexterity
+      Lapis Amulet       — +(20-30) to Intelligence
+      Citrine Amulet     — +(16-24) to Strength and Dexterity
+      Turquoise Amulet   — +(16-24) to Dexterity and Intelligence
+      Agate Amulet       — +(16-24) to Strength and Intelligence
+      Onyx Amulet        — +(10-16) to All Attributes
+      Amethyst Amulet    — +(10-13)% to Chaos Resistance
+      Simplex Amulet     — +(20-25)% to Global Defences
+      Paua Amulet        — +(20-25)% of Physical Damage taken as Lightning
+      Marble Amulet      — (1.2-1.6)% of Life Regenerated per second
+
+    BELT BASE TYPES:
+      Leather Belt       — +(25-40) to Maximum Life
+      Chain Belt         — +(20-25)% to Stun Threshold
+      Rustic Sash        — +(12-24)% to Global Physical Damage
+      Heavy Belt         — +(20-30) to Strength
+      Cloth Belt         — +(20-30) to Intelligence
+      Studded Belt       — +(20-30) to Dexterity
+      Micro-Distillery   — +(1-3) Charm Slots
+      Belt
+      Golden Belt        — +(10-15)% Rarity of Items Found
+
+      CRITICAL FOR BELTS: The number of Charm Slots is determined by
+      the base type implicit. Micro-Distillery Belt has 1-3. Other
+      belt bases have 1 by default. Higher base types can roll more.
+
+    Check poe2db.tw for all base variants and their exact implicit
+    ranges at different ilvls. Some implicits (like Two-Stone Ring
+    resists) scale with ilvl.
+
+  Step 2: Check item level
+  ─────────────────────────
+    Hold ALT while hovering the item. The ilvl is displayed at the
+    bottom. You need ilvl 82+. ilvl 84+ is ideal.
+
+    CRITICAL FOR AMULETS: +Level of all Skill Gems T1 requires ilvl 84+
+    on many amulet base types. If you are chasing this mod, ilvl 84+ is
+    MANDATORY. Do not start an amulet mirror craft below ilvl 84.
+
+    Buy from trade if needed. High ilvl jewellery bases drop from:
+      - Tier 15+ Waystones
+      - Breachstones
+      - Simulacrum
+      - Pinnacle bosses
+      - Ritual rewards
+      - Expedition vendors
+
+  Step 3: CHOOSE AND APPLY YOUR CATALYST
+  ────────────────────────────────────────
+    THIS IS A PERMANENT, IRREVERSIBLE DECISION.
+
+    Apply your chosen catalyst 20 times to reach 20% quality. Catalyst
+    quality can technically be applied at any stage of crafting, but
+    applying it at Phase 1 front-loads the quality bonus through the
+    entire process.
+
+    Use the S-Tier lists from Section 7 to determine which catalyst
+    matches your PRIMARY desired modifier type:
+
+    ┌──────────────────────┬─────────────────────────────────────┐
+    │ Primary Target Mod   │ Recommended Catalyst                │
+    ├──────────────────────┼─────────────────────────────────────┤
+    │ +Max Life            │ Flesh Catalyst                      │
+    │ +Max ES / %Defences  │ Carapace Catalyst                   │
+    │ Added flat fire dmg  │ Xoph's Catalyst                     │
+    │ Added flat cold dmg  │ Tul's Catalyst                      │
+    │ Added flat light dmg │ Esh's Catalyst                      │
+    │ Added flat chaos dmg │ Chayula's Catalyst                  │
+    │ Added flat phys dmg  │ Uul-Netol's Catalyst                │
+    │ %Spell/Element dmg   │ Xoph/Tul/Esh/Sibilant (match type)  │
+    │ Attack mods          │ Reaver Catalyst                     │
+    │ Cast speed           │ Skittering / Sibilant               │
+    │ Attributes           │ Adaptive Catalyst                   │
+    │ Minion mods          │ Necrotic Catalyst                   │
+    │ Mana mods            │ Neural Catalyst                     │
+    └──────────────────────┴─────────────────────────────────────┘
+
+    Each catalyst costs ~0.05-0.50 div depending on type. Applying
+    20x = ~1-10 div total. This is trivial compared to the cost of
+    Whittling and fracturing.
+
+================================================================================
+8.2 — PHASE 2: MAGIC STAGE — PERFECT TRANSMUTATION & AUGMENTATION
+================================================================================
+
+  This is the most critical filter step. By using Perfect orbs at the
+  magic stage, you front-load your T1 odds before the item is even rare.
+  If you don't hit S-tier T1 mods now, you TRASH the base and start
+  over. This saves you from sinking hundreds of divines into a dead item.
+
+8.2.1 — Why the Magic Stage Matters
+────────────────────────────────────────────────────────────────────
+
+  A white base is cheap. A fractured rare with bad mods is expensive
+  to recover. The magic stage lets you:
+
+    a) See 2 mods before committing to rare status
+    b) Use Perfect orbs for maximum tier bias on those 2 mods
+    c) Immediately trash the base if those 2 mods aren't S-tier
+    d) For amulets: check for +Gem Level BEFORE spending anything
+       beyond transmutation
+
+  This is the most cost-efficient filter in the entire crafting process.
+
+8.2.2 — The Perfect Transmutation → Perfect Augmentation Loop
+────────────────────────────────────────────────────────────────────
+
+  Step 1: Perfect Transmutation Orb
+  ──────────────────────────────────
+    Apply a Perfect Transmutation Orb to the ilvl 82+ white base.
+    This turns it into a 1-mod Magic item.
+
+    Perfect Transmutation has min mod level 50, so the single mod it
+    adds CANNOT be below ilvl 50. This filters out all low-tier trash.
+
+    Cost: ~0.02 div per attempt (bulk).
+
+  Step 2: Check the mod — TRASH CRITERIA
+  ────────────────────────────────────────
+    After the Perfect Transmutation, you have a 1-mod magic item.
+
+      ┌─────────────────────────────────────────────────────────────┐
+      │ S-TIER (KEEP — RINGS):                                      │
+      │   • +Max Life, T1-T2                                        │
+      │   • +Max Energy Shield, T1-T2                               │
+      │   • Adds # to # [Correct Element/Phys] Damage, T1-T2        │
+      │   • % Increased [Correct Element] Damage, T1-T2             │
+      │   • % Increased Rarity (if MF-focused), T1-T2               │
+      │                                                              │
+      │ S-TIER (KEEP — AMULETS):                                     │
+      │   • +Level of all Skill Gems, ANY TIER — INSTANT KEEP       │
+      │   • +Level of all [Type] Skill Gems, T2+                    │
+      │   • +Max Life, T1-T2                                        │
+      │   • +Max Energy Shield, T1-T2                               │
+      │   • %Increased [Element/Spell] Damage, T1-T2                │
+      │   • %Increased Global Defences, T1-T2                       │
+      │                                                              │
+      │ S-TIER (KEEP — BELTS):                                       │
+      │   • +Max Life, T1-T2                                        │
+      │   • +Max Energy Shield, T1-T2                               │
+      │   • %Increased Flask Life Recovery, T1-T2                   │
+      │   • %Increased Flask Mana Recovery, T1-T2                   │
+      │   • %Increased Global Defences, T1-T2                       │
+      │                                                              │
+      │ TRASH (THROW AWAY BASE, START OVER):                         │
+      │   • Any mod below T3 tier                                   │
+      │   • Wrong element flat damage (lightning on a cold build)   │
+      │   • +Max Mana (unless MoM/Archmage build)                   │
+      │   • Stun-related mods (unless stun build)                    │
+      │   • Life/Mana on kill                                       │
+      │   • Thorns/Reflect mods                                     │
+      │   • Light Radius                                            │
+      │   • +Armour/+Evasion (unless specific hybrid build)         │
+      └─────────────────────────────────────────────────────────────┘
+
+    AMULET EXCEPTION: If Perfect Transmutation hits +Level of all Skill
+    Gems at ANY tier (T3+), that is an INSTANT KEEP. Do not trash it.
+    This mod is so rare and so valuable that you proceed to Augmentation
+    regardless of what else is happening. Even a T3 gem level amulet can
+    be worth building around.
+
+    IF THE MOD IS TRASH → throw away the base. Do NOT proceed.
+    Buy another base. Perfect Transmutation is cheap enough that
+    you can do this dozens of times.
+
+    Expected: ~10-25 Perfect Transmutations to find a keeper
+    (more for amulets due to stricter gem-level criteria).
+
+  Step 3: Perfect Augmentation Orb
+  ──────────────────────────────────
+    Apply a Perfect Orb of Augmentation to the keeper magic item.
+    This adds a 2nd mod. Magic items cap at 2 mods (1 prefix + 1 suffix
+    or 2 of the same type).
+
+    Perfect Augmentation has min mod level 50 (same tier filtering).
+
+    Cost: ~0.02 div per attempt.
+
+  Step 4: Check both mods — TRASH CRITERIA
+  ──────────────────────────────────────────
+    Now you have a 2-mod magic item. Evaluate BOTH mods:
+
+      ┌─────────────────────────────────────────────────────────────┐
+      │ S-TIER (PROCEED TO REGAL):                                   │
+      │   Both mods are T1-T2, AND both are desirable for your       │
+      │   build. At least one should be T1.                          │
+      │                                                              │
+      │ KEEP (CONSIDER):                                             │
+      │   One S-tier T1 mod + one T2-T3 mod that's still usable      │
+      │   (not complete trash). This is marginal — you may            │
+      │   still want to trash it and keep rolling.                   │
+      │                                                              │
+      │ AMULET EXCEPTION: If either mod is +Gem Level (any tier),    │
+      │ this item ALWAYS proceeds. Even if the other mod is bad.     │
+      │                                                              │
+      │ TRASH (THROW AWAY BASE, START OVER):                         │
+      │   • Either mod is below T3                                   │
+      │   • Either mod is completely useless for your build          │
+      │   • Both mods are on the same side (2 prefixes or 2           │
+      │     suffixes) AND one is undesirable — you can't fix          │
+      │     this easily since Regal could add either side             │
+      └─────────────────────────────────────────────────────────────┘
+
+    IF THE ITEM IS TRASH → throw it away. Base + Transmute + Augment
+    are all cheap. Do NOT proceed with a mediocre magic item.
+
+    Expected: ~10-30 Perfect Augmentations to find a double-keeper
+    (depends on how strict your S-tier criteria are). For amulets
+    where you already hit +Gem Level, you auto-keep regardless.
+
+8.2.3 — Perfect Magic Orb Details
+────────────────────────────────────────────────────────────────────
+
+  Perfect Orb of Transmutation:
+    Effect:   Upgrades a Normal item to Magic with 1 random modifier
+    Min Mod Level: 50
+    Stack:    1/10
+    Drop Level: 79
+    Market:   ~0.02 div
+
+  Perfect Orb of Augmentation:
+    Effect:   Adds 1 random modifier to a Magic item
+    Min Mod Level: 50
+    Stack:    1/10
+    Drop Level: 79
+    Market:   ~0.02 div
+
+  Both orbs use min mod level 50, meaning:
+    - Cannot roll any mod with an ilvl requirement below 50
+    - This removes roughly the bottom 50-60% of mod tiers from the pool
+    - Not a guaranteed T1, but eliminates all low-tier garbage
+    - Combined with your ilvl 82+ base, the mod pool is heavily
+      weighted toward T1-T3 results
+
+8.2.4 — Why This Beats Alchemy
+────────────────────────────────────────────────────────────────────
+
+  Alchemy Orb:
+    - Costs 1 attempt per base (can't scour)
+    - Gives 4 mods you CANNOT see before committing
+    - All 4 mods are random, no min mod level filter
+    - If 3/4 are trash, you're starting Chaos spam already behind
+
+  Perfect Transmute + Perfect Augment:
+    - Costs ~0.04 div per attempt
+    - You see EACH mod before proceeding
+    - Both mods filtered through min mod level 50
+    - You arrive at the Regal stage with 2 verified high-tier mods
+    - Trash decision costs you the base + 2 cheap orbs (negligible)
+    - For amulets: you get to check for +Gem Level BEFORE any major
+      investment
+
+  The Alchemy route can work, but for mirror-tier crafting where you
+  want a specific starting point, the magic stage filtering is far
+  more efficient in total currency spent.
+
+8.2.5 — Magic Stage Summary Flow
+────────────────────────────────────────────────────────────────────
+
+  ┌──────────────────────┐
+  │ ilvl 82+ White Base  │
+  │ 20% Catalyst Quality │  ← Applied in Phase 1
+  └──────────┬───────────┘
+             ▼
+  ┌──────────────────────────────────────┐
+  │ Perfect Transmutation Orb            │
+  │ → 1-mod Magic item                   │
+  └──────────┬───────────────────────────┘
+             ▼
+  ┌──────────────────────────────────────────────────────┐
+  │ CHECK: Is the mod S-tier T1-T2?                      │
+  │   AMULETS: Is it +Gem Level (ANY tier)?              │
+  │   NO  → TRASH base, buy new base                     │
+  │   YES → Continue                                     │
+  └──────────┬───────────────────────────────────────────┘
+             ▼
+  ┌──────────────────────────────────────┐
+  │ Perfect Augmentation Orb             │
+  │ → 2-mod Magic item                   │
+  └──────────┬───────────────────────────┘
+             ▼
+  ┌──────────────────────────────────────┐
+  │ CHECK: Are BOTH mods T1-T2, useful?  │
+  │   NO  → TRASH base, buy new base     │
+  │   YES → Proceed to Phase 3 (Regal)   │
+  └──────────────────────────────────────┘
+
+================================================================================
+8.3 — PHASE 3: REGAL TO RARE & ISOLATE A T1 MOD
+================================================================================
+
+  You now have a 2-mod magic item with verified high-tier mods from
+  Phase 2. Time to upgrade to rare and set up for fracturing.
+
+8.3.1 — Regal the Item
+────────────────────────────────────────────────────────────────────
+
+  Apply a Perfect Regal Orb to upgrade from Magic → Rare, adding 1
+  additional modifier (3 total).
+
+    Perfect Regal Orb:
+      Min Mod Level: 50
+      Market: ~0.1 div
+
+  Use with a Coronation Omen to control direction:
+    - Omen of Sinistral Coronation → Regal adds PREFIX only
+    - Omen of Dextral Coronation  → Regal adds SUFFIX only
+
+  Strategy: Look at your current 2 mods.
+    - If you have 1P + 1S already (balanced): skip the omen, let Regal
+      add either side randomly. If it adds a bad mod, you can annul it.
+    - If you have 2 prefixes: use Dextral Coronation to force a suffix.
+    - If you have 2 suffixes: use Sinistral Coronation to force a prefix.
+
+  After Regal, you have a 3-mod rare.
+
+8.3.2 — Identify Targets
+────────────────────────────────────────────────────────────────────
+
+  Goal: End up with a rare that has your most desired T1 mod AND
+  at least 3 other mods (total 4+ for Fracturing Orb requirement).
+
+  Know which mod is your #1 priority for the fracture:
+
+    RINGS:
+      - +Max Life T1 (highest universal value)
+      - Adds # to # [Element] Damage (matching your build)
+      - % Increased [Element] Damage (matching your build)
+
+    AMULETS:
+      - +Level of all Skill Gems (ALWAYS #1, no exceptions)
+      - +Level of all [Type] Skill Gems (2nd priority)
+      - +Max Life T1 / +% Crit Multi T1 (tie for 3rd)
+      - % Increased [Element/Spell] Damage
+
+    BELTS:
+      - +Max Life T1 (highest universal value)
+      - % Inc Flask Life Recovery Rate T1
+      - % Inc Cooldown Recovery Rate T1
+
+  If your #1 mod is already on the item from the magic stage: skip to
+  8.3.4 (Annul).
+  If not, and you want to try to find it: proceed to 8.3.3.
+
+8.3.3 — Perfect Chaos Spam to Find Your #1 T1
+────────────────────────────────────────────────────────────────────
+
+  Use Perfect Chaos Orbs to repeatedly remove 1 and add 1 until
+  you hit a T1 version of your #1 desired mod.
+
+  Why Perfect Chaos instead of regular Chaos? Perfect Chaos has
+  min mod level 50, so the ADDED mod is biased toward high tier.
+  Regular Chaos can add an ilvl 1 mod, wasting the attempt.
+
+  Use with Erasure Omens for directional control:
+    - Omen of Sinistral Erasure → Chaos removes PREFIX only
+    - Omen of Dextral Erasure   → Chaos removes SUFFIX only
+
+  This protects the opposite side from being touched by Chaos.
+
+  WARNING: Each Perfect Chaos costs ~5.18 div. You may burn
+  through dozens before finding the mod you want. If your two
+  magic-stage mods were both strong, sometimes it's better to
+  skip this sub-phase and accept one of them as your fracture target.
+
+  AMULET NOTE: If you are chasing +Level of all Skill Gems and it
+  was NOT on your magic-stage item, you WILL burn significant
+  divines on Perfect Chaos. This mod has the lowest weighting in
+  the amulet prefix pool. Expect 50-200+ Perfect Chaos attempts
+  to find it. This is why hitting it during magic stage (Phase 2)
+  saves you an immense amount of currency.
+
+8.3.4 — Annul Unwanted Mods
+────────────────────────────────────────────────────────────────────
+
+  Once you have your desired T1 mod, use Annulment Orbs to remove
+  the mods you don't want.
+
+  USE OMENS FOR DIRECTION:
+    - If your T1 is a prefix and you want to protect it while
+      removing a suffix: use Dextral Annulment Omen + Annul
+    - If your T1 is a suffix: use Sinistral Annulment Omen + Annul
+
+  Without omens, Annul is random and can hit your T1. Protecting
+  it with an omen is expensive (~14 div per Sinistral/Dextral Annulment
+  omen) but prevents restarting from scratch.
+
+8.3.5 — Ensure 4+ Mods for Fracturing
+────────────────────────────────────────────────────────────────────
+
+  The Fracturing Orb requires the item to have at least 4 affixes.
+  If you've annulled down to fewer than 4, use Perfect Exalted Orbs
+  (ideally with the opposite direction omen to fill the other side
+  first) to bring the total back up to 4+.
+
+  Example: You have a T1 prefix and 2 suffixes (3 total).
+  → Use Sinistral Exaltation Omen + Perfect Exalted to add a prefix.
+  → Now you have 4 mods and can fracture (Phase 4).
+
+  SUMMARY: After Phase 3, you should have:
+    - A rare item with 4+ mods
+    - At least 1 mod is a T1 version of your desired affix
+    - Ideally 2+ of your magic-stage mods are still present
+    - For amulets: your #1 fracture target is ALWAYS +Gem Level
+
+================================================================================
+8.4 — PHASE 4: FRACTURE
+================================================================================
+
+  Step 1: Apply Fracturing Orb
+  ─────────────────────────────
+    Use a Fracturing Orb on the rare item. It will randomly select
+    ONE of the existing mods and lock it permanently (it becomes
+    a "Fractured" modifier that cannot be removed by any means).
+
+    Current market: ~10 div per Fracturing Orb.
+
+  Step 2: Evaluate result
+  ─────────────────────────
+    If it fractured your desired T1 mod:
+      → Proceed to Phase 5. This is the best outcome.
+
+    If it fractured a different mod:
+      → The item is now a brick for your purposes. The fractured mod
+        is permanent. You can:
+          a) Use the Reforging Bench (3 of these → 1 new roll)
+          b) Sell it if the fractured mod has value to someone else
+          c) Use it for a different craft
+      → Start over from Phase 1 with a new base.
+
+  The Fracturing Orb picks randomly from all mods. With 4 mods and
+  1 desired, you have a 25% chance. With 5 mods and 1 desired, 20%.
+  With 6, ~17%.
+
+  STRATEGY: The fewer mods on the item (minimum 4), the better your
+  odds. After hitting your T1, annul down to exactly 4 mods before
+  fracturing to maximize the 25% chance.
+
+  JEWELLERY NOTE: Because the mod pool is wider on rings and amulets,
+  landing your T1 in the first place is harder. Don't throw the
+  fracture attempt casually — prepare the item properly first.
+
+================================================================================
+8.5 — PHASE 5: CLEAN UP
+================================================================================
+
+  After a successful fracture, you have a rare with 1 fractured T1
+  mod and 3+ other (mostly junk) mods.
+
+  Step 1: Annul everything except the fractured mod
+  ───────────────────────────────────────────────────
+    Use targeted Annulment Omens to remove the non-fractured mods.
+    The fractured mod is locked and cannot be removed, so you're safe.
+
+    If all remaining mods are on one side:
+      - All suffixes to remove: Sinistral Annulment Omen + Annul
+      - All prefixes to remove: Dextral Annulment Omen + Annul
+
+    You cannot annul a fractured mod. Annulment Orbs skip fractured
+    mods automatically.
+
+  Step 2: You now have a rare with only the fractured mod
+  ─────────────────────────────────────────────────────────
+    The item is still rare (it retains its rarity from the original
+    crafting) even with only 1 mod. This is fine — it just means you
+    can use Exalted Orbs directly without needing to Regal first.
+
+    In PoE2, a rare with 1 mod is valid. The minimum for a rare is
+    1 mod (unlike PoE1 where rares needed at least 3).
+
+  Step 3 (Optional): Regal for control
+  ─────────────────────────────────────
+    If you want to add a mod in a specific direction first:
+      - Use Sinistral/Dextral Coronation Omen + Perfect Regal Orb
+      - This adds exactly 1 mod on your chosen side
+
+    This step is optional — you can also go straight to Exalting.
+
+================================================================================
+8.6 — PHASE 6: FILL REMAINING SLOTS WITH PERFECT EXALTS
+================================================================================
+
+  Goal: Reach 6 mods (3 prefixes, 3 suffixes) using Perfect Exalted
+  Orbs with directional Omens to maximize T1 probability.
+
+  The fractured mod occupies 1 slot. You need to fill the other 5.
+
+  Strategy:
+  ──────────
+    1. Count your current prefix/suffix split
+       Example: Fractured prefix = 1P/0S. Need 2 more P, 3 S.
+
+    2. Fill suffixes first (usually easier to target on jewellery):
+       Omen of Dextral Exaltation + Perfect Exalted Orb
+       Repeat 3 times for 3 suffixes.
+
+       Why suffixes first on jewellery?
+       ─────────────────────────────────
+         Jewellery suffixes include resists, attributes, and speed.
+         These are generally easier to roll at T1 than damage prefixes.
+         Filling the "easier" side first lets you see how your mod
+         layout is shaping up before tackling the harder prefixes.
+
+    3. Fill remaining prefixes:
+       Omen of Sinistral Exaltation + Perfect Exalted Orb
+       Repeat for remaining prefix slots.
+
+  Why fill one side first?
+  ─────────────────────────
+    If you alternate, you might fill one side to 3 and then the
+    next Perfect Exalted with the wrong omen direction will fail
+    (because that side is full). Filling one side completely first
+    avoids this.
+
+  If a Perfect Exalt adds a low-tier mod:
+  ───────────────────────────────────────────
+    DO NOT annul it immediately if it's on the correct side.
+    Wait until all 6 slots are filled, then use Whittling (Phase 7).
+    Annulling now wastes the Perfect Exalted.
+
+    Exception: If the mod is completely useless (wrong damage type,
+    wrong attribute, etc.), annul it with a directional omen.
+
+  Using Greater Exaltation Omen:
+  ──────────────────────────────
+    Omen of Greater Exaltation makes the next Exalted add 2 mods
+    at once. This is faster but you lose directional control (you
+    can't combine with Sinistral/Dextral). The 2 mods could be:
+      - 2 prefixes
+      - 2 suffixes
+      - 1 prefix + 1 suffix
+
+    Use this when you have multiple empty slots on both sides
+    and want to speed things up. ~1 div per omen.
+
+================================================================================
+8.7 — PHASE 7: WHITTLING — REPLACE NON-T1 MODS
+================================================================================
+
+  This is the most expensive phase and where most people go broke.
+  You now have 6 mods, but some are below T1. Whittling replaces
+  the lowest-ilvl mod one at a time.
+
+  JEWELLERY WHITTLING NOTE: Rings have the widest mod pool of any
+  item type in the game. This means Whittling on rings has MORE
+  possible outcomes to roll, increasing the number of attempts
+  needed to hit T1 on each slot. Amulets and belts have narrower
+  mod pools and thus Whittling is more manageable.
+
+  How Whittling Works:
+  ────────────────────
+    Omen of Whittling + Perfect Chaos Orb:
+      1. The omen forces the Chaos to remove the LOWEST ilvl-requirement
+         mod on the item.
+      2. Perfect Chaos then adds a new mod at min mod level 50 (high
+         tier bias).
+
+    This means:
+      - If you have 1 non-T1 mod and it's the lowest ilvl: Whittling
+        targets it every time.
+      - If you have multiple non-T1 mods with the same ilvl: Whittling
+        picks randomly among them.
+      - T1 mods have high ilvl requirements, so they're usually safe
+        from being removed.
+
+  The Whittling Loop:
+  ───────────────────
+    WHILE any mod on the item is NOT T1:
+      1. Activate Omen of Whittling
+      2. Use Perfect Chaos Orb
+      3. Check the result:
+         a. If the removed mod was non-T1 and replacement is T1:
+            → Progress! Continue loop.
+         b. If the removed mod was non-T1 but replacement is also
+            non-T1 (even lower tier):
+            → Net neutral or worse. Continue loop.
+         c. If Whittling accidentally removes a T1 mod:
+            → This happens when all mods are T1 except one that
+              rolled a T1-tier mod with a low ilvl requirement.
+            → Stop. You may need a different approach.
+
+  Why Perfect Chaos (not regular)?
+  ─────────────────────────────────
+    Regular Chaos adds at min mod level 1 — it could replace a T2
+    with a T8, wasting the Whittling omen. Perfect Chaos at min
+    level 50 has a much better chance of adding T1-T3.
+
+  Cost per Whittling attempt:
+    Omen of Whittling: ~15 div
+    Perfect Chaos Orb:  ~5 div
+    TOTAL:              ~20 div per attempt
+
+  RING REALITY CHECK: With the widest mod pool in the game,
+  Whittling on rings can easily require 4-6+ attempts per slot.
+  If you need ~4 non-T1 mods replaced:
+    4 slots × 5 attempts average × 20 div = ~400 div
+  But bad RNG on rings can push this to 6-8 attempts per slot:
+    4 slots × 7 attempts × 20 div = ~560 div
+
+  BELT REALITY CHECK: Belts have a smaller mod pool, so Whittling
+  is more efficient. Expect 3-5 attempts per non-T1 mod:
+    4 slots × 4 attempts × 20 div = ~320 div
+
+  Alternative: Budget Whittling
+  ─────────────────────────────
+    If you can't afford Omen of Whittling, use Perfect Chaos without
+    omens. It removes a RANDOM mod (could be your T1) and adds a high-
+    tier mod. This is gambling and can destroy your craft, but it's
+    ~5 div per attempt instead of ~20 div.
+
+================================================================================
+8.8 — PHASE 8: DIVINE FOR PERFECT ROLLS
+================================================================================
+
+  Once all 6 modifiers are the correct T1 affixes, the numeric values
+  within those tiers still vary.
+
+  Step 1: Identify the roll ranges
+  ─────────────────────────────────
+    Hold ALT over the item to see the tier and the possible range
+    for each mod.
+
+  Step 2: Use Divine Orbs
+  ─────────────────────────
+    Divine Orbs reroll ALL numeric values on the item simultaneously.
+    Each mod rerolls independently within its tier range.
+    (~1 div per Divine Orb)
+
+    Keep using Divine Orbs until all mods are at or near their
+    maximum values. This can take 10-200+ Divines depending on
+    how many mods have wide ranges.
+
+  CATALYST EFFECT ON DIVINING:
+  ────────────────────────────
+    The 20% catalyst quality bonus is applied AFTER the roll.
+    Example: +Max Life T1 rolls 100-120. With Flesh Catalyst at
+    20% quality, the effective range is 120-144. The Divine Orb
+    rerolls the base value (100-120 range), and then catalyst
+    multiplies by 1.2.
+
+    You are aiming for the max BASE roll, not the catalyst-adjusted
+    display. The catalyst bonus is always active on the displayed
+    value in-game.
+
+  Step 3: Know when to stop
+  ──────────────────────────
+    Some mods have very tight T1 ranges (e.g. 95-100%). Others span
+    50-100%. Prioritize the mods that matter most to your build.
+
+    For amulets: +Gem Level has a fixed value at each tier — no
+    divine range to worry about. T1 is always +1 (or +2 on some
+    base types). Divine cannot change gem level values.
+
+    A "perfect" jewellery item with all max rolls is exponentially
+    rarer than one with "good enough" rolls. For mirror service,
+    perfect is expected. For personal use, 95th percentile is
+    usually fine.
+
+================================================================================
+8.9 — PHASE 9: FINALIZE — JEWELLERY-SPECIFIC
+================================================================================
+
+  8.9.1 — RINGS: Finalization
+  ────────────────────────────────────────────────────────────────────
+
+    Step 1: Confirm catalyst quality is at 20%
+    ────────────────────────────────────────────
+      Verify the catalyst quality shows 20%. If for any reason you
+      delayed catalyst application, apply it now.
+
+    Step 2: No sockets, no runes
+    ────────────────────────────
+      Rings cannot have sockets or runes. The item is complete once
+      all 6 mods are T1 + catalyst quality is 20%.
+
+    RING IS COMPLETE. Equip and enjoy.
+
+  8.9.2 — AMULETS: Finalization + Anointing
+  ────────────────────────────────────────────────────────────────────
+
+    Step 1: ANOINT at the Blight Altar
+    ────────────────────────────────────
+      Amulets can be permanently anointed with a Notable Passive Skill
+      from the passive tree using Distilled Emotions at the Blight Altar.
+
+      Anointing is done AFTER the craft is complete. It does NOT affect
+      existing modifiers in any way — it simply adds an allocated Notable
+      that functions as if you had pathed to it on the passive tree.
+
+      Anointing uses 3 Distilled Emotion oils. The combination determines
+      which Notable is allocated. Specific recipes can be found on
+      poe2db.tw or community resources.
+
+      POPULAR AMULET ANOINTS:
+
+      ┌────────────────────────────────┬──────────────────────────────┐
+      │ Notable                         │ Effect                       │
+      ├────────────────────────────────┼──────────────────────────────┤
+      │ Charisma                        │ Reduced skill mana           │
+      │                                 │ reservation                  │
+      ├────────────────────────────────┼──────────────────────────────┤
+      │ Whispers of Doom               │ +1 to maximum number of       │
+      │                                 │ curses you can inflict        │
+      ├────────────────────────────────┼──────────────────────────────┤
+      │ Sovereignty                    │ Increased effect of auras     │
+      ├────────────────────────────────┼──────────────────────────────┤
+      │ Heart of Ice/Fire/Thunder      │ Elemental penetration for     │
+      │                                 │ specific element              │
+      ├────────────────────────────────┼──────────────────────────────┤
+      │ Cleansed Thoughts              │ Chaos resistance is doubled   │
+      ├────────────────────────────────┼──────────────────────────────┤
+      │ True Strike                    │ Increased critical strike     │
+      │                                 │ chance for attacks            │
+      ├────────────────────────────────┼──────────────────────────────┤
+      │ Arcane Focus                   │ Increased spell damage with    │
+      │                                 │ reduced cast speed            │
+      ├────────────────────────────────┼──────────────────────────────┤
+      │ Death Attunement               │ +1 to maximum number of       │
+      │                                 │ summoned totems              │
+      ├────────────────────────────────┼──────────────────────────────┤
+      │ Glancing Blows                 │ Doubled block chance, but     │
+      │                                 │ you take 65% of blocked dmg  │
+      ├────────────────────────────────┼──────────────────────────────┤
+      │ Tribal Fury                    │ Strike skills target +1       │
+      │                                 │ additional nearby enemy       │
+      └────────────────────────────────┴──────────────────────────────┘
+
+      Anointable notables list is extensive — choose what optimally
+      complements your build. The anoint IS permanent and can be
+      overwritten by reapplying with different oils (destroying the
+      previous anoint).
+
+    Step 2: Confirm catalyst quality is at 20%
+    ────────────────────────────────────────────
+      Same as rings. Quality should already be at 20% from Phase 1.
+
+    AMULET IS COMPLETE. Anoint first, then equip.
+
+  8.9.3 — BELTS: Finalization
+  ────────────────────────────────────────────────────────────────────
+
+    Step 1: Check Charm Slots
+    ──────────────────────────
+      Belts have 1-3 Charm Slots determined by the base type.
+      Higher-tier base types (Micro-Distillery Belt) can have up
+      to 3. Equip appropriate charms in the charm slots — these
+      are NOT part of the crafting process but are directly
+      affected by the belt's stats.
+
+      Belt modifiers that interact with charms:
+        - % Increased Effect of Charms — directly multiplies charm power
+        - % Increased Cooldown Recovery Rate — affects charm cooldowns
+
+    Step 2: Confirm catalyst quality is at 20%
+    ────────────────────────────────────────────
+      Same as all jewellery. Quality should be at 20%.
+
+    BELT IS COMPLETE. Equip charms and go.
+
+================================================================================
+9. QUICK-REFERENCE FLOWCHART
+================================================================================
+
+  ┌──────────────────────────────────────────────────────────────┐
+  │ PHASE 1: PREPARE BASE                                         │
+  │   Choose base type (implicit matters!)                       │
+  │   ilvl 82+ white base (ilvl 84+ for amulet +Gem Level)       │
+  │   Choose + Apply catalyst → 20% quality (PERMANENT)          │
+  └──────────────────────────┬───────────────────────────────────┘
+                             ▼
+  ┌──────────────────────────────────────────────────────────────┐
+  │ PHASE 2: MAGIC STAGE                                          │
+  │   Perfect Transmutation → 1 mod magic                        │
+  │   TRASH if mod not S-tier T1-T2                              │
+  │   AMULETS: +Gem Level (any tier) = INSTANT KEEP              │
+  │   Perfect Augmentation → 2 mod magic                         │
+  │   TRASH if both mods not T1-T2 + useful                      │
+  └──────────────────────────┬───────────────────────────────────┘
+                             ▼
+  ┌──────────────────────────────────────────────────────────────┐
+  │ PHASE 3: REGAL & ISOLATE T1                                   │
+  │   Perfect Regal (w/ Coronation Omen) → 3 mod rare             │
+  │   Perfect Chaos (w/ Erasure Omens) if #1 T1 missing           │
+  │   AMULET WARNING: chasing +Gem Level burns divines fast       │
+  │   Targeted Annul (w/ omens) to remove junk                    │
+  │   Ensure 4+ mods remain for Fracturing                        │
+  └──────────────────────────┬───────────────────────────────────┘
+                             ▼
+  ┌──────────────────────────────────────────────────────────────┐
+  │ PHASE 4: FRACTURE                                             │
+  │   Fracturing Orb → 25% chance to lock your T1                 │
+  │   Miss? → Start over from Phase 1                             │
+  └──────────────────────────┬───────────────────────────────────┘
+                             ▼
+  ┌──────────────────────────────────────────────────────────────┐
+  │ PHASE 5: CLEAN UP                                             │
+  │   Annul all non-fractured mods                                │
+  │   Optional: Regal with Coronation Omen for direction          │
+  └──────────────────────────┬───────────────────────────────────┘
+                             ▼
+  ┌──────────────────────────────────────────────────────────────┐
+  │ PHASE 6: FILL SLOTS                                           │
+  │   Dextral Exaltation Omens + Perfect Exalts → 3 suffixes      │
+  │   Sinistral Exaltation Omens + Perfect Exalts → 2-3 prefixes  │
+  │   Fill to 6/6 mods (3P + 3S)                                  │
+  └──────────────────────────┬───────────────────────────────────┘
+                             ▼
+  ┌──────────────────────────────────────────────────────────────┐
+  │ PHASE 7: WHITTLING                                            │
+  │   Omen of Whittling + Perfect Chaos                           │
+  │   Repeat until all 6 mods are T1                              │
+  │   ~20 div per attempt                                          │
+  │   RINGS: widest pool = most attempts needed                   │
+  └──────────────────────────┬───────────────────────────────────┘
+                             ▼
+  ┌──────────────────────────────────────────────────────────────┐
+  │ PHASE 8: DIVINE                                               │
+  │   Divine Orb until numeric values are perfect                 │
+  │   Catalyst quality multiplies final values                    │
+  └──────────────────────────┬───────────────────────────────────┘
+                             ▼
+  ┌──────────────────────────────────────────────────────────────┐
+  │ PHASE 9: FINALIZE                                             │
+  │   RINGS:  Confirm 20% catalyst → DONE                         │
+  │   AMULETS: Confirm 20% catalyst → ANOINT → DONE               │
+  │   BELTS:   Confirm 20% catalyst → Equip charms → DONE         │
+  └──────────────────────────────────────────────────────────────┘
+
+================================================================================
+10. COST ESTIMATION
+================================================================================
+
+  These are VERY rough estimates. RNG is the dominant factor.
+  Jewellery costs are generally HIGHER than weapon costs due to
+  wider mod pools and (for amulets) the +Gem Level chase.
+
+  ─────────────────────────────────────────────────────────────────
+  RING — 6x T1 Mirror-Tier
+  ─────────────────────────────────────────────────────────────────
+
+  Line Item                       ~Cost (Div)   Notes
+  ──────────────────────────────   ───────────   ──────────────────
+  ilvl 84 white bases (×~20)           1-30      Good ring bases cost
+  Catalysts (20x, bulk)                1-10      Depends on type
+  Perfect Transmutation (×~15)          <1
+  Perfect Augmentation (×~25)           <1
+
+  PHASE 3: REGAL & ISOLATE
+  Perfect Regal Orb                     <1
+  Coronation Omen (optional)            ~2
+  Perfect Chaos (isolating T1)        50-400+    Widest pool = worst odds
+  Erasure Omens                       50-150
+  Annulment + Annul Omens             20-80
+
+  PHASE 4: FRACTURE
+  Fracturing Orb                        10
+  (Multiply by ~4 for 25% success)      40
+
+  PHASE 5-6: CLEAN UP & FILL
+  Cleanup Annuls + Omens              10-40
+  Perfect Exalted Orbs (×5)            14
+  Directional Exalt Omens (×5)         30
+
+  PHASE 7: WHITTLING
+  Omen of Whittling (×~25)            375        Ring pool = more attempts
+  Perfect Chaos (×~25)                130
+
+  PHASE 8: DIVINE
+  Divine Orbs (×~50)                   50
+
+  ──────────────────────────────────────────────
+  RING TOTAL (VERY ROUGH)       ~500-1,000+ div
+  ──────────────────────────────────────────────
+  Bad RNG on wide pool Whittling can push this to 1,500+ div.
+
+  ─────────────────────────────────────────────────────────────────
+  AMULET — 6x T1 Mirror-Tier (Chasing +Gem Level)
+  ─────────────────────────────────────────────────────────────────
+
+  Line Item                       ~Cost (Div)   Notes
+  ──────────────────────────────   ───────────   ──────────────────
+  ilvl 84 white bases (×~25)           1-40      Need ilvl 84+ for T1
+  Catalysts (20x)                      1-10
+  Perfect Transmutation (×~20)          <1       More attempts looking
+  Perfect Augmentation (×~30)           <1       for +Gem Level
+
+  PHASE 3: REGAL & ISOLATE
+  Perfect Regal Orb                     <1
+  Coronation Omen (optional)            ~2
+  Perfect Chaos (IF chasing +Gem)    100-1,000+  This can bankrupt you
+  Erasure Omens                      100-300
+  Annulment + Annul Omens             20-100
+
+  PHASE 4: FRACTURE
+  Fracturing Orb                        10
+  (Multiply by ~4 for 25% success)      40
+
+  PHASE 5-6: CLEAN UP & FILL
+  Cleanup Annuls + Omens              10-40
+  Perfect Exalted Orbs (×5)            14
+  Directional Exalt Omens (×5)         30
+
+  PHASE 7: WHITTLING
+  Omen of Whittling (×~20)            300
+  Perfect Chaos (×~20)                104
+
+  PHASE 8: DIVINE
+  Divine Orbs (×~50)                   50
+
+  PHASE 9: ANOINTING
+  Distilled Emotions (3 oils)         10-50      Depends on Notable
+
+  ──────────────────────────────────────────────
+  AMULET TOTAL (VERY ROUGH)     ~600-1,200+ div
+  ──────────────────────────────────────────────
+  If +Gem Level is found at magic stage (Phase 2), costs drop
+  significantly. If you must Perfect Chaos spam to find it, costs
+  can easily exceed 2,500+ div.
+
+  ─────────────────────────────────────────────────────────────────
+  BELT — 6x T1 Mirror-Tier
+  ─────────────────────────────────────────────────────────────────
+
+  Line Item                       ~Cost (Div)   Notes
+  ──────────────────────────────   ───────────   ──────────────────
+  ilvl 84 white bases (×~20)           1-20
+  Catalysts (20x)                      1-10
+  Perfect Transmutation (×~15)          <1
+  Perfect Augmentation (×~20)           <1
+
+  PHASE 3: REGAL & ISOLATE
+  Perfect Regal Orb                     <1
+  Coronation Omen (optional)            ~2
+  Perfect Chaos (isolating T1)        30-200      Narrower pool
+  Erasure Omens                       30-100
+  Annulment + Annul Omens             20-60
+
+  PHASE 4: FRACTURE
+  Fracturing Orb                        10
+  (Multiply by ~4 for 25% success)      40
+
+  PHASE 5-6: CLEAN UP & FILL
+  Cleanup Annuls + Omens              10-30
+  Perfect Exalted Orbs (×5)            14
+  Directional Exalt Omens (×5)         30
+
+  PHASE 7: WHITTLING
+  Omen of Whittling (×~16)            240        Smaller pool = faster
+  Perfect Chaos (×~16)                 83
+
+  PHASE 8: DIVINE
+  Divine Orbs (×~40)                   40
+
+  ──────────────────────────────────────────────
+  BELT TOTAL (VERY ROUGH)       ~400-800+ div
+  ──────────────────────────────────────────────
+  Belts are the most affordable jewellery mirror craft due to
+  the smaller mod pool. An excellent entry point into mirror-tier
+  jewellery crafting.
+
+  ─────────────────────────────────────────────────────────────────
+  GRAND TOTAL SUMMARY
+  ─────────────────────────────────────────────────────────────────
+
+  Ring:      ~500-1,000+ div   (widest pool, hardest Whittling)
+  Amulet:    ~600-1,200+ div   (+Gem Level chase adds massive cost)
+  Belt:      ~400-800+ div     (narrowest pool, most affordable)
+
+================================================================================
+11. ALTERNATIVE ROUTES
+================================================================================
+
+11.1 — DESECRATION CRAFTING (COLLARBONE-BASED)
+────────────────────────────────────────────────────────────────────
+
+  Desecration offers a completely different mod pool (Ulaman, Amanamu,
+  Kurgal affixes) that cannot be obtained through normal crafting.
+  This is for niche builds that specifically want abyssal modifiers
+  on their jewellery.
+
+  Basic Process:
+    1. Start with a rare ring/amulet/belt (6 mods or fewer)
+    2. Use Ancient/Preserved/Gnawed Collarbone to apply Desecration
+       (NOT Jawbones — those are for weapons)
+    3. This replaces or adds modifiers from the desecrated pool
+    4. Use Desecration Omens to control outcomes:
+       - Sinistral/Dextral Necromancy: target prefix or suffix
+       - Abyssal Echoes: grants a reroll on the desecration outcome
+       - Putrefaction: replace ALL mods, corrupt the item
+       - Blackblooded/Liege/Sovereign: target specific abyssal affix
+         families
+
+  Kurgal Affixes (Blackblooded):
+    - Flat added physical damage
+    - Physical damage as extra element
+    - Global physical damage increase
+
+  Amanamu Affixes (Liege):
+    - Minion damage and utility
+    - Minion speed and survivability
+
+  Ulaman Affixes (Sovereign):
+    - Defensive abyssal mods
+    - Ailment-related mods
+
+  WARNING:
+    - Desecrated mods are visibly distinct from normal mods
+    - Omen of Light is the ONLY way to safely remove desecrated mods
+      (forces Annul to target desecrated mods only)
+    - Putrefaction corrupts the item, making it permanently unmodifiable
+    - Desecrated mods do NOT benefit from catalyst quality in most cases
+
+  This route is highly specialized and not recommended for general
+  T1-mod mirror crafting.
+
+11.2 — FRACTURE-SKIP ROUTE
+────────────────────────────────────────────────────────────────────
+
+  If Fracturing Orbs are too expensive or unavailable, you can skip
+  the fracture step entirely. The trade-off is that you have no locked
+  mod, so every Annul and Chaos endangers your T1 mods.
+
+  Adjusted Process (no fracture):
+    1. Base → Alchemy (or Magic stage filtering as Phase 2)
+    2. Perfect Chaos spam until you have 1-2 T1 mods + random others
+    3. Fill remaining slots with Perfect Exalts + directional omens
+    4. Whittling to upgrade non-T1 mods
+    5. Divine
+
+  Without a fractured anchor, Whittling can accidentally remove your
+  best mod. For amulets chasing +Gem Level, a fracture-skip route is
+  incredibly dangerous — you could spend 1,000+ divines only to have
+  Whittling eat your +Gem Level mod near the finish line.
+
+  This route is ONLY recommended for belts (smaller mod pool = easier
+  to recover from mistakes) and VERY patient crafters.
+
+11.3 — CATALYST-FIRST VS CATALYST-LAST
+────────────────────────────────────────────────────────────────────
+
+  There is an ongoing debate about when to apply catalyst quality:
+
+  CATALYST-FIRST (Recommended):
+    ────────────────────────────
+    Advantages:
+      • Quality bonus applies to mods from the very first transmutation
+      • You see the true "final" values as you craft
+      • The catalyst-enhanced values help you judge whether a roll is
+        worth keeping
+    Disadvantages:
+      • You must commit to a catalyst type BEFORE seeing your final
+        set of 6 T1 mods
+      • If your final mod set heavily favors a different mod type than
+        your catalyst, you've wasted the catalyst bonus on the "wrong"
+        stat
+
+  CATALYST-LAST (Flexible):
+    ────────────────────────
+    Advantages:
+      • You see all 6 T1 mods before choosing which catalyst type
+        benefits the most mods on the final item
+      • Zero risk of catalyst-type regret
+    Disadvantages:
+      • You miss out on seeing catalyst-multiplied values during
+        the crafting process
+      • No gameplay difference — the end result is identical
+
+  RECOMMENDATION: If you are 100% certain of your build's primary
+  stat (e.g., a life-based RF build ALWAYS wants Flesh Catalyst),
+  apply catalyst at Phase 1. If you are flexible and might pivot
+  between damage types or defence types based on what you hit,
+  apply catalyst at Phase 9 after all 6 mods are locked.
+
+  There is NO mechanical disadvantage to applying catalysts late —
+  the 20% quality bonus is identical regardless of when you apply it.
+
+================================================================================
+12. COMMON MISTAKES
+================================================================================
+
+   1. USING THE WRONG CATALYST TYPE
+      Once catalyst quality is applied, it is PERMANENT. You cannot
+      change catalyst types. There is no "scrap catalyst" equivalent.
+      If you apply Flesh Catalyst and then hit 3 T1 elemental damage
+      prefixes, you have a permanent mismatch. Choose carefully.
+
+   2. NOT CHASING +GEM LEVEL ON AMULETS AGGRESSIVELY ENOUGH
+      +Level of all Skill Gems is the single most valuable modifier
+      on any amulet. If you hit it at T3+ during magic stage, KEEP
+      THE ITEM. If you are at Phase 3 and don't have it, strongly
+      consider Perfect Chaos spam to find it before fracturing.
+      An amulet without +Gem Level, even 6x T1 otherwise, is worth
+      a FRACTION of one with +Gem Level.
+
+   3. FORGETTING TO ANOINT THE AMULET BEFORE CONSIDERING IT COMPLETE
+      An amulet without an anoint is an incomplete amulet. The anoint
+      is part of the final item. Don't list it for mirror service or
+      equip it without anointing first.
+
+   4. APPLYING CATALYST AT PHASE 1 THEN HITTING A COMPLETELY DIFFERENT
+       MOD TYPE AS YOUR T1
+      Example: You apply Flesh Catalyst (Life) chasing +Max Life, then
+      your Perfect Transmutation hits %Increased Lightning Damage T1
+      instead. Now your catalyst doesn't match your best mod. You
+      either proceed with a mismatch or start over.
+
+      Mitigation: Consider applying catalyst at Phase 9 (Catalyst-Last
+      route in Section 11.3) if you're uncertain about which mod type
+      you'll end up with.
+
+   5. NOT CHECKING THE BASE IMPLICIT BEFORE BUYING
+      The catalyst does NOT affect the implicit mod (the mod the item
+      has as a white base). A Diamond Ring with 20% quality still has
+      its base crit implicit at the original value. The implicit is
+      its own thing.
+
+   6. EXPECTING AMULET +GEM LEVEL TO BE EASY TO FIND
+      +Level of all Skill Gems has the LOWEST weighting of any modifier
+      in the amulet prefix pool. You can easily burn 500+ Perfect Chaos
+      Orbs and not see it. This is not bad luck — this is by design.
+      The rarity of this mod is what makes +Gem Level amulets so
+      valuable.
+
+   7. CRAFTING A RING WITHOUT DECIDING PREFIX VS SUFFIX PRIORITY FIRST
+      Rings have 3 prefix slots and 3 suffix slots. Before you start
+      the Perfect Transmutation, decide: are you targeting a specific
+      prefix first (e.g., +Life, flat damage) or a suffix first (e.g.,
+      resists, attributes, speed)? Your magic stage strategy and
+      directional omen choices depend on this decision.
+
+   8. USING REGULAR ORBS INSTEAD OF PERFECT
+      Regular Exalted/Chaos have min mod level 1. They can add the
+      worst possible tiers to your item. For mirror-tier crafting,
+      always use Perfect or at minimum Greater orbs.
+
+   9. ANNULLING WITHOUT OMENS
+      A random Annul can delete your T1 mod. Always use Sinistral or
+      Dextral Annulment Omens to control which side gets annulled.
+
+  10. FRACTURING WITH 6+ MODS
+      More mods = lower chance of fracturing your desired mod.
+      Annul down to exactly 4 before fracturing for maximum 25% odds.
+
+  11. DIVINING BEFORE FINISHING WHITTLING
+      Divine Orbs reroll all numeric values. If you divine early and
+      then Whittling replaces a mod, you'll need to divine again.
+
+  12. PROCEEDING WITH BAD MAGIC STAGE MODS
+      The biggest mistake. If your Perfect Transmutation or Perfect
+      Augmentation results aren't S-tier T1-T2, TRASH THE BASE. Do
+      not Regal a mediocre magic item — you will waste exponentially
+      more currency downstream trying to fix it.
+
+  13. EXPECTING A DETERMINISTIC OUTCOME
+      PoE2 crafting is gambling. There is NO way to guarantee any
+      specific mod or tier. You control direction with omens but the
+      outcome is always RNG. Jewellery amplifies this due to wider
+      mod pools.
+
+  14. DESECRATING WITHOUT COLLARBONES
+      Using the wrong bone type (e.g., Jawbone on a ring) will fail.
+      Jewellery = Collarbones. Weapons = Jawbones. Armour = Ribs.
+
+  15. APPLYING VAAL ORB BEFORE COMPLETING ALL OTHER STEPS
+      Vaal Orbs corrupt the item, making it PERMANENTLY unmodifiable.
+      Do not Vaal a mirror-tier craft unless you are 100% certain and
+      accept the risk of destroying the item. Vaal is never reversible.
+
+================================================================================
+13. GLOSSARY
+================================================================================
+
+  Affix        A modifier on an item (prefix or suffix)
+  Annul        Short for Orb of Annulment
+  Anoint       Applying a Notable Passive Skill to an amulet at the
+               Blight Altar using Distilled Emotions
+  Base         The white (normal) version of an item
+  Brick        An item that can no longer be improved
+  Catalyst     Quality currency for rings, amulets, and belts
+  Chaos        Short for Chaos Orb
+  Collarbone   Desecration currency for jewellery (Ancient/Preserved/
+               Gnawed)
+  Coronation   Omen type that controls Regal Orb direction
+  Div/Divine   Short for Divine Orb
+  Distilled     Consumable used to anoint amulets at the Blight Altar
+  Emotions
+  Erasure      Omen type that controls Chaos Orb direction
+  Ex/Exalt     Short for Exalted Orb
+  Fracture     To lock a mod permanently with Fracturing Orb
+  ilvl         Item Level — determines what mod tiers can roll
+  Implicit     The built-in mod a white base has (e.g., Amethyst Ring
+               has Chaos Resistance)
+  Mod Pool     The complete set of possible modifiers an item can roll
+  Necromancy   Omen type that controls Desecration direction
+  P/S          Prefix / Suffix
+  Perfect X    The highest tier currency orb variant
+  RNG          Random Number Generator (luck)
+  Scour        Scouring Orb (DOES NOT EXIST in PoE2)
+  Slam         Using an Exalted Orb (slang)
+  T1           Tier 1 — the highest possible tier of a modifier
+  Trash        To throw away an item and start fresh (no scour orbs)
+  Whittling    Using Omen of Whittling + Chaos Orb to remove lowest
+               ilvl mod
+
+===============================================================================
+14. SANCTIFY — PHASE 10
+===============================================================================
+
+   Sanctifying is the final, most powerful upgrade available. It allows you
+   to push a modifier beyond its normal T1 ceiling — for example, turning a
+   T1 +Level to Gems into a T0 version with +1 extra level.
+
+   This phase is OPTIONAL. It is extremely expensive and carries risk.
+
+   Success rate per Divine Orb: ~13%.
+   Expected attempts: ~7-8 Divine Orbs per successful sanctify.
+
+14.1 — HOW SANCTIFYING WORKS
+   ───────────────────────────────────────────────────
+
+   When you Sanctify an item with a Divine Orb:
+     1. The game randomly selects ONE modifier on the item
+     2. That modifier has a ~13% chance to be UPGRADED to a higher tier
+        (e.g. T1 → T0, +4 skills → +5 skills)
+     3. If the attempt fails, the item is UNCHANGED — you can try again
+
+   Sanctified mods appear with a special visual indicator on the item.
+   They stack multiplicatively with quality bonuses (whetstones/catalysts).
+
+14.2 — HINEKORA’S LOCK (STRONGLY RECOMMENDED)
+   ───────────────────────────────────────────────────────
+
+   Hinekora's Lock is a consumable that PREVIEWS the outcome of your
+   next Sanctify attempt without consuming it.
+
+   Process with Hinekora's Lock:
+     1. Use Hinekora's Lock on the item
+     2. The game shows you which mod WOULD be upgraded and to what tier
+     3. If the preview is good → use a Divine Orb to lock it in
+     4. If the preview is bad → modify the item in ANY way (e.g. change
+        a socket, swap a rune) to REROLL the seed
+     5. Use another Lock and check again
+
+   Hinekora's Lock cost: ~150 div each.
+   This is expensive but protects your multi-thousand-divine item from
+   bricking on a bad sanctify target.
+
+14.3 — SANCTIFY CHECKLIST
+   ──────────────────────────────────────────────────
+
+   Before attempting to Sanctify:
+     [ ] All 6 mods are T1 (completed Whittling, Phase 7)
+     [ ] All numeric rolls are satisfactory (completed Divining, Phase 8)
+     [ ] Runes are socketed, quality is capped (completed Finalize, Phase 9)
+     [ ] You have enough Divine Orbs for ~8 attempts per desired upgrade
+     [ ] You have Hinekora's Locks if protecting a high-value craft
+
+   Do NOT Sanctify if any prior step is incomplete. Sanctifying before
+   finishing Divining means the divine rerolls after sanctify could
+   lose your perfect rolls.
+
+14.4 — WHEN TO SANCTIFY
+   ──────────────────────────────────────────────────
+
+   Sanctify is recommended when:
+     - The item is already 6x T1 with good rolls
+     - You have one specific mod you want to push to T0 (e.g. +Gem Level)
+     - You can afford the Locks + Divine Orbs (~1,200+ div total)
+     - The item is worth enough that the sanctify investment is justified
+
+   Sanctify is NOT recommended when:
+     - The item still has non-T1 mods (Whittling first)
+     - The item has bad rolls (Divine first)
+     - You are on a tight budget
+     - The mod you’d want to sanctify isn’t on the item yet
+
+14.5 — SANCTIFIED MOD EXAMPLES
+   ──────────────────────────────────────────────────
+
+   The exact T0 ranges vary by mod. Check poe2db.tw for the specific
+   T0 values of your target modifier.
+
+   +Level of Gems mods typically gain +1 extra level when sanctified.
+   Damage/speed mods gain a new higher-ceiling T0 roll range.
+
+14.6 — COST ESTIMATION
+   ──────────────────────────────────────────────────
+
+   Sanctify attempt cost:
+     Divine Orb:                       ~1 div per attempt
+     Hinekora's Lock (if using):       ~150 div per preview
+     Expected Divine Orbs to hit:      ~8 (at 13% success rate)
+
+   WITH Lock (recommended for mirror-tier):
+     ~5 Lock previews needed on average before the right mod is targeted:
+       5 Locks x 150 div + 1 Divine Orb = ~751 div
+
+   Sanctifying a single mod with Locks: ~500-1,000+ div.
+   Sanctifying ALL 6 mods: astronomical, rarely attempted.
+
+
+================================================================================
+                             END OF GUIDE
+================================================================================

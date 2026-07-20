@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PoE2 Mirror Crafter — Your Path to Mirror-Tier Perfection</title>
+<meta name="description" content="The ultimate step-by-step crafting companion for Path of Exile 2. 10-phase guided crafting, live poe.ninja prices, 15+ item types. Free, open source, runs locally.">
+<meta name="theme-color" content="#0a0604">
+<link rel="canonical" href="https://poe2craft.jerkyjesse.com/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="PoE2 Mirror Crafter — Your Path to Mirror-Tier Perfection">
+<meta property="og:description" content="Step-by-step crafting guide for Path of Exile 2. From base item to 6x T1 mirror-tier masterpiece — with live Divine Orb cost tracking.">
+<meta property="og:url" content="https://poe2craft.jerkyjesse.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PoE2 Mirror Crafter">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PoE2 Mirror Crafter — Your Path to Mirror-Tier Perfection">
+<meta name="twitter:description" content="Step-by-step crafting guide for Path of Exile 2. From base item to 6x T1 mirror-tier masterpiece.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+
+<!-- JSON-LD: SoftwareApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "PoE2 Mirror Crafter",
+  "operatingSystem": "Windows, macOS, Linux",
+  "applicationCategory": "GameApplication",
+  "description": "Step-by-step crafting companion for Path of Exile 2. 10-phase guided crafting from base item to mirror-tier with live poe.ninja price integration.",
+  "url": "https://poe2craft.jerkyjesse.com/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "JerkyJesse",
+    "url": "https://github.com/JerkyJesse"
+  },
+  "license": "https://opensource.org/licenses/MIT"
+}
+</script>
+</head>
+<body>
+
+<!-- Skip link -->
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- Ember particle container -->
+<div class="ember-layer" id="emberLayer" aria-hidden="true"></div>
+
+<!-- Torch cursor glow -->
+<div class="torch-glow" id="torchGlow" aria-hidden="true"></div>
+
+<!-- Ornate border frame overlay -->
+<div class="frame-overlay" aria-hidden="true">
+  <div class="frame-corner tl"></div>
+  <div class="frame-corner tr"></div>
+  <div class="frame-corner bl"></div>
+  <div class="frame-corner br"></div>
+</div>
+
+<!-- Inline SVG sprite sheet -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+
+    <!-- Divine Orb glyph (hero visual) -->
+    <symbol id="orb-divine" viewBox="0 0 200 200">
+      <defs>
+        <radialGradient id="divine-glow" cx="50%" cy="45%" r="50%">
+          <stop offset="0%" stop-color="#f5c842" stop-opacity="0.9"/>
+          <stop offset="40%" stop-color="#e6a817" stop-opacity="0.7"/>
+          <stop offset="70%" stop-color="#b8780e" stop-opacity="0.4"/>
+          <stop offset="100%" stop-color="#4a2004" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <circle cx="100" cy="100" r="98" fill="url(#divine-glow)"/>
+      <circle cx="100" cy="95" r="60" fill="none" stroke="var(--amber)" stroke-width="2.5" opacity="0.8"/>
+      <circle cx="100" cy="95" r="46" fill="none" stroke="var(--amber)" stroke-width="1.8" opacity="0.6"/>
+      <!-- Orb face / runic markings -->
+      <path d="M 100 40 L 100 150 M 40 95 L 160 95 M 58 58 L 142 132 M 58 132 L 142 58"
+            stroke="var(--amber)" stroke-width="1.2" opacity="0.5"/>
+      <circle cx="100" cy="95" r="10" fill="none" stroke="var(--term-yellow)" stroke-width="2.2"/>
+      <circle cx="100" cy="95" r="3" fill="var(--term-yellow)" opacity="0.95"/>
+      <!-- Outer ring runes -->
+      <g fill="none" stroke="var(--amber)" stroke-width="1.5" opacity="0.55">
+        <path d="M 100 8 L 95 20 L 105 20 Z"/>
+        <path d="M 100 182 L 95 170 L 105 170 Z"/>
+        <path d="M 8 95 L 20 90 L 20 100 Z"/>
+        <path d="M 182 95 L 170 90 L 170 100 Z"/>
+      </g>
+    </symbol>
+
+    <!-- Exalted Orb glyph -->
+    <symbol id="orb-exalted" viewBox="0 0 120 120">
+      <circle cx="60" cy="60" r="55" fill="none" stroke="var(--term-yellow)" stroke-width="2" opacity="0.4"/>
+      <circle cx="60" cy="60" r="38" fill="none" stroke="var(--amber)" stroke-width="2.5" opacity="0.7"/>
+      <circle cx="60" cy="60" r="22" fill="none" stroke="var(--term-yellow)" stroke-width="1.8" opacity="0.6"/>
+      <!-- Exalted face -->
+      <path d="M 60 28 L 60 92 M 28 60 L 92 60" stroke="var(--amber)" stroke-width="1.5" opacity="0.5"/>
+      <circle cx="60" cy="60" r="5" fill="var(--term-yellow)" opacity="0.8"/>
+      <!-- Star-like crown points -->
+      <g fill="var(--term-yellow)" opacity="0.6">
+        <polygon points="60,8 57,22 63,22"/>
+        <polygon points="60,112 57,98 63,98"/>
+        <polygon points="8,60 22,57 22,63"/>
+        <polygon points="112,60 98,57 98,63"/>
+        <polygon points="24,24 34,34 28,40"/>
+        <polygon points="96,96 86,86 92,80"/>
+        <polygon points="24,96 34,86 28,80"/>
+        <polygon points="96,24 86,34 92,40"/>
+      </g>
+    </symbol>
+
+    <!-- Chaos Orb glyph -->
+    <symbol id="orb-chaos" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="45" fill="none" stroke="var(--danger)" stroke-width="2.2" opacity="0.5"/>
+      <circle cx="50" cy="50" r="30" fill="none" stroke="var(--danger)" stroke-width="2.8" opacity="0.7"/>
+      <circle cx="50" cy="50" r="15" fill="none" stroke="var(--danger)" stroke-width="1.8" opacity="0.6"/>
+      <!-- Spiral chaos face -->
+      <path d="M 50 50 m 0 -5 c 3 0 5 2 5 5 c 0 4 -3 8 -8 8 c -6 0 -10 -5 -10 -11 c 0 -8 6 -14 14 -14"
+            fill="none" stroke="var(--danger)" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+      <circle cx="50" cy="50" r="2.5" fill="var(--danger)" opacity="0.9"/>
+    </symbol>
+
+    <!-- Mirror shard / tier star glyph -->
+    <symbol id="glyph-mirror" viewBox="0 0 60 60">
+      <polygon points="30,4 36,22 54,22 40,34 45,52 30,40 15,52 20,34 6,22 24,22"
+               fill="none" stroke="var(--amber)" stroke-width="1.8" stroke-linejoin="round" opacity="0.85"/>
+      <circle cx="30" cy="28" r="4" fill="var(--term-yellow)" opacity="0.6"/>
+    </symbol>
+
+    <!-- Scroll / parchment glyph -->
+    <symbol id="glyph-scroll" viewBox="0 0 50 60">
+      <rect x="8" y="6" width="34" height="48" rx="2" fill="none" stroke="var(--text)" stroke-width="2" opacity="0.6"/>
+      <!-- Scroll curl -->
+      <path d="M 8 12 Q 2 12 2 18 Q 2 24 8 24" fill="none" stroke="var(--text)" stroke-width="2" opacity="0.6"/>
+      <path d="M 8 42 Q 2 42 2 48 Q 2 54 8 54" fill="none" stroke="var(--text)" stroke-width="2" opacity="0.6"/>
+      <!-- Text lines -->
+      <g stroke="var(--text)" stroke-width="1.2" opacity="0.35">
+        <line x1="14" y1="18" x2="36" y2="18"/>
+        <line x1="14" y1="26" x2="36" y2="26"/>
+        <line x1="14" y1="34" x2="30" y2="34"/>
+      </g>
+    </symbol>
+
+    <!-- Rune border corner (top-left) -->
+    <symbol id="rune-corner" viewBox="0 0 80 80">
+      <!-- Corner bracket -->
+      <path d="M 4 30 L 4 4 L 30 4" fill="none" stroke="var(--amber)" stroke-width="2.5" stroke-linejoin="round" opacity="0.6"/>
+      <!-- Inner bracket -->
+      <path d="M 14 28 L 14 14 L 28 14" fill="none" stroke="var(--amber)" stroke-width="1.2" stroke-linejoin="round" opacity="0.35"/>
+      <!-- Rune dot -->
+      <circle cx="12" cy="12" r="2.5" fill="var(--term-yellow)" opacity="0.6"/>
+    </symbol>
+
+    <!-- Weapon glyph (sword) -->
+    <symbol id="glyph-weapon" viewBox="0 0 40 70">
+      <rect x="16" y="4" width="8" height="40" rx="1" fill="none" stroke="var(--text)" stroke-width="2.2" opacity="0.7"/>
+      <line x1="20" y1="44" x2="20" y2="62" stroke="var(--text)" stroke-width="3" opacity="0.7"/>
+      <rect x="10" y="60" width="20" height="8" rx="2" fill="none" stroke="var(--text)" stroke-width="2" opacity="0.7"/>
+      <circle cx="20" cy="12" r="2" fill="var(--amber)" opacity="0.7"/>
+    </symbol>
+
+  </defs>
+</svg>
+
+<main id="main">
+
+  <!-- ═══════════════════════ HERO ═══════════════════════ -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <div class="eyebrow">PoE2 Mirror Crafter · v1.0</div>
+          <h1>Your path to<br>mirror-tier perfection.</h1>
+          <p class="hero-sub">Crafting that thinks before you click.</p>
+          <p class="lede">
+            Step-by-step crafting companion for Path of Exile 2.
+            From white base to 6x T1 masterpiece — every orb, every omen,
+            every decision guided. Live Divine Orb tracking. 15+ item types.
+            Free. Open source. Runs on your machine.
+          </p>
+          <div class="install" role="group" aria-label="Clone command">
+            <code id="installCmd">git clone https://github.com/JerkyJesse/poe2-mirror-crafter.git</code>
+            <button class="install-copy" type="button" id="copyBtn" aria-label="Copy clone command">Copy</button>
+          </div>
+          <p class="install-note">Requires Python 3 + Pygame. <code>pip install -r requirements.txt</code></p>
+        </div>
+        <svg class="hero-glyph flicker" role="img" aria-label="Divine Orb">
+          <use href="#orb-divine"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ DEMO — crafting flow preview ═══════════════════════ -->
+  <section class="demo" id="demo">
+    <div class="container">
+      <div class="eyebrow">See the difference</div>
+      <h2>Wiki vs. Mirror Crafter.</h2>
+      <p>
+        Left: scrolling wikis, spreadsheets, guesswork. Right: guided, priced, confirmed.
+      </p>
+
+      <div class="compare-split" role="region" aria-label="Crafting flow comparison">
+        <div class="compare-pane pane-wiki">
+          <div class="pane-label">
+            <span class="pane-dot"></span>
+            Crafting solo
+          </div>
+          <pre># How to craft a mirror-tier bow
+
+1. Buy an iLvl 82+ Thicket Bow base.
+
+2. Transmute it. Check for T1 flat phys.
+   If miss: scour + transmute again.
+
+3. Augment. Hope for T1 hybrid phys.
+   If miss: scour, repeat from step 2.
+
+4. Regal. Isolate T1 prefix. Use Omen
+   of Amelioration if you're scared.
+
+5. Greater Essence of Torment to add
+   T1 flat elemental damage.
+
+   ...(scrolling 8 more wiki pages)...
+
+Cost: check poe.ninja for divine prices.
+Multiply by your estimated attempts.
+Hope you didn't forget an omen.</pre>
+        </div>
+
+        <div class="compare-pane pane-app">
+          <div class="pane-label">
+            <span class="pane-dot amber"></span>
+            Mirror Crafter · guided mode
+          </div>
+          <pre># Phase 1/10: Acquire & Prepare Base
+
+Select: Weapons > Bow
+
+Step 1/3 — Acquire base
+  Buy iLvl 82+ Thicket Bow (trade site)
+
+Cost estimate:
+  1× Thicket Bow iLvl 82+  ~5c
+  Step total: 5c (0.03 div)
+
+[✓] Confirm Step  —  SPACE
+
+Marketplace — live poe.ninja:
+  Divine Orb    183c  ← live
+  Chaos Orb       1c
+  Estimated craft: 12.5 div (Standard)
+  Tier: Mirror</pre>
+        </div>
+      </div>
+
+      <div class="compare-meta">
+        <span>10 guided phases · live prices · no guesswork</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ FEATURES ═══════════════════════ -->
+  <section id="features">
+    <div class="container">
+      <div class="eyebrow">What's inside</div>
+      <h2>Everything the wiki won't tell you.</h2>
+      <p>Each feature built from hundreds of hours of mirror-tier crafting experience.</p>
+
+      <div class="skills-grid">
+
+        <article class="skill-card">
+          <div class="skill-slash">10-Phase Pipeline</div>
+          <div class="skill-desc">Base → Magic → Regal → Fracture → Clean → Fill → Whittle → Divine → Finalize → Sanctify. Every step with explicit instructions.</div>
+          <svg class="skill-glyph"><use href="#glyph-scroll"/></svg>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-slash">Live Price Integration</div>
+          <div class="skill-desc">Real-time Divine and Chaos Orb prices from poe.ninja. Cost estimates update as you craft. Know your spend before you commit.</div>
+          <svg class="skill-glyph"><use href="#orb-exalted"/></svg>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-slash">15+ Item Types</div>
+          <div class="skill-desc">Weapons (Bow, Crossbow, Wand, Sceptre, Staff, Quarterstaff), Armour (Body, Helm, Boots, Gloves, Shield, Focus), Jewellery (Ring, Amulet, Belt).</div>
+          <svg class="skill-glyph"><use href="#glyph-weapon"/></svg>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-slash">Per-Step Cost Tracking</div>
+          <div class="skill-desc">Each step shows exact orb costs, attempt estimates, and running total. Classified Budget / Standard / Mirror tier in real time.</div>
+          <svg class="skill-glyph"><use href="#orb-chaos"/></svg>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-slash">Choice Alternatives</div>
+          <div class="skill-desc">Key decisions offer multiple paths: safe but expensive, balanced, or risky and cheap. Pick your style. Costs adjust automatically.</div>
+          <svg class="skill-glyph"><use href="#glyph-mirror"/></svg>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-slash">Save & Resume</div>
+          <div class="skill-desc">Auto-saves every step. Manual save/load with date-stamped slots. Crafts can take days — never lose your place mid-mirror.</div>
+          <svg class="skill-glyph"><use href="#glyph-scroll"/></svg>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-slash">Full Keyboard Nav</div>
+          <div class="skill-desc">Arrow keys, Space, Enter, Tab, number keys, S/L/B/R — everything accessible without touching the mouse. Speed through crafts.</div>
+          <svg class="skill-glyph"><use href="#glyph-weapon"/></svg>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-slash">Headless Tested</div>
+          <div class="skill-desc">~40 smoke tests covering every button, key, and screen. Automatable CI pipeline. Your crafting guide won't crash mid-craft.</div>
+          <svg class="skill-glyph"><use href="#glyph-mirror"/></svg>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-slash">100% Local</div>
+          <div class="skill-desc">No account, no login, no cloud. Saves to your AppData folder. Prices fetched from poe.ninja — no telemetry. Your crafts, your machine.</div>
+          <svg class="skill-glyph"><use href="#orb-exalted"/></svg>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ PHASES PREVIEW ═══════════════════════ -->
+  <section id="phases">
+    <div class="container">
+      <div class="eyebrow">The 10-phase journey</div>
+      <h2>From base to best-in-slot.</h2>
+
+      <div class="phase-timeline">
+        <div class="phase-step" data-n="1">
+          <div class="phase-num">01</div>
+          <div class="phase-info">
+            <strong>Acquire & Prepare Base</strong>
+            <span>Buy iLvl 82+ base, quality to 20%, apply catalysts</span>
+          </div>
+        </div>
+        <div class="phase-step" data-n="2">
+          <div class="phase-num">02</div>
+          <div class="phase-info">
+            <strong>Magic Stage</strong>
+            <span>Transmute + Augment for T1 modifiers</span>
+          </div>
+        </div>
+        <div class="phase-step" data-n="3">
+          <div class="phase-num">03</div>
+          <div class="phase-info">
+            <strong>Regal & Isolate T1</strong>
+            <span>Regal orb, isolate T1 prefix. Omen of Amelioration safety net</span>
+          </div>
+        </div>
+        <div class="phase-step" data-n="4">
+          <div class="phase-num">04</div>
+          <div class="phase-info">
+            <strong>Fracture</strong>
+            <span>Lock in your T1 mod with a fracturing orb</span>
+          </div>
+        </div>
+        <div class="phase-step" data-n="5">
+          <div class="phase-num">05</div>
+          <div class="phase-info">
+            <strong>Clean Up</strong>
+            <span>Scour unwanted mods, prepare empty affix slots</span>
+          </div>
+        </div>
+        <div class="phase-step" data-n="6">
+          <div class="phase-num">06</div>
+          <div class="phase-info">
+            <strong>Fill Slots</strong>
+            <span>Essences and targeted crafting to fill all affix slots</span>
+          </div>
+        </div>
+        <div class="phase-step" data-n="7">
+          <div class="phase-num">07</div>
+          <div class="phase-info">
+            <strong>Whittling</strong>
+            <span>Remove lowest-tier mods. Omens of Whittling. Repeat until 6x T1</span>
+          </div>
+        </div>
+        <div class="phase-step" data-n="8">
+          <div class="phase-num">08</div>
+          <div class="phase-info">
+            <strong>Divine</strong>
+            <span>Perfect-roll all mod values with Divine Orbs</span>
+          </div>
+        </div>
+        <div class="phase-step" data-n="9">
+          <div class="phase-num">09</div>
+          <div class="phase-info">
+            <strong>Finalize</strong>
+            <span>Apply quality, sockets, links, enchantments, rune sockets</span>
+          </div>
+        </div>
+        <div class="phase-step final" data-n="10">
+          <div class="phase-num">10</div>
+          <div class="phase-info">
+            <strong>Sanctify</strong>
+            <span>Final blessing. Your 6x T1 mirror-tier item is complete. GG, Exile.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ DETAILS (collapsed) ═══════════════════════ -->
+  <section id="docs">
+    <div class="container">
+      <div class="eyebrow">Deep dive</div>
+      <h2>How it works.</h2>
+
+      <details class="docs-details">
+        <summary>Install, architecture, keyboard shortcuts, and FAQ</summary>
+        <div class="docs-body">
+
+          <h3>Install</h3>
+          <pre><code>git clone https://github.com/JerkyJesse/poe2-mirror-crafter.git
+cd poe2-mirror-crafter
+pip install -r requirements.txt
+python main.py</code></pre>
+          <p>Runs on Windows, macOS, and Linux. Only dependency is Pygame.</p>
+
+          <h3>Keyboard Shortcuts</h3>
+          <table class="kb-table">
+            <tr><td><kbd>Space</kbd></td><td>Confirm current step</td></tr>
+            <tr><td><kbd>Enter</kbd></td><td>Next step / advance</td></tr>
+            <tr><td><kbd>Tab</kbd></td><td>Skip current phase</td></tr>
+            <tr><td><kbd>1</kbd>–<kbd>0</kbd></td><td>Jump to phase 1–10</td></tr>
+            <tr><td><kbd>S</kbd></td><td>Save craft</td></tr>
+            <tr><td><kbd>L</kbd></td><td>Load craft</td></tr>
+            <tr><td><kbd>B</kbd></td><td>Back to selection</td></tr>
+            <tr><td><kbd>Esc</kbd></td><td>Reset / quit</td></tr>
+            <tr><td><kbd>Arrow keys</kbd></td><td>Navigate menus</td></tr>
+          </table>
+
+          <h3>Architecture</h3>
+          <pre><code>main.py              # Entry point
+crafting_app.py      # App logic, state, event loop (628 LOC)
+renderer.py          # All drawing, particles, backgrounds (1056 LOC)
+prices.py            # poe.ninja API + fallback dictionary (205 LOC)
+state_manager.py     # JSON save/load to AppData (138 LOC)
+icon_loader.py       # Async orb icon downloader + cache (193 LOC)
+phases/               # Crafting data for all 15+ item types
+  base_phases.py     # Universal 10-phase pipeline builder
+  weapon_phases.py   # Bow, Crossbow, Wand, Sceptre, Staff, Quarterstaff
+  armour_phases.py   # Body, Helm, Boots, Gloves, Shield, Focus
+  jewellery_phases.py # Ring, Amulet, Belt
+docs/                # Reference guides (~5000 lines)
+tests/               # Headless smoke tests (~40 test cases)</code></pre>
+
+          <h3>Budget Tiers</h3>
+          <p>The app calculates your running total in Divine Orbs and classifies your craft:</p>
+          <table class="kb-table">
+            <tr><td><strong>Budget</strong></td><td>&lt; 5 div</td><td>Entry-level crafting</td></tr>
+            <tr><td><strong>Standard</strong></td><td>5–25 div</td><td>Serious investment</td></tr>
+            <tr><td><strong>Mirror</strong></td><td>&gt; 25 div</td><td>No-expense-spared perfection</td></tr>
+          </table>
+
+          <h3>What's on disk</h3>
+          <pre><code>%APPDATA%\poe2-mirror-crafter\
+  saves\          # JSON save files (auto + manual slots)
+  icons\          # Cached orb icons from poe2db.tw CDN</code></pre>
+          <p>Nothing leaves your machine except poe.ninja price requests. No telemetry. No accounts. No cloud.</p>
+
+          <h3>FAQ</h3>
+          <ul>
+            <li><strong>Does this play the game for me?</strong> No. It's a guide — you still do the crafting. It just prevents you from bricking a 50-div item because you forgot an omen.</li>
+            <li><strong>How do prices stay updated?</strong> The app fetches poe.ninja's PoE2 Standard league prices on launch. Falls back to a static dictionary if offline.</li>
+            <li><strong>What happens after a PoE2 patch?</strong> Update the phase data in <code>phases/</code>. The project includes AI update instructions so future maintainers (human or AI) can keep data current.</li>
+            <li><strong>Can I add my own crafting recipes?</strong> Yes. The phase system is modular Python dicts. Add your item type, configure S-Tier mod lists, and it plugs into the pipeline.</li>
+          </ul>
+
+          <h3>License</h3>
+          <p>MIT. Source: <a href="https://github.com/JerkyJesse/poe2-mirror-crafter">github.com/JerkyJesse/poe2-mirror-crafter</a>. Issues, ideas, PRs welcome.</p>
+
+        </div>
+      </details>
+    </div>
+  </section>
+
+</main>
+
+<!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+<footer>
+  <div class="container">
+    <div>
+      <div class="foot-brand">PoE2 Mirror Crafter</div>
+      <div class="foot-tag">your path to mirror-tier perfection</div>
+    </div>
+    <nav class="foot-links" aria-label="Footer">
+      <a href="#features">Features</a>
+      <a href="#phases">Phases</a>
+      <a href="#docs">Docs</a>
+      <a href="https://github.com/JerkyJesse/poe2-mirror-crafter">GitHub</a>
+      <a href="https://github.com/JerkyJesse/poe2-mirror-crafter/issues">Issues</a>
+    </nav>
+    <div class="foot-attrib">
+      <span>Built for Path of Exile 2 crafters.</span>
+      <span>Not affiliated with Grinding Gear Games.</span>
+    </div>
+    <div class="foot-meta">
+      <span>v1.0 · MIT</span>
+      <span>Built by JerkyJesse</span>
+      <span>Crafted with care since 2025</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ══════════════════════════════════════════
+  // Ember particle system
+  // ══════════════════════════════════════════
+  (function(){
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const layer = document.getElementById('emberLayer');
+    if (!layer) return;
+    const count = 35;
+    let particles = [];
+
+    function createParticle() {
+      const el = document.createElement('div');
+      el.className = 'ember';
+      const size = 1.5 + Math.random() * 3;
+      el.style.width = size + 'px';
+      el.style.height = size + 'px';
+      el.style.left = Math.random() * 100 + '%';
+      el.style.top = '110%';
+      el.style.setProperty('--drift', (Math.random() - 0.5) * 120 + 'px');
+      el.style.setProperty('--dur', 6 + Math.random() * 14 + 's');
+      el.style.animationDelay = Math.random() * 8 + 's';
+      el.style.opacity = 0.3 + Math.random() * 0.4;
+      return el;
+    }
+
+    for (let i = 0; i < count; i++) {
+      const p = createParticle();
+      particles.push(p);
+      layer.appendChild(p);
+    }
+  })();
+
+  // ══════════════════════════════════════════
+  // Torch cursor glow
+  // ══════════════════════════════════════════
+  (function(){
+    if (matchMedia('(pointer: coarse)').matches) return;
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const glow = document.getElementById('torchGlow');
+    const root = document.documentElement;
+    let x = innerWidth / 2, y = innerHeight / 2;
+    let tx = x, ty = y;
+    addEventListener('pointermove', (e) => {
+      tx = e.clientX; ty = e.clientY;
+      glow.style.opacity = '1';
+    });
+    addEventListener('pointerleave', () => { glow.style.opacity = '0'; });
+    function tick() {
+      x += (tx - x) * 0.18;
+      y += (ty - y) * 0.18;
+      glow.style.transform = `translate(${x}px, ${y}px) translate(-50%, -50%)`;
+      root.style.setProperty('--mx', (x / innerWidth * 100) + '%');
+      root.style.setProperty('--my', (y / innerHeight * 100) + '%');
+      requestAnimationFrame(tick);
+    }
+    tick();
+  })();
+
+  // ══════════════════════════════════════════
+  // Copy button
+  // ══════════════════════════════════════════
+  (function(){
+    const btn = document.getElementById('copyBtn');
+    const cmd = document.getElementById('installCmd');
+    if (!btn || !cmd) return;
+    btn.addEventListener('click', async () => {
+      const text = cmd.textContent.trim();
+      try { await navigator.clipboard.writeText(text); }
+      catch {
+        const ta = document.createElement('textarea');
+        ta.value = text; document.body.appendChild(ta);
+        ta.select(); document.execCommand('copy'); ta.remove();
+      }
+      const orig = btn.textContent;
+      btn.textContent = 'Copied';
+      btn.dataset.copied = '1';
+      setTimeout(() => { btn.textContent = orig; btn.removeAttribute('data-copied'); }, 1800);
+    });
+  })();
+
+  // ══════════════════════════════════════════
+  // Phase timeline scroll animation
+  // ══════════════════════════════════════════
+  (function(){
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateX(0)';
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.phase-step').forEach((el, i) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateX(-20px)';
+      el.style.transition = `opacity 0.5s ${i * 0.06}s ease, transform 0.5s ${i * 0.06}s ease`;
+      observer.observe(el);
+    });
+  })();
+</script>
+
+</body>
+</html>
