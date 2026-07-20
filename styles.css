@@ -534,6 +534,14 @@ section + section {
   transform: scale(1.1);
 }
 
+.inline-glyph {
+  display: inline;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+  color: var(--accent);
+}
+
 /* ─── Phase Timeline ─── */
 #phases h2 { margin-bottom: 4px; }
 #phases > .container > p {

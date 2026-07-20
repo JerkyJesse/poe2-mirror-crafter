@@ -9,3 +9,23 @@ build/
 *.code-workspace
 *.spec
 PoE2 Mirror Crafter.exe
+
+# AI / IDE
+.cursor/
+.claude/
+.aider*
+.codex*
+.copilot*
+*.log
+
+# Python virtualenv
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env*
+AI_UPDATE_INSTRUCTIONS.md

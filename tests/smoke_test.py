@@ -389,12 +389,16 @@ class SmokeTester:
     def test_select_subtype_click(self):
         app = self._new_app()
         self._setup_select_mode(app)
-        # Prime hitboxes
+        # First select a category to make sub-types visible
+        rects = _select_panel_rects(app.category_keys)
+        self._click_button(app, rects.get("Weapons"))
+        self._pump(app, 2)
+        # Now get hitboxes with sub-type row rendered
         self._draw_frame(app)
         hitboxes = app.selection_hitboxes
         subtype_items = hitboxes.get("subtype_items", {})
 
-        # Click first sub-type (Bow) — should auto-select Weapons category
+        # Click sub-type (Bow)
         bow_rect = subtype_items.get("Bow")
         if bow_rect:
             self._post_click(self._center(bow_rect))
@@ -758,6 +762,10 @@ class SmokeTester:
         self._assert_mode("[E2E-01] Startup => select", app, "select")
 
         # 2. Selection — click Weapons, Bow, BEGIN CRAFT
+        self._draw_frame(app)
+        rects = _select_panel_rects(app.category_keys)
+        self._post_click(self._center(rects["Weapons"]))
+        self._pump(app, 2)
         self._draw_frame(app)
         subtype_items = app.selection_hitboxes.get("subtype_items", {})
         bow_rect = subtype_items.get("Bow")

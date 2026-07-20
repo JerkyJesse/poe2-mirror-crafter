@@ -261,23 +261,67 @@ def draw_selection_screen(surface, tick, categories, selected_category, selected
     draw_particles(surface)
 
     cx = WIDTH // 2
-    draw_text(surface, "CHOOSE  YOUR  CRAFT", cx, _s(30), TEXT_GOLD, "huge", centered=True)
+    title_y = _s(30)
+    subtitle_y = _s(66)
+    draw_text(surface, "CHOOSE  YOUR  CRAFT", cx, title_y, TEXT_GOLD, "huge", centered=True)
     draw_text(
         surface,
         "Select an item type to begin your journey toward mirror-tier perfection.",
-        cx, _s(66), TEXT_DIM, "tiny", centered=True,
+        cx, subtitle_y, TEXT_DIM, "tiny", centered=True,
     )
 
     cat_names = list(categories.keys())
     margin = _s(40)
     spacing = _s(16)
     panel_w = (WIDTH - margin * 2 - spacing * (len(cat_names) - 1)) // len(cat_names)
-    panel_y = _s(100)
+
+    subtype_items = {}
+    subtype_row_y = subtitle_y + _s(24)
+    subtype_row_h = _s(36)
+    has_subtype_row = selected_category is not None
+
+    panel_y = subtype_row_y + subtype_row_h + _s(12) if has_subtype_row else subtitle_y + _s(34)
     panel_h = min(_s(530), HEIGHT - panel_y - _s(80))
     panel_x = margin
 
+    if has_subtype_row:
+        cat = categories.get(selected_category, {})
+        sub_types = cat.get("sub_types", [])
+        total_st = len(sub_types)
+        if total_st > 0:
+            row_width = WIDTH - margin * 2
+            item_spacing = _s(8)
+            max_item_w = _s(150)
+            usable = row_width - item_spacing * (total_st - 1)
+            st_item_w = min(max_item_w, usable // total_st)
+            total_row_w = st_item_w * total_st + item_spacing * (total_st - 1)
+            st_start_x = cx - total_row_w // 2
+
+            label_y = subtype_row_y - _s(16)
+            draw_text(surface, "\u25BC  Select sub-type:", cx, label_y, TEXT_GOLD, "small", centered=True)
+
+            for sti, st in enumerate(sub_types):
+                sx = st_start_x + sti * (st_item_w + item_spacing)
+                sy = subtype_row_y
+                st_rect = pygame.Rect(sx, sy, st_item_w, subtype_row_h)
+
+                is_selected_sub = selected_subtype == st
+                if is_selected_sub:
+                    draw_rect(surface, st_rect, (30, 10, 10), radius=4)
+                    draw_rect(surface, st_rect, BORDER_GOLD, border=2, radius=4)
+                    st_color = TEXT_BRIGHT
+                else:
+                    draw_rect(surface, st_rect, (15, 6, 6), radius=3)
+                    draw_rect(surface, st_rect, BORDER_GOLD_DIM, border=1, radius=3)
+                    st_color = TEXT_WHITE
+
+                st_font = get_font("tiny")
+                st_text = st
+                tw = st_font.size(st_text)[0]
+                draw_text(surface, st_text, sx + st_item_w // 2, sy + _s(9), st_color, "tiny", centered=True)
+                subtype_items[st] = st_rect
+
     category_panels = {}
-    subtype_items = {}
     begin_btn = None
 
     for cat_name in cat_names:
@@ -312,57 +356,13 @@ def draw_selection_screen(surface, tick, categories, selected_category, selected
             if line:
                 lines.append(line)
             desc_y = by + _s(36)
-            max_desc_y = by + _s(80)
+            max_desc_y = min(by + _s(80), by + bh - _s(20))
             line_h = desc_font.get_height() + 1
             for i, line in enumerate(lines):
                 if desc_y + line_h > max_desc_y:
                     break
-                if i == len(lines) - 1 and desc_y + line_h > max_desc_y:
-                    break
                 draw_text(surface, line, bx + _s(8), desc_y, TEXT_DIM, "tiny")
                 desc_y += line_h
-
-        sub_types = cat.get("sub_types", [])
-        sub_start_y = by + _s(80)
-        sub_item_h = _s(28)
-        sub_spacing = _s(2)
-        max_sub_y = by + bh - _s(20)
-
-        if is_selected_cat and sub_types:
-            draw_text(surface, "Sub-types:", bx + _s(8), sub_start_y - _s(16), TEXT_GOLD, "small")
-
-        visible_count = 0
-        total_sub = len(sub_types)
-
-        for sti, st in enumerate(sub_types):
-            sty = sub_start_y + sti * (sub_item_h + sub_spacing)
-            if sty + sub_item_h > max_sub_y:
-                break
-
-            is_selected_sub = is_selected_cat and selected_subtype == st
-            st_rect = pygame.Rect(bx + _s(6), sty, bw - _s(12), sub_item_h - sub_spacing)
-
-            if is_selected_sub:
-                draw_rect(surface, st_rect, (30, 10, 10), radius=3)
-                draw_rect(surface, st_rect, BORDER_GOLD, border=1, radius=3)
-                st_color = TEXT_BRIGHT
-            else:
-                st_color = TEXT_WHITE
-                if is_selected_cat:
-                    draw_rect(surface, st_rect, (15, 6, 6), radius=2)
-
-            draw_text(surface, f"  {st}", st_rect.x + _s(4), st_rect.y + _s(5), st_color, "tiny")
-            subtype_items[st] = st_rect
-            visible_count += 1
-
-        if is_selected_cat and visible_count < total_sub:
-            more_y = sub_start_y + visible_count * (sub_item_h + sub_spacing)
-            if more_y + sub_item_h <= max_sub_y:
-                draw_text(
-                    surface,
-                    f"  +{total_sub - visible_count} more",
-                    bx + _s(6), more_y + _s(5), TEXT_DIM, "tiny",
-                )
 
         category_panels[cat_name] = pygame.Rect(bx, by, bw, bh)
         panel_x += panel_w + spacing
@@ -385,7 +385,7 @@ def draw_selection_screen(surface, tick, categories, selected_category, selected
         draw_text(surface, "Press ENTER or click BEGIN CRAFT to start", cx, text_y, GREEN_GLOW, "tiny", centered=True)
     elif selected_category:
         bot_y = HEIGHT - _s(24)
-        draw_text(surface, "Now select a sub-type \u2191", cx, bot_y, TEXT_GOLD, "tiny", centered=True)
+        draw_text(surface, "Now select a sub-type above \u2191", cx, bot_y, TEXT_GOLD, "tiny", centered=True)
     else:
         bot_y = HEIGHT - _s(24)
         draw_text(surface, "Click a category above to begin", cx, bot_y, TEXT_DIM, "tiny", centered=True)
@@ -768,7 +768,7 @@ def draw_step_panel(
 
 def draw_price_panel(surface, step, prices_available_flag, running_total=0.0,
                     category=None, mod_search_query="", mod_search_active=False,
-                    item_type=None):
+                    item_type=None, mod_search_scroll=0):
     x = WIDTH - PANEL_RIGHT_W + _s(4)
     y = _s(4)
     w = PANEL_RIGHT_W - _s(8)
@@ -805,8 +805,8 @@ def draw_price_panel(surface, step, prices_available_flag, running_total=0.0,
         draw_text(surface, "(No orbs in this step)", x + _s(12), y + _s(40), TEXT_DIM, "tiny")
         if running_total > 0:
             _draw_budget_tier(surface, x, y, w, running_total, tier_thresholds)
-        mod_rect = draw_mod_search(surface, x, y, w, mod_search_query, mod_search_active, category, item_type)
-        return {"mod_search_rect": mod_rect}
+        mod_rect, scroll_used, total = draw_mod_search(surface, x, y, w, mod_search_query, mod_search_active, category, item_type, mod_search_scroll)
+        return {"mod_search_rect": mod_rect, "mod_search_scroll": scroll_used, "mod_search_total": total}
 
     orb_y = y + _s(40)
     orb_inc = _s(50)
@@ -886,8 +886,8 @@ def draw_price_panel(surface, step, prices_available_flag, running_total=0.0,
     if running_total > 0:
         _draw_budget_tier(surface, x, y, w, running_total, tier_thresholds)
 
-    mod_rect = draw_mod_search(surface, x, y, w, mod_search_query, mod_search_active, category, item_type)
-    return {"mod_search_rect": mod_rect}
+    mod_rect, scroll_used, total = draw_mod_search(surface, x, y, w, mod_search_query, mod_search_active, category, item_type, mod_search_scroll)
+    return {"mod_search_rect": mod_rect, "mod_search_scroll": scroll_used, "mod_search_total": total}
 
 
 def _truncate_to_fit(text, font, max_w):
@@ -943,7 +943,7 @@ def _draw_budget_tier(surface, x, y, w, running_total, tier_thresholds=None):
 #  Mod search widget (right panel, between orb prices and budget tier)
 # =============================================================================
 
-def draw_mod_search(surface, panel_x, panel_y, panel_w, query, active, category=None, item_type=None):
+def draw_mod_search(surface, panel_x, panel_y, panel_w, query, active, category=None, item_type=None, scroll_offset=0):
     inp_y = HEIGHT - _s(222)
     inp_h = _s(22)
     rect = pygame.Rect(panel_x + _s(8), inp_y, panel_w - _s(16), inp_h)
@@ -972,23 +972,44 @@ def draw_mod_search(surface, panel_x, panel_y, panel_w, query, active, category=
             panel_x + panel_w // 2, rect.y - _s(14), TEXT_DIM, "tiny", centered=True,
         )
 
-    if not query:
-        return rect
+    if not query and not active:
+        return rect, 0, 0
 
-    results = sorted(modref.search_mods(query, category, item_type=item_type), key=lambda m: m["name"].lower())
+    if query:
+        results = sorted(modref.search_mods(query, category, item_type=item_type), key=lambda m: m["name"].lower())
+    elif item_type:
+        results = sorted(modref.mods_for_item_type(item_type), key=lambda m: m["name"].lower())
+    elif category:
+        results = sorted(modref.all_mods_for_category(category), key=lambda m: m["name"].lower())
+    else:
+        results = sorted(modref._MODS, key=lambda m: m["name"].lower())
+
     if not results:
-        return rect
+        return rect, 0, 0
 
     res_y = rect.y + inp_h + _s(4)
     max_res_h = _draw_budget_tier_y() - res_y - _s(8)
     font_t = get_font("tiny")
-    line_h = font_t.get_height() + _s(2)
+    line_h = font_t.get_height() + _s(3)
     max_lines = max(0, max_res_h // line_h)
-    shown = 0
 
-    for mod in results:
-        if shown >= max_lines:
-            break
+    from math import ceil
+    total_results = len(results)
+    max_offset = max(0, total_results - max_lines)
+    scroll_offset = max(0, min(scroll_offset, max_offset))
+
+    if scroll_offset > 0:
+        draw_text(
+            surface,
+            f"\u25b2  {scroll_offset} more above",
+            panel_x + _s(12), res_y, TEXT_DIM, "tiny",
+        )
+        res_y += line_h
+        max_lines -= 1
+
+    shown = 0
+    for i in range(scroll_offset, min(total_results, scroll_offset + max_lines)):
+        mod = results[i]
 
         badge_label, badge_color = modref.get_affix_badge(mod)
         badge_w = _s(52)
@@ -1013,17 +1034,18 @@ def draw_mod_search(surface, panel_x, panel_y, panel_w, query, active, category=
             name_text = _truncate_to_fit(name_text, font_t, max_name_w)
         draw_text(surface, name_text, name_x, res_y, TEXT_WHITE, "tiny")
 
-        res_y += line_h + _s(1)
+        res_y += line_h
         shown += 1
 
-    if shown < len(results):
+    remaining_below = total_results - scroll_offset - shown
+    if remaining_below > 0:
         draw_text(
             surface,
-            f"... and {len(results) - shown} more matches",
+            f"\u25bc  {remaining_below} more below",
             panel_x + _s(12), res_y, TEXT_DIM, "tiny",
         )
 
-    return rect
+    return rect, scroll_offset, total_results
 
 
 def _draw_budget_tier_y():

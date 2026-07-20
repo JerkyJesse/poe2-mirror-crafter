@@ -72,6 +72,8 @@ class CraftingApp:
         self.mod_search_query = ""
         self.mod_search_active = False
         self.mod_search_rect = None
+        self.mod_search_scroll = 0
+        self.mod_search_total = 0
         self._search_skip_slash = False
         pygame.key.start_text_input()
 
@@ -339,6 +341,7 @@ class CraftingApp:
                 self._search_skip_slash = False
                 return
             self.mod_search_query += event.text
+            self.mod_search_scroll = 0
             return
 
         if self.mode == "startup":
@@ -454,11 +457,19 @@ class CraftingApp:
                 self._close_save_load()
 
     def _handle_crafting_event(self, event):
+        if event.type == pygame.MOUSEWHEEL and self.mod_search_active:
+            scroll_amount = event.y
+            if event.flipped:
+                scroll_amount = -scroll_amount
+            self.mod_search_scroll = max(0, self.mod_search_scroll + scroll_amount)
+            return
+
         if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
             mx, my = event.pos
             if self.mod_search_rect and self.mod_search_rect.collidepoint(mx, my):
                 self.mod_search_active = True
                 self.mod_search_query = ""
+                self.mod_search_scroll = 0
                 self._search_skip_slash = False
                 pygame.key.set_text_input_rect(self.mod_search_rect)
                 return
@@ -487,6 +498,7 @@ class CraftingApp:
                 if self.mod_search_active:
                     self.mod_search_active = False
                     self.mod_search_query = ""
+                    self.mod_search_scroll = 0
                     self._search_skip_slash = False
                     pygame.key.set_text_input_rect(pygame.Rect(0, 0, 0, 0))
                     return
@@ -496,16 +508,25 @@ class CraftingApp:
                 self.mod_search_active = not self.mod_search_active
                 if self.mod_search_active:
                     self.mod_search_query = ""
+                    self.mod_search_scroll = 0
                     self._search_skip_slash = True
                     if self.mod_search_rect:
                         pygame.key.set_text_input_rect(self.mod_search_rect)
                 else:
                     self.mod_search_query = ""
+                    self.mod_search_scroll = 0
                     self._search_skip_slash = False
                     pygame.key.set_text_input_rect(pygame.Rect(0, 0, 0, 0))
                 return
             elif self.mod_search_active and event.key == pygame.K_BACKSPACE:
                 self.mod_search_query = self.mod_search_query[:-1]
+                self.mod_search_scroll = 0
+                return
+            elif self.mod_search_active and event.key == pygame.K_UP:
+                self.mod_search_scroll = max(0, self.mod_search_scroll - 1)
+                return
+            elif self.mod_search_active and event.key == pygame.K_DOWN:
+                self.mod_search_scroll += 1
                 return
             elif self.mod_search_active:
                 return
@@ -612,9 +633,14 @@ class CraftingApp:
                         mod_search_query=self.mod_search_query,
                         mod_search_active=self.mod_search_active,
                         item_type=self.selected_subtype,
+                        mod_search_scroll=self.mod_search_scroll,
                     )
                     if price_hitboxes:
                         self.mod_search_rect = price_hitboxes.get("mod_search_rect")
+                        if "mod_search_scroll" in price_hitboxes:
+                            self.mod_search_scroll = price_hitboxes["mod_search_scroll"]
+                        if "mod_search_total" in price_hitboxes:
+                            self.mod_search_total = price_hitboxes["mod_search_total"]
                 else:
                     self.confirm_btn_rect = None
                     self.back_btn_rect = None

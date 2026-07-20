@@ -10,10 +10,20 @@ def _get_initial_resolution():
         info = pygame.display.Info()
         dw, dh = info.current_w, info.current_h
         if dw > 0 and dh > 0:
-            return int(dw * 0.9), int(dh * 0.9)
+            return dw, dh
     except Exception:
         pass
     return 1280, 800
+
+
+def _maximize_window():
+    try:
+        import ctypes
+        hwnd = pygame.display.get_wm_info()['window']
+        SW_MAXIMIZE = 3
+        ctypes.windll.user32.ShowWindow(hwnd, SW_MAXIMIZE)
+    except Exception:
+        pass
 
 
 def main():
@@ -23,6 +33,9 @@ def main():
         import renderer
         renderer.update_layout(iw, ih)
         app = CraftingApp(iw, ih)
+        _maximize_window()
+        sw, sh = pygame.display.get_surface().get_size()
+        renderer.update_layout(sw, sh)
         app.run()
     except Exception as e:
         import traceback
