@@ -421,8 +421,7 @@ def build_phases(custom):
         alternatives,
     )
 
-    phase6_steps = [
-        step_6_1,
+    step_6_2 = _apply_alternatives(
         {
             "id": "6.2",
             "title": "Fill Prefixes",
@@ -436,6 +435,13 @@ def build_phases(custom):
             "orbs_used": ["Perfect Exalted Orb", "Omen of Sinistral Exaltation"],
             "action": "Fill prefixes with Perfect Exalts + Omen of Sinistral Exaltation",
         },
+        "6.2",
+        alternatives,
+    )
+
+    phase6_steps = [
+        step_6_1,
+        step_6_2,
         {
             "id": "6.3",
             "title": "Verify 6/6 Mods",
@@ -444,8 +450,9 @@ def build_phases(custom):
                 "The fractured T1 is protected.\n"
                 "Some mods may be below T1 — that's fine.\n"
                 "Whittling (Phase 7) will fix them.\n\n"
-                "If using Greater Exaltation Omen:\n"
-                "adds 2 mods at once (faster, less control). ~1 div."
+                "If you chose Greater Exaltation Omen in 6.1/6.2:\n"
+                "you filled 2 mods per Exalt — verify both sides\n"
+                "landed correctly before proceeding."
             ),
             "orbs_used": [],
             "action": "Confirm all 6 mod slots are filled",

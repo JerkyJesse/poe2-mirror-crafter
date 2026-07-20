@@ -11,6 +11,34 @@ def _make_alternatives():
             "orbs_used": ["Perfect Chaos Orb", "Omen of Dextral Erasure"],
             "action": "Spam Perfect Chaos + Erasure Omen",
         },
+        "6.1": [
+                {
+                    "label": "Standard Exaltation (Recommended)",
+                    "cost": "~9 div per mod",
+                    "risk": "low",
+                    "description": "Use Omen of Dextral Exaltation + Perfect Exalted Orb. One suffix at a time with full directional control. ~3 div per Exalt, ~6 div per Omen.",
+                },
+                {
+                    "label": "Add Greater Exaltation Omen (2x mods)",
+                    "cost": "+~1 div (Greater Omen)",
+                    "risk": "low",
+                    "description": "Stack Greater Exaltation Omen with Dextral Exaltation. Both omens work together: 2 guaranteed-suffix mods per Exalt instead of 1. Halves the number of Exalts needed.",
+                },
+            ],
+        "6.2": [
+                {
+                    "label": "Standard Exaltation (Recommended)",
+                    "cost": "~9 div per mod",
+                    "risk": "low",
+                    "description": "Use Omen of Sinistral Exaltation + Perfect Exalted Orb. One prefix at a time with full directional control. ~3 div per Exalt, ~6 div per Omen.",
+                },
+                {
+                    "label": "Add Greater Exaltation Omen (2x mods)",
+                    "cost": "+~1 div (Greater Omen)",
+                    "risk": "low",
+                    "description": "Stack Greater Exaltation Omen with Sinistral Exaltation. Both omens work together: 2 guaranteed-prefix mods per Exalt instead of 1. Halves the number of Exalts needed.",
+                },
+            ],
         "7.1": {
             "title": "Alternative: Omen of Dextral Annulment + Perfect Exalt",
             "description": (
@@ -35,6 +63,12 @@ def _make_alternatives():
                 "cost": "~1 div per Divine Orb",
                 "risk": "medium",
                 "description": "13% success rate. No Lock, no Omen. ~7-8 attempts expected on average.",
+            },
+            {
+                "label": "Lock + Sanctification Omen (Ultimate Safety)",
+                "cost": "~151.4 div (Lock ~150 + Divine ~1 + Omen ~0.4)",
+                "risk": "very low",
+                "description": "Combine Hinekora's Lock (preview outcome) with Omen of Sanctification (guaranteed success). Preview the sanctify and if the result is good, the Omen guarantees it lands.",
             },
         ],
     }

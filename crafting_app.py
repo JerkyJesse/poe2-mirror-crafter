@@ -47,6 +47,7 @@ class CraftingApp:
 
         # UI hitboxes
         self.confirm_btn_rect = None
+        self.back_btn_rect = None
         self.reset_btn_rect = None
         self.choice_btn_rects = []
         self.selection_hitboxes = {}
@@ -440,6 +441,10 @@ class CraftingApp:
                 if step and step["id"] not in self.completed_steps:
                     self._confirm_step()
                 return
+            # Back button
+            if self.back_btn_rect and self.back_btn_rect.collidepoint(mx, my):
+                self._back_to_selection()
+                return
             # Choice buttons
             for i, rect in enumerate(self.choice_btn_rects):
                 if rect.collidepoint(mx, my):
@@ -543,6 +548,7 @@ class CraftingApp:
                         pending_choice=self.pending_choice,
                     )
                     self.confirm_btn_rect = hitboxes.get("confirm_btn")
+                    self.back_btn_rect = hitboxes.get("back_btn")
                     self.choice_btn_rects = hitboxes.get("choice_btns", [])
                     draw_price_panel(
                         self.screen, step, prices_available(),
@@ -551,6 +557,7 @@ class CraftingApp:
                     )
                 else:
                     self.confirm_btn_rect = None
+                    self.back_btn_rect = None
                     self.choice_btn_rects = []
 
                 self._draw_help_bar()

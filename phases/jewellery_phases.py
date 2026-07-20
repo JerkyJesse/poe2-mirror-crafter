@@ -13,6 +13,34 @@ _JEWELLERY_ALTERNATIVES = {
             "description": "Random side. 50/50 chance. Wrong side = Annul (~14 div with omen) to fix.",
         },
     ],
+    "6.1": [
+        {
+            "label": "Standard Exaltation (Recommended)",
+            "cost": "~9 div per mod",
+            "risk": "low",
+            "description": "Use Omen of Dextral Exaltation + Perfect Exalted Orb. One suffix at a time with full directional control. ~3 div per Exalt, ~6 div per Omen.",
+        },
+        {
+            "label": "Add Greater Exaltation Omen (2x mods)",
+            "cost": "+~1 div (Greater Omen)",
+            "risk": "low",
+            "description": "Stack Greater Exaltation Omen with Dextral Exaltation. Both omens work together: 2 guaranteed-suffix mods per Exalt instead of 1. Halves the number of Exalts needed.",
+        },
+    ],
+    "6.2": [
+        {
+            "label": "Standard Exaltation (Recommended)",
+            "cost": "~9 div per mod",
+            "risk": "low",
+            "description": "Use Omen of Sinistral Exaltation + Perfect Exalted Orb. One prefix at a time with full directional control. ~3 div per Exalt, ~6 div per Omen.",
+        },
+        {
+            "label": "Add Greater Exaltation Omen (2x mods)",
+            "cost": "+~1 div (Greater Omen)",
+            "risk": "low",
+            "description": "Stack Greater Exaltation Omen with Sinistral Exaltation. Both omens work together: 2 guaranteed-prefix mods per Exalt instead of 1. Halves the number of Exalts needed.",
+        },
+    ],
     "7.1": [
         {
             "label": "Full Whittling (Recommended)",
@@ -45,6 +73,12 @@ _JEWELLERY_ALTERNATIVES = {
             "cost": "~1.4 div (1 Divine + ~0.4 Omen)",
             "risk": "very low",
             "description": "Omen of Sanctification guarantees 100% sanctify success on your next Divine Orb. Spend ~0.4 div to skip the RNG entirely.",
+        },
+        {
+            "label": "Lock + Sanctification Omen (Ultimate Safety)",
+            "cost": "~151.4 div (Lock ~150 + Divine ~1 + Omen ~0.4)",
+            "risk": "very low",
+            "description": "Combine Hinekora's Lock (preview outcome) with Omen of Sanctification (guaranteed success). Preview the sanctify and if the result is good, the Omen guarantees it lands.",
         },
     ],
 }

@@ -592,10 +592,33 @@ def draw_step_panel(
         "medium",
     )
 
+    back_btn_w = 100
     btn_w = 220
     btn_h = 36
     btn_x = x + w - btn_w - 16
     btn_y = action_y + 2
+    back_btn_x = btn_x - back_btn_w - 8
+
+    draw_rect(
+        surface, (back_btn_x, btn_y, back_btn_w, btn_h), (20, 10, 30), radius=4
+    )
+    draw_rect(
+        surface,
+        (back_btn_x, btn_y, back_btn_w, btn_h),
+        BORDER_GOLD_DIM,
+        border=2,
+        radius=4,
+    )
+    draw_text(
+        surface,
+        "Back",
+        back_btn_x + back_btn_w // 2,
+        btn_y + 8,
+        TEXT_BRIGHT,
+        "medium",
+        centered=True,
+    )
+    back_btn = pygame.Rect(back_btn_x, btn_y, back_btn_w, btn_h)
 
     if is_done_step:
         draw_rect(
@@ -622,32 +645,32 @@ def draw_step_panel(
             clamped = min(max(pending_choice, 0), len(alternatives) - 1)
             if clamped != pending_choice:
                 pending_choice = clamped
-        else:
-            draw_rect(
-                surface, (btn_x, btn_y, btn_w, btn_h), (50, 25, 10), radius=4
-            )
-            draw_rect(
-                surface,
-                (btn_x, btn_y, btn_w, btn_h),
-                BORDER_GOLD,
-                border=2,
-                radius=4,
-            )
-            draw_text(
-                surface,
-                "Confirm Step",
-                btn_x + btn_w // 2,
-                btn_y + 8,
-                TEXT_BRIGHT,
-                "medium",
-                centered=True,
-            )
+        draw_rect(
+            surface, (btn_x, btn_y, btn_w, btn_h), (50, 25, 10), radius=4
+        )
+        draw_rect(
+            surface,
+            (btn_x, btn_y, btn_w, btn_h),
+            BORDER_GOLD,
+            border=2,
+            radius=4,
+        )
+        draw_text(
+            surface,
+            "Confirm Step",
+            btn_x + btn_w // 2,
+            btn_y + 8,
+            TEXT_BRIGHT,
+            "medium",
+            centered=True,
+        )
 
     confirm_btn = pygame.Rect(btn_x, btn_y, btn_w, btn_h) if not is_done_step else None
 
     return {
         "confirm_btn": confirm_btn,
         "choice_btns": choice_btns,
+        "back_btn": back_btn,
     }
 
 

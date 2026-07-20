@@ -3,22 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PoE2 Mirror Crafter — Your Path to Mirror-Tier Perfection</title>
-<meta name="description" content="The ultimate step-by-step crafting companion for Path of Exile 2. 10-phase guided crafting, live poe.ninja prices, 15+ item types. Free, open source, runs locally.">
-<meta name="theme-color" content="#0a0604">
+<title>PoE2 Mirror Crafter — Crafting guide for Path of Exile 2</title>
+<meta name="description" content="Desktop crafting companion for Path of Exile 2. Step-by-step mirror-tier guide, live poe.ninja prices, 15+ item types. Free, open source, runs locally.">
+<meta name="theme-color" content="#030202">
 <link rel="canonical" href="https://poe2craft.jerkyjesse.com/">
 
 <!-- Open Graph -->
-<meta property="og:title" content="PoE2 Mirror Crafter — Your Path to Mirror-Tier Perfection">
-<meta property="og:description" content="Step-by-step crafting guide for Path of Exile 2. From base item to 6x T1 mirror-tier masterpiece — with live Divine Orb cost tracking.">
+<meta property="og:title" content="PoE2 Mirror Crafter — Crafting guide for Path of Exile 2">
+<meta property="og:description" content="Desktop crafting companion for Path of Exile 2. Step-by-step mirror-tier guide with live Divine Orb tracking.">
 <meta property="og:url" content="https://poe2craft.jerkyjesse.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="PoE2 Mirror Crafter">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="PoE2 Mirror Crafter — Your Path to Mirror-Tier Perfection">
-<meta name="twitter:description" content="Step-by-step crafting guide for Path of Exile 2. From base item to 6x T1 mirror-tier masterpiece.">
+<meta name="twitter:title" content="PoE2 Mirror Crafter — Crafting guide for Path of Exile 2">
+<meta name="twitter:description" content="Desktop crafting companion for Path of Exile 2. Step-by-step mirror-tier guide with live poe.ninja prices.">
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,7 +35,7 @@
   "name": "PoE2 Mirror Crafter",
   "operatingSystem": "Windows, macOS, Linux",
   "applicationCategory": "GameApplication",
-  "description": "Step-by-step crafting companion for Path of Exile 2. 10-phase guided crafting from base item to mirror-tier with live poe.ninja price integration.",
+  "description": "Desktop crafting companion for Path of Exile 2. Step-by-step mirror-tier guide with live poe.ninja price integration.",
   "url": "https://poe2craft.jerkyjesse.com/",
   "offers": {
     "@type": "Offer",
@@ -74,26 +74,24 @@
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <defs>
 
-    <!-- Divine Orb glyph (hero visual) -->
+    <!-- Divine Orb glyph -->
     <symbol id="orb-divine" viewBox="0 0 200 200">
       <defs>
         <radialGradient id="divine-glow" cx="50%" cy="45%" r="50%">
-          <stop offset="0%" stop-color="#f5c842" stop-opacity="0.9"/>
-          <stop offset="40%" stop-color="#e6a817" stop-opacity="0.7"/>
-          <stop offset="70%" stop-color="#b8780e" stop-opacity="0.4"/>
-          <stop offset="100%" stop-color="#4a2004" stop-opacity="0"/>
+          <stop offset="0%" stop-color="#e63c32" stop-opacity="0.9"/>
+          <stop offset="40%" stop-color="#dc3228" stop-opacity="0.7"/>
+          <stop offset="70%" stop-color="#a01414" stop-opacity="0.4"/>
+          <stop offset="100%" stop-color="#460a0a" stop-opacity="0"/>
         </radialGradient>
       </defs>
       <circle cx="100" cy="100" r="98" fill="url(#divine-glow)"/>
-      <circle cx="100" cy="95" r="60" fill="none" stroke="var(--amber)" stroke-width="2.5" opacity="0.8"/>
-      <circle cx="100" cy="95" r="46" fill="none" stroke="var(--amber)" stroke-width="1.8" opacity="0.6"/>
-      <!-- Orb face / runic markings -->
+      <circle cx="100" cy="95" r="60" fill="none" stroke="var(--accent)" stroke-width="2.5" opacity="0.8"/>
+      <circle cx="100" cy="95" r="46" fill="none" stroke="var(--accent)" stroke-width="1.8" opacity="0.6"/>
       <path d="M 100 40 L 100 150 M 40 95 L 160 95 M 58 58 L 142 132 M 58 132 L 142 58"
-            stroke="var(--amber)" stroke-width="1.2" opacity="0.5"/>
-      <circle cx="100" cy="95" r="10" fill="none" stroke="var(--term-yellow)" stroke-width="2.2"/>
-      <circle cx="100" cy="95" r="3" fill="var(--term-yellow)" opacity="0.95"/>
-      <!-- Outer ring runes -->
-      <g fill="none" stroke="var(--amber)" stroke-width="1.5" opacity="0.55">
+            stroke="var(--accent)" stroke-width="1.2" opacity="0.5"/>
+      <circle cx="100" cy="95" r="10" fill="none" stroke="var(--gold)" stroke-width="2.2"/>
+      <circle cx="100" cy="95" r="3" fill="var(--gold)" opacity="0.95"/>
+      <g fill="none" stroke="var(--accent)" stroke-width="1.5" opacity="0.55">
         <path d="M 100 8 L 95 20 L 105 20 Z"/>
         <path d="M 100 182 L 95 170 L 105 170 Z"/>
         <path d="M 8 95 L 20 90 L 20 100 Z"/>
@@ -103,14 +101,12 @@
 
     <!-- Exalted Orb glyph -->
     <symbol id="orb-exalted" viewBox="0 0 120 120">
-      <circle cx="60" cy="60" r="55" fill="none" stroke="var(--term-yellow)" stroke-width="2" opacity="0.4"/>
-      <circle cx="60" cy="60" r="38" fill="none" stroke="var(--amber)" stroke-width="2.5" opacity="0.7"/>
-      <circle cx="60" cy="60" r="22" fill="none" stroke="var(--term-yellow)" stroke-width="1.8" opacity="0.6"/>
-      <!-- Exalted face -->
-      <path d="M 60 28 L 60 92 M 28 60 L 92 60" stroke="var(--amber)" stroke-width="1.5" opacity="0.5"/>
-      <circle cx="60" cy="60" r="5" fill="var(--term-yellow)" opacity="0.8"/>
-      <!-- Star-like crown points -->
-      <g fill="var(--term-yellow)" opacity="0.6">
+      <circle cx="60" cy="60" r="55" fill="none" stroke="var(--gold)" stroke-width="2" opacity="0.4"/>
+      <circle cx="60" cy="60" r="38" fill="none" stroke="var(--accent)" stroke-width="2.5" opacity="0.7"/>
+      <circle cx="60" cy="60" r="22" fill="none" stroke="var(--gold)" stroke-width="1.8" opacity="0.6"/>
+      <path d="M 60 28 L 60 92 M 28 60 L 92 60" stroke="var(--accent)" stroke-width="1.5" opacity="0.5"/>
+      <circle cx="60" cy="60" r="5" fill="var(--gold)" opacity="0.8"/>
+      <g fill="var(--gold)" opacity="0.6">
         <polygon points="60,8 57,22 63,22"/>
         <polygon points="60,112 57,98 63,98"/>
         <polygon points="8,60 22,57 22,63"/>
@@ -127,7 +123,6 @@
       <circle cx="50" cy="50" r="45" fill="none" stroke="var(--danger)" stroke-width="2.2" opacity="0.5"/>
       <circle cx="50" cy="50" r="30" fill="none" stroke="var(--danger)" stroke-width="2.8" opacity="0.7"/>
       <circle cx="50" cy="50" r="15" fill="none" stroke="var(--danger)" stroke-width="1.8" opacity="0.6"/>
-      <!-- Spiral chaos face -->
       <path d="M 50 50 m 0 -5 c 3 0 5 2 5 5 c 0 4 -3 8 -8 8 c -6 0 -10 -5 -10 -11 c 0 -8 6 -14 14 -14"
             fill="none" stroke="var(--danger)" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
       <circle cx="50" cy="50" r="2.5" fill="var(--danger)" opacity="0.9"/>
@@ -136,17 +131,15 @@
     <!-- Mirror shard / tier star glyph -->
     <symbol id="glyph-mirror" viewBox="0 0 60 60">
       <polygon points="30,4 36,22 54,22 40,34 45,52 30,40 15,52 20,34 6,22 24,22"
-               fill="none" stroke="var(--amber)" stroke-width="1.8" stroke-linejoin="round" opacity="0.85"/>
-      <circle cx="30" cy="28" r="4" fill="var(--term-yellow)" opacity="0.6"/>
+               fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linejoin="round" opacity="0.85"/>
+      <circle cx="30" cy="28" r="4" fill="var(--gold)" opacity="0.6"/>
     </symbol>
 
     <!-- Scroll / parchment glyph -->
     <symbol id="glyph-scroll" viewBox="0 0 50 60">
       <rect x="8" y="6" width="34" height="48" rx="2" fill="none" stroke="var(--text)" stroke-width="2" opacity="0.6"/>
-      <!-- Scroll curl -->
       <path d="M 8 12 Q 2 12 2 18 Q 2 24 8 24" fill="none" stroke="var(--text)" stroke-width="2" opacity="0.6"/>
       <path d="M 8 42 Q 2 42 2 48 Q 2 54 8 54" fill="none" stroke="var(--text)" stroke-width="2" opacity="0.6"/>
-      <!-- Text lines -->
       <g stroke="var(--text)" stroke-width="1.2" opacity="0.35">
         <line x1="14" y1="18" x2="36" y2="18"/>
         <line x1="14" y1="26" x2="36" y2="26"/>
@@ -154,22 +147,12 @@
       </g>
     </symbol>
 
-    <!-- Rune border corner (top-left) -->
-    <symbol id="rune-corner" viewBox="0 0 80 80">
-      <!-- Corner bracket -->
-      <path d="M 4 30 L 4 4 L 30 4" fill="none" stroke="var(--amber)" stroke-width="2.5" stroke-linejoin="round" opacity="0.6"/>
-      <!-- Inner bracket -->
-      <path d="M 14 28 L 14 14 L 28 14" fill="none" stroke="var(--amber)" stroke-width="1.2" stroke-linejoin="round" opacity="0.35"/>
-      <!-- Rune dot -->
-      <circle cx="12" cy="12" r="2.5" fill="var(--term-yellow)" opacity="0.6"/>
-    </symbol>
-
-    <!-- Weapon glyph (sword) -->
+    <!-- Weapon glyph -->
     <symbol id="glyph-weapon" viewBox="0 0 40 70">
       <rect x="16" y="4" width="8" height="40" rx="1" fill="none" stroke="var(--text)" stroke-width="2.2" opacity="0.7"/>
       <line x1="20" y1="44" x2="20" y2="62" stroke="var(--text)" stroke-width="3" opacity="0.7"/>
       <rect x="10" y="60" width="20" height="8" rx="2" fill="none" stroke="var(--text)" stroke-width="2" opacity="0.7"/>
-      <circle cx="20" cy="12" r="2" fill="var(--amber)" opacity="0.7"/>
+      <circle cx="20" cy="12" r="2" fill="var(--accent)" opacity="0.7"/>
     </symbol>
 
   </defs>
@@ -182,20 +165,19 @@
     <div class="container">
       <div class="hero-inner">
         <div class="hero-copy">
-          <div class="eyebrow">PoE2 Mirror Crafter · v1.0</div>
-          <h1>Your path to<br>mirror-tier perfection.</h1>
-          <p class="hero-sub">Crafting that thinks before you click.</p>
+          <div class="eyebrow">PoE2 Mirror Crafter &middot; v1.0</div>
+          <h1>PoE2 crafting<br>without the wiki tabs.</h1>
+          <p class="hero-sub">Pick an item. Follow the steps. Don't brick your craft.</p>
           <p class="lede">
-            Step-by-step crafting companion for Path of Exile 2.
-            From white base to 6x T1 masterpiece — every orb, every omen,
-            every decision guided. Live Divine Orb tracking. 15+ item types.
-            Free. Open source. Runs on your machine.
+            A desktop app that walks you through crafting mirror-tier items in Path of Exile 2.
+            Tells you which orb to use, what to look for, and what it'll cost — in order, one step at a time.
+            15 item types. Live poe.ninja prices. Free. Open source.
           </p>
           <div class="install" role="group" aria-label="Clone command">
             <code id="installCmd">git clone https://github.com/JerkyJesse/poe2-mirror-crafter.git</code>
             <button class="install-copy" type="button" id="copyBtn" aria-label="Copy clone command">Copy</button>
           </div>
-          <p class="install-note">Requires Python 3 + Pygame. <code>pip install -r requirements.txt</code></p>
+          <p class="install-note">Python 3.8+ and Pygame. <code>pip install -r requirements.txt</code> then <code>python main.py</code></p>
         </div>
         <svg class="hero-glyph flicker" role="img" aria-label="Divine Orb">
           <use href="#orb-divine"/>
@@ -204,20 +186,50 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════ DEMO — crafting flow preview ═══════════════════════ -->
+  <!-- ═══════════════════════ SCREENSHOTS ═══════════════════════ -->
+  <section id="screenshots">
+    <div class="container">
+      <div class="eyebrow">See the app</div>
+      <h2>What it actually looks like.</h2>
+      <div class="screenshots-grid">
+        <div class="screenshot-card">
+          <img src="assets/screenshots/01-startup.png" alt="Startup screen" loading="lazy" width="1280" height="800">
+          <div class="screenshot-caption">Startup — New Craft or Resume</div>
+        </div>
+        <div class="screenshot-card">
+          <img src="assets/screenshots/02-selection.png" alt="Item selection screen" loading="lazy" width="1280" height="800">
+          <div class="screenshot-caption">Pick your item type</div>
+        </div>
+        <div class="screenshot-card">
+          <img src="assets/screenshots/03-crafting.png" alt="Crafting guide in progress" loading="lazy" width="1280" height="800">
+          <div class="screenshot-caption">Mid-craft — phases, steps, prices</div>
+        </div>
+        <div class="screenshot-card">
+          <img src="assets/screenshots/04-complete.png" alt="Craft complete screen" loading="lazy" width="1280" height="800">
+          <div class="screenshot-caption">Craft complete</div>
+        </div>
+        <div class="screenshot-card">
+          <img src="assets/screenshots/05-saveload.png" alt="Save and load screen" loading="lazy" width="1280" height="800">
+          <div class="screenshot-caption">Save &amp; resume your crafts</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ DEMO ═══════════════════════ -->
   <section class="demo" id="demo">
     <div class="container">
-      <div class="eyebrow">See the difference</div>
-      <h2>Wiki vs. Mirror Crafter.</h2>
+      <div class="eyebrow">The problem</div>
+      <h2>Crafting blind vs. having a guide.</h2>
       <p>
-        Left: scrolling wikis, spreadsheets, guesswork. Right: guided, priced, confirmed.
+        Left: alt-tabbing between wikis, trade site, and poe.ninja. Right: the same craft, step by step, with costs shown.
       </p>
 
       <div class="compare-split" role="region" aria-label="Crafting flow comparison">
         <div class="compare-pane pane-wiki">
           <div class="pane-label">
             <span class="pane-dot"></span>
-            Crafting solo
+            Going in blind
           </div>
           <pre># How to craft a mirror-tier bow
 
@@ -230,46 +242,50 @@
    If miss: scour, repeat from step 2.
 
 4. Regal. Isolate T1 prefix. Use Omen
-   of Amelioration if you're scared.
+   of Amelioration if you're worried.
 
 5. Greater Essence of Torment to add
    T1 flat elemental damage.
 
-   ...(scrolling 8 more wiki pages)...
+   ...(still scrolling through 8 more
+   wiki pages to figure out what's next)...
 
-Cost: check poe.ninja for divine prices.
-Multiply by your estimated attempts.
-Hope you didn't forget an omen.</pre>
+Cost: open poe.ninja in another tab.
+Multiply by estimated attempts.
+Hope you didn't miss an omen step.</pre>
         </div>
 
         <div class="compare-pane pane-app">
           <div class="pane-label">
-            <span class="pane-dot amber"></span>
-            Mirror Crafter · guided mode
+            <span class="pane-dot active"></span>
+            Mirror Crafter
           </div>
-          <pre># Phase 1/10: Acquire & Prepare Base
+          <pre># Phase 3/10: Regal & Isolate T1
 
-Select: Weapons > Bow
+Item: Weapons &gt; Bow
 
-Step 1/3 — Acquire base
-  Buy iLvl 82+ Thicket Bow (trade site)
+Step 2/3 — Regal the item
+  Use a Perfect Regal Orb
+  Looking for: T1 hybrid phys, T1
+  attack speed, or T1 crit
 
-Cost estimate:
-  1× Thicket Bow iLvl 82+  ~5c
-  Step total: 5c (0.03 div)
+Orbs needed:
+  1x Perfect Regal Orb     ~36c
+  Omen of Amelioration     ~12c
+  Step total: 48c (0.25 div)
 
-[✓] Confirm Step  —  SPACE
+[Confirm] SPACE  |  [Skip] TAB
 
-Marketplace — live poe.ninja:
-  Divine Orb    183c  ← live
+Market — live poe.ninja:
+  Divine Orb    183c   live
   Chaos Orb       1c
-  Estimated craft: 12.5 div (Standard)
-  Tier: Mirror</pre>
+  Running total: 12.5 div
+  Tier: Standard</pre>
         </div>
       </div>
 
       <div class="compare-meta">
-        <span>10 guided phases · live prices · no guesswork</span>
+        <span>10 guided phases &middot; live prices &middot; no guesswork</span>
       </div>
     </div>
   </section>
@@ -277,158 +293,157 @@ Marketplace — live poe.ninja:
   <!-- ═══════════════════════ FEATURES ═══════════════════════ -->
   <section id="features">
     <div class="container">
-      <div class="eyebrow">What's inside</div>
-      <h2>Everything the wiki won't tell you.</h2>
-      <p>Each feature built from hundreds of hours of mirror-tier crafting experience.</p>
+      <div class="eyebrow">What it does</div>
+      <h2>Features.</h2>
 
       <div class="skills-grid">
 
         <article class="skill-card">
           <div class="skill-slash">10-Phase Pipeline</div>
-          <div class="skill-desc">Base → Magic → Regal → Fracture → Clean → Fill → Whittle → Divine → Finalize → Sanctify. Every step with explicit instructions.</div>
+          <div class="skill-desc">Base &rarr; Magic &rarr; Regal &rarr; Fracture &rarr; Clean &rarr; Fill &rarr; Whittle &rarr; Divine &rarr; Finalize &rarr; Sanctify. Every step says what orb to use and what mod to look for.</div>
           <svg class="skill-glyph"><use href="#glyph-scroll"/></svg>
         </article>
 
         <article class="skill-card">
-          <div class="skill-slash">Live Price Integration</div>
-          <div class="skill-desc">Real-time Divine and Chaos Orb prices from poe.ninja. Cost estimates update as you craft. Know your spend before you commit.</div>
+          <div class="skill-slash">Live poe.ninja Prices</div>
+          <div class="skill-desc">Pulls Divine and Chaos Orb prices on launch. Shows per-step and running total in divines. Falls back to static prices if the API is down.</div>
           <svg class="skill-glyph"><use href="#orb-exalted"/></svg>
         </article>
 
         <article class="skill-card">
           <div class="skill-slash">15+ Item Types</div>
-          <div class="skill-desc">Weapons (Bow, Crossbow, Wand, Sceptre, Staff, Quarterstaff), Armour (Body, Helm, Boots, Gloves, Shield, Focus), Jewellery (Ring, Amulet, Belt).</div>
+          <div class="skill-desc">Weapons: Bow, Crossbow, Wand, Sceptre, Staff, Quarterstaff. Armour: Body, Helm, Boots, Gloves, Shield, Focus. Jewellery: Ring, Amulet, Belt.</div>
           <svg class="skill-glyph"><use href="#glyph-weapon"/></svg>
         </article>
 
         <article class="skill-card">
           <div class="skill-slash">Per-Step Cost Tracking</div>
-          <div class="skill-desc">Each step shows exact orb costs, attempt estimates, and running total. Classified Budget / Standard / Mirror tier in real time.</div>
+          <div class="skill-desc">Each step lists the exact orbs, their estimated cost, and the running total. Auto-classified as Budget, Standard, or Mirror tier.</div>
           <svg class="skill-glyph"><use href="#orb-chaos"/></svg>
         </article>
 
         <article class="skill-card">
           <div class="skill-slash">Choice Alternatives</div>
-          <div class="skill-desc">Key decisions offer multiple paths: safe but expensive, balanced, or risky and cheap. Pick your style. Costs adjust automatically.</div>
+          <div class="skill-desc">At key decision points you pick a route: safe and expensive, balanced, or cheap and risky. Costs update to match your choice.</div>
           <svg class="skill-glyph"><use href="#glyph-mirror"/></svg>
         </article>
 
         <article class="skill-card">
-          <div class="skill-slash">Save & Resume</div>
-          <div class="skill-desc">Auto-saves every step. Manual save/load with date-stamped slots. Crafts can take days — never lose your place mid-mirror.</div>
+          <div class="skill-slash">Save &amp; Resume</div>
+          <div class="skill-desc">Auto-saves on every step. Manual save/load with date-stamped slots. You can craft over days and not lose your place.</div>
           <svg class="skill-glyph"><use href="#glyph-scroll"/></svg>
         </article>
 
         <article class="skill-card">
-          <div class="skill-slash">Full Keyboard Nav</div>
-          <div class="skill-desc">Arrow keys, Space, Enter, Tab, number keys, S/L/B/R — everything accessible without touching the mouse. Speed through crafts.</div>
+          <div class="skill-slash">Full Keyboard Navigation</div>
+          <div class="skill-desc">Arrow keys, Space, Enter, Tab, numbers 1-0, S, L, B, R — everything works without the mouse. Fast once you learn the keys.</div>
           <svg class="skill-glyph"><use href="#glyph-weapon"/></svg>
         </article>
 
         <article class="skill-card">
           <div class="skill-slash">Headless Tested</div>
-          <div class="skill-desc">~40 smoke tests covering every button, key, and screen. Automatable CI pipeline. Your crafting guide won't crash mid-craft.</div>
+          <div class="skill-desc">~40 automated tests cover every screen, keybind, and click target. Won't crash on you mid-craft.</div>
           <svg class="skill-glyph"><use href="#glyph-mirror"/></svg>
         </article>
 
         <article class="skill-card">
           <div class="skill-slash">100% Local</div>
-          <div class="skill-desc">No account, no login, no cloud. Saves to your AppData folder. Prices fetched from poe.ninja — no telemetry. Your crafts, your machine.</div>
+          <div class="skill-desc">No accounts, no login, no cloud. Saves go to your AppData folder. Prices come from poe.ninja. Nothing else phones home.</div>
           <svg class="skill-glyph"><use href="#orb-exalted"/></svg>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════════════ PHASES PREVIEW ═══════════════════════ -->
+  <!-- ═══════════════════════ PHASES ═══════════════════════ -->
   <section id="phases">
     <div class="container">
-      <div class="eyebrow">The 10-phase journey</div>
-      <h2>From base to best-in-slot.</h2>
+      <div class="eyebrow">The crafting pipeline</div>
+      <h2>10 phases, base to mirror.</h2>
 
       <div class="phase-timeline">
         <div class="phase-step" data-n="1">
           <div class="phase-num">01</div>
           <div class="phase-info">
-            <strong>Acquire & Prepare Base</strong>
-            <span>Buy iLvl 82+ base, quality to 20%, apply catalysts</span>
+            <strong>Acquire &amp; Prepare Base</strong>
+            <span>Buy iLvl 82+ base. Quality to 20%, apply catalysts or infuser.</span>
           </div>
         </div>
         <div class="phase-step" data-n="2">
           <div class="phase-num">02</div>
           <div class="phase-info">
             <strong>Magic Stage</strong>
-            <span>Transmute + Augment for T1 modifiers</span>
+            <span>Transmute + Augment for T1 mods. Scour and repeat until you hit.</span>
           </div>
         </div>
         <div class="phase-step" data-n="3">
           <div class="phase-num">03</div>
           <div class="phase-info">
-            <strong>Regal & Isolate T1</strong>
-            <span>Regal orb, isolate T1 prefix. Omen of Amelioration safety net</span>
+            <strong>Regal &amp; Isolate T1</strong>
+            <span>Regal orb, then isolate your best T1 prefix using Coronation Omens.</span>
           </div>
         </div>
         <div class="phase-step" data-n="4">
           <div class="phase-num">04</div>
           <div class="phase-info">
             <strong>Fracture</strong>
-            <span>Lock in your T1 mod with a fracturing orb</span>
+            <span>Lock your top mod permanently with a Fracturing Orb.</span>
           </div>
         </div>
         <div class="phase-step" data-n="5">
           <div class="phase-num">05</div>
           <div class="phase-info">
             <strong>Clean Up</strong>
-            <span>Scour unwanted mods, prepare empty affix slots</span>
+            <span>Scour unwanted mods. Erasure Omens to clear empty affix slots.</span>
           </div>
         </div>
         <div class="phase-step" data-n="6">
           <div class="phase-num">06</div>
           <div class="phase-info">
             <strong>Fill Slots</strong>
-            <span>Essences and targeted crafting to fill all affix slots</span>
+            <span>Essences and Exalted Orbs to fill every affix slot with targeted mods.</span>
           </div>
         </div>
         <div class="phase-step" data-n="7">
           <div class="phase-num">07</div>
           <div class="phase-info">
             <strong>Whittling</strong>
-            <span>Remove lowest-tier mods. Omens of Whittling. Repeat until 6x T1</span>
+            <span>Remove the lowest-tier mod until all 6 are T1. Whittling Omens are expensive here.</span>
           </div>
         </div>
         <div class="phase-step" data-n="8">
           <div class="phase-num">08</div>
           <div class="phase-info">
             <strong>Divine</strong>
-            <span>Perfect-roll all mod values with Divine Orbs</span>
+            <span>Divine Orb every mod value to perfect rolls.</span>
           </div>
         </div>
         <div class="phase-step" data-n="9">
           <div class="phase-num">09</div>
           <div class="phase-info">
             <strong>Finalize</strong>
-            <span>Apply quality, sockets, links, enchantments, rune sockets</span>
+            <span>Quality, sockets, links, rune sockets, enchantments, anoints.</span>
           </div>
         </div>
         <div class="phase-step final" data-n="10">
           <div class="phase-num">10</div>
           <div class="phase-info">
             <strong>Sanctify</strong>
-            <span>Final blessing. Your 6x T1 mirror-tier item is complete. GG, Exile.</span>
+            <span>Final blessing. 6x T1 mirror-tier item done.</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════════════ DETAILS (collapsed) ═══════════════════════ -->
+  <!-- ═══════════════════════ DETAILS ═══════════════════════ -->
   <section id="docs">
     <div class="container">
-      <div class="eyebrow">Deep dive</div>
-      <h2>How it works.</h2>
+      <div class="eyebrow">Details</div>
+      <h2>Setup, keys, and FAQ.</h2>
 
       <details class="docs-details">
-        <summary>Install, architecture, keyboard shortcuts, and FAQ</summary>
+        <summary>Install, shortcuts, architecture, and common questions</summary>
         <div class="docs-body">
 
           <h3>Install</h3>
@@ -436,60 +451,61 @@ Marketplace — live poe.ninja:
 cd poe2-mirror-crafter
 pip install -r requirements.txt
 python main.py</code></pre>
-          <p>Runs on Windows, macOS, and Linux. Only dependency is Pygame.</p>
+          <p>Works on Windows, macOS, and Linux. Only needs Python 3.8+ and Pygame.</p>
 
           <h3>Keyboard Shortcuts</h3>
           <table class="kb-table">
             <tr><td><kbd>Space</kbd></td><td>Confirm current step</td></tr>
             <tr><td><kbd>Enter</kbd></td><td>Next step / advance</td></tr>
             <tr><td><kbd>Tab</kbd></td><td>Skip current phase</td></tr>
-            <tr><td><kbd>1</kbd>–<kbd>0</kbd></td><td>Jump to phase 1–10</td></tr>
+            <tr><td><kbd>1</kbd>&ndash;<kbd>0</kbd></td><td>Jump to phase 1&ndash;10</td></tr>
             <tr><td><kbd>S</kbd></td><td>Save craft</td></tr>
             <tr><td><kbd>L</kbd></td><td>Load craft</td></tr>
             <tr><td><kbd>B</kbd></td><td>Back to selection</td></tr>
-            <tr><td><kbd>Esc</kbd></td><td>Reset / quit</td></tr>
-            <tr><td><kbd>Arrow keys</kbd></td><td>Navigate menus</td></tr>
+            <tr><td><kbd>R</kbd></td><td>Refresh prices</td></tr>
+            <tr><td><kbd>Esc</kbd></td><td>Back / quit</td></tr>
+            <tr><td><kbd>Arrow keys</kbd></td><td>Navigate menus and alternatives</td></tr>
           </table>
 
           <h3>Architecture</h3>
           <pre><code>main.py              # Entry point
-crafting_app.py      # App logic, state, event loop (628 LOC)
-renderer.py          # All drawing, particles, backgrounds (1056 LOC)
-prices.py            # poe.ninja API + fallback dictionary (205 LOC)
-state_manager.py     # JSON save/load to AppData (138 LOC)
-icon_loader.py       # Async orb icon downloader + cache (193 LOC)
+crafting_app.py      # State machine, event loop (~635 LOC)
+renderer.py          # UI drawing, particles, fonts (~1080 LOC)
+prices.py            # poe.ninja API + fallback dictionary (~205 LOC)
+state_manager.py     # JSON save/load to AppData (~138 LOC)
+icon_loader.py       # Async orb icon downloader + cache (~193 LOC)
 phases/               # Crafting data for all 15+ item types
   base_phases.py     # Universal 10-phase pipeline builder
   weapon_phases.py   # Bow, Crossbow, Wand, Sceptre, Staff, Quarterstaff
   armour_phases.py   # Body, Helm, Boots, Gloves, Shield, Focus
   jewellery_phases.py # Ring, Amulet, Belt
-docs/                # Reference guides (~5000 lines)
-tests/               # Headless smoke tests (~40 test cases)</code></pre>
+docs/                # Reference crafting guides
+tests/               # Headless smoke tests (~40 cases)</code></pre>
 
           <h3>Budget Tiers</h3>
-          <p>The app calculates your running total in Divine Orbs and classifies your craft:</p>
           <table class="kb-table">
-            <tr><td><strong>Budget</strong></td><td>&lt; 5 div</td><td>Entry-level crafting</td></tr>
-            <tr><td><strong>Standard</strong></td><td>5–25 div</td><td>Serious investment</td></tr>
-            <tr><td><strong>Mirror</strong></td><td>&gt; 25 div</td><td>No-expense-spared perfection</td></tr>
+            <tr><td><strong>Budget</strong></td><td>&lt; 5 div</td><td>Minimal safety, higher risk of bricking</td></tr>
+            <tr><td><strong>Standard</strong></td><td>5&ndash;25 div</td><td>Balanced approach with key omens</td></tr>
+            <tr><td><strong>Mirror</strong></td><td>&gt; 25 div</td><td>Every omen, every safety net, guaranteed 6x T1</td></tr>
           </table>
 
-          <h3>What's on disk</h3>
+          <h3>Save Files</h3>
           <pre><code>%APPDATA%\poe2-mirror-crafter\
   saves\          # JSON save files (auto + manual slots)
   icons\          # Cached orb icons from poe2db.tw CDN</code></pre>
-          <p>Nothing leaves your machine except poe.ninja price requests. No telemetry. No accounts. No cloud.</p>
+          <p>Nothing leaves your machine except poe.ninja price requests. No telemetry, no accounts, no cloud.</p>
 
           <h3>FAQ</h3>
           <ul>
-            <li><strong>Does this play the game for me?</strong> No. It's a guide — you still do the crafting. It just prevents you from bricking a 50-div item because you forgot an omen.</li>
-            <li><strong>How do prices stay updated?</strong> The app fetches poe.ninja's PoE2 Standard league prices on launch. Falls back to a static dictionary if offline.</li>
-            <li><strong>What happens after a PoE2 patch?</strong> Update the phase data in <code>phases/</code>. The project includes AI update instructions so future maintainers (human or AI) can keep data current.</li>
-            <li><strong>Can I add my own crafting recipes?</strong> Yes. The phase system is modular Python dicts. Add your item type, configure S-Tier mod lists, and it plugs into the pipeline.</li>
+            <li><strong>Does this play the game for me?</strong> No. It tells you what orb to use and what to look for. You still do the clicking.</li>
+            <li><strong>How do prices update?</strong> Fetches poe.ninja's PoE2 Standard league on launch. Falls back to a static price dictionary if offline.</li>
+            <li><strong>What happens after a PoE2 patch?</strong> Update the phase data in <code>phases/</code>. Check <code>AI_UPDATE_INSTRUCTIONS.md</code> for the full guide.</li>
+            <li><strong>Can I add my own item types?</strong> Yes. Copy an existing entry in the <code>phases/</code> files, fill in the mod data, and register it in <code>__init__.py</code>.</li>
+            <li><strong>Why Pygame instead of a website?</strong> No server, no accounts, no database. Runs identically on every OS. Your data stays local.</li>
           </ul>
 
           <h3>License</h3>
-          <p>MIT. Source: <a href="https://github.com/JerkyJesse/poe2-mirror-crafter">github.com/JerkyJesse/poe2-mirror-crafter</a>. Issues, ideas, PRs welcome.</p>
+          <p>MIT. Source: <a href="https://github.com/JerkyJesse/poe2-mirror-crafter">github.com/JerkyJesse/poe2-mirror-crafter</a>. Issues and PRs welcome.</p>
 
         </div>
       </details>
@@ -503,9 +519,10 @@ tests/               # Headless smoke tests (~40 test cases)</code></pre>
   <div class="container">
     <div>
       <div class="foot-brand">PoE2 Mirror Crafter</div>
-      <div class="foot-tag">your path to mirror-tier perfection</div>
+      <div class="foot-tag">Desktop crafting guide for Path of Exile 2</div>
     </div>
     <nav class="foot-links" aria-label="Footer">
+      <a href="#screenshots">Screenshots</a>
       <a href="#features">Features</a>
       <a href="#phases">Phases</a>
       <a href="#docs">Docs</a>
@@ -513,13 +530,11 @@ tests/               # Headless smoke tests (~40 test cases)</code></pre>
       <a href="https://github.com/JerkyJesse/poe2-mirror-crafter/issues">Issues</a>
     </nav>
     <div class="foot-attrib">
-      <span>Built for Path of Exile 2 crafters.</span>
       <span>Not affiliated with Grinding Gear Games.</span>
     </div>
     <div class="foot-meta">
-      <span>v1.0 · MIT</span>
+      <span>v1.0 &middot; MIT</span>
       <span>Built by JerkyJesse</span>
-      <span>Crafted with care since 2025</span>
     </div>
   </div>
 </footer>
