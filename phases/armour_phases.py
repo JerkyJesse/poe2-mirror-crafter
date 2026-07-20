@@ -59,12 +59,6 @@ def _make_alternatives():
                 "description": "Omen of Sanctification guarantees 100% sanctify success. Skip the RNG entirely for ~0.4 div.",
             },
             {
-                "label": "YOLO Sanctify (No Lock)",
-                "cost": "~1 div per Divine Orb",
-                "risk": "medium",
-                "description": "13% success rate. No Lock, no Omen. ~7-8 attempts expected on average.",
-            },
-            {
                 "label": "Lock + Sanctification Omen (Ultimate Safety)",
                 "cost": "~151.4 div (Lock ~150 + Divine ~1 + Omen ~0.4)",
                 "risk": "very low",

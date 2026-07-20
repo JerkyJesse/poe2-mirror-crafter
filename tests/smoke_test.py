@@ -33,10 +33,12 @@ from renderer import (
     draw_phase_list,
     draw_step_panel,
     draw_price_panel,
-    draw_crafting_end_screen,
     draw_save_load_screen,
+    draw_crafting_end_screen,
     WIDTH,
     HEIGHT,
+    _s,
+    get_font,
 )
 from state_manager import list_saves, delete_save
 from prices import prices_available
@@ -49,14 +51,40 @@ CY = HEIGHT // 2
 
 
 # ── Startup screen ────────────────────────────────────────────────────────
+def _startup_base_y():
+    title_h = get_font("title").get_height()
+    subtitle_h = get_font("medium").get_height()
+    esc_h = get_font("tiny").get_height()
+    btn_h = _s(50)
+
+    title_to_sub_gap = _s(90)
+    sub_to_btn1_gap = _s(50)
+    btn1_to_btn2_gap = _s(20)
+    btn2_to_esc_gap = _s(80)
+
+    total_h = (
+        title_h + title_to_sub_gap + subtitle_h + sub_to_btn1_gap
+        + btn_h + btn1_to_btn2_gap + btn_h + btn2_to_esc_gap + esc_h
+    )
+    return HEIGHT // 2 - total_h // 2
+
+
 def _startup_new_craft_btn():
-    btn_w, btn_h = 300, 50
-    return pygame.Rect(CX - btn_w // 2, CY, btn_w, btn_h)
+    btn_w, btn_h = _s(300), _s(50)
+    base_y = _startup_base_y()
+    title_h = get_font("title").get_height()
+    subtitle_h = get_font("medium").get_height()
+    btn_new_y = base_y + _s(90) + subtitle_h + _s(50)
+    return pygame.Rect(CX - btn_w // 2, btn_new_y, btn_w, btn_h)
 
 
 def _startup_resume_btn():
-    btn_w, btn_h = 300, 50
-    return pygame.Rect(CX - btn_w // 2, CY + 70, btn_w, btn_h)
+    btn_w, btn_h = _s(300), _s(50)
+    base_y = _startup_base_y()
+    title_h = get_font("title").get_height()
+    subtitle_h = get_font("medium").get_height()
+    btn_resume_y = base_y + _s(90) + subtitle_h + _s(50) + btn_h + _s(20)
+    return pygame.Rect(CX - btn_w // 2, btn_resume_y, btn_w, btn_h)
 
 
 # ── Selection screen ──────────────────────────────────────────────────────

@@ -38,15 +38,15 @@ From a white base item to a 6x T1 masterpiece with perfect rolls, every orb, eve
 
 ```mermaid
 graph LR
-    A[Base Item<br/>iLvl 82+] --> B[Magic<br/>Transmute + Augment]
-    B --> C[Regal<br/>Isolate T1 mod]
-    C --> D[Fracture<br/>Lock T1 forever]
-    D --> E[Clean<br/>Remove trash mods]
-    E --> F[Fill<br/>Essence + Exalt slots]
-    F --> G[Whittle<br/>Remove lowest tier]
-    G --> H[Divine<br/>Perfect roll all mods]
-    H --> I[Finalize<br/>Quality / Sockets / Runes]
-    I --> J[Sanctify<br/>6x T1 Mirror Complete]
+    A[Base Item<br>iLvl 82+] --> B[Magic<br>Transmute + Augment]
+    B --> C[Regal<br>Isolate T1 mod]
+    C --> D[Fracture<br>Lock T1 forever]
+    D --> E[Clean<br>Remove trash mods]
+    E --> F[Fill<br>Essence + Exalt slots]
+    F --> G[Whittle<br>Remove lowest tier]
+    G --> H[Divine<br>Perfect roll all mods]
+    H --> I[Finalize<br>Quality / Sockets / Runes]
+    I --> J[Sanctify<br>6x T1 Mirror Complete]
 
     style A fill:#1a1a2e,stroke:#b8780e,color:#f0e6d2
     style J fill:#1a1a2e,stroke:#f5c842,color:#f5c842
@@ -220,18 +220,18 @@ flowchart TB
     end
 
     subgraph Core
-        B --> C[renderer.py<br/>UI & Particles]
-        B --> D[phases/__init__.py<br/>Category Router]
-        B --> E[prices.py<br/>poe.ninja API]
-        B --> F[state_manager.py<br/>Save / Load]
-        B --> G[icon_loader.py<br/>Orb Icons]
+        B --> C[renderer.py<br>UI and Particles]
+        B --> D[phases/__init__.py<br>Category Router]
+        B --> E[prices.py<br>poe.ninja API]
+        B --> F[state_manager.py<br>Save / Load]
+        B --> G[icon_loader.py<br>Orb Icons]
     end
 
     subgraph Data
-        D --> H[base_phases.py<br/>10-Phase Builder]
-        D --> I[weapon_phases.py<br/>6 Weapons]
-        D --> J[armour_phases.py<br/>7 Armour Types]
-        D --> K[jewellery_phases.py<br/>3 Jewellery Types]
+        D --> H[base_phases.py<br>10-Phase Builder]
+        D --> I[weapon_phases.py<br>6 Weapons]
+        D --> J[armour_phases.py<br>7 Armour Types]
+        D --> K[jewellery_phases.py<br>3 Jewellery Types]
     end
 
     subgraph External

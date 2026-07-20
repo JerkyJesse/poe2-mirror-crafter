@@ -7,3 +7,5 @@ build/
 .vscode/
 .idea/
 *.code-workspace
+*.spec
+PoE2 Mirror Crafter.exe

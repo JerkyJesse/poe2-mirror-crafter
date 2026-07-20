@@ -7,7 +7,7 @@ from renderer import (
     init_fonts, draw_background, draw_selection_screen, draw_phase_list,
     draw_step_panel, draw_price_panel, draw_crafting_end_screen,
     draw_save_load_screen, spawn_particle,
-    draw_text, draw_rect,
+    draw_text, draw_rect, _s, get_font,
     TEXT_GOLD, TEXT_DIM, TEXT_WHITE, BORDER_GOLD, BORDER_GOLD_DIM,
     BG_PANEL, BG_HEADER, GREEN_GLOW,
 )
@@ -16,8 +16,8 @@ import random
 
 
 class CraftingApp:
-    def __init__(self):
-        self.screen = pygame.display.set_mode((WIDTH, HEIGHT), pygame.RESIZABLE)
+    def __init__(self, init_w=WIDTH, init_h=HEIGHT):
+        self.screen = pygame.display.set_mode((init_w, init_h), pygame.RESIZABLE)
         self.clock = pygame.time.Clock()
         self.running = True
         self.tick = 0
@@ -67,6 +67,13 @@ class CraftingApp:
 
         # Budget tracking
         self.total_estimated_cost = 0
+
+        # Mod search
+        self.mod_search_query = ""
+        self.mod_search_active = False
+        self.mod_search_rect = None
+        self._search_skip_slash = False
+        pygame.key.start_text_input()
 
         init_fonts()
         load_cached_icons()
@@ -302,18 +309,36 @@ class CraftingApp:
         self.crafting_complete = False
         self.total_estimated_cost = 0
 
+    def _back_one_step(self):
+        if self.current_step > 0:
+            self.current_step -= 1
+        elif self.current_phase > 0:
+            self.current_phase -= 1
+            phase_steps = self._current_phase_steps()
+            self.current_step = max(0, len(phase_steps) - 1)
+        else:
+            self._back_to_selection()
+
     def handle_event(self, event):
         if event.type == pygame.QUIT:
             self.running = False
             return
 
         if event.type == pygame.VIDEORESIZE:
-            from renderer import update_layout
+            from renderer import update_layout, init_fonts
             import renderer as _renderer
             update_layout(event.w, event.h)
+            init_fonts()
             self.screen = pygame.display.set_mode((event.w, event.h), pygame.RESIZABLE)
             globals()["WIDTH"] = _renderer.WIDTH
             globals()["HEIGHT"] = _renderer.HEIGHT
+            return
+
+        if self.mod_search_active and event.type == pygame.TEXTINPUT:
+            if self._search_skip_slash and event.text == "/":
+                self._search_skip_slash = False
+                return
+            self.mod_search_query += event.text
             return
 
         if self.mode == "startup":
@@ -431,6 +456,12 @@ class CraftingApp:
     def _handle_crafting_event(self, event):
         if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
             mx, my = event.pos
+            if self.mod_search_rect and self.mod_search_rect.collidepoint(mx, my):
+                self.mod_search_active = True
+                self.mod_search_query = ""
+                self._search_skip_slash = False
+                pygame.key.set_text_input_rect(self.mod_search_rect)
+                return
             # Reset button
             if self.reset_btn_rect and self.reset_btn_rect.collidepoint(mx, my):
                 self._reset()
@@ -443,7 +474,7 @@ class CraftingApp:
                 return
             # Back button
             if self.back_btn_rect and self.back_btn_rect.collidepoint(mx, my):
-                self._back_to_selection()
+                self._back_one_step()
                 return
             # Choice buttons
             for i, rect in enumerate(self.choice_btn_rects):
@@ -453,7 +484,31 @@ class CraftingApp:
 
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_ESCAPE:
-                self._reset()
+                if self.mod_search_active:
+                    self.mod_search_active = False
+                    self.mod_search_query = ""
+                    self._search_skip_slash = False
+                    pygame.key.set_text_input_rect(pygame.Rect(0, 0, 0, 0))
+                    return
+                else:
+                    self._reset()
+            elif event.key == pygame.K_SLASH:
+                self.mod_search_active = not self.mod_search_active
+                if self.mod_search_active:
+                    self.mod_search_query = ""
+                    self._search_skip_slash = True
+                    if self.mod_search_rect:
+                        pygame.key.set_text_input_rect(self.mod_search_rect)
+                else:
+                    self.mod_search_query = ""
+                    self._search_skip_slash = False
+                    pygame.key.set_text_input_rect(pygame.Rect(0, 0, 0, 0))
+                return
+            elif self.mod_search_active and event.key == pygame.K_BACKSPACE:
+                self.mod_search_query = self.mod_search_query[:-1]
+                return
+            elif self.mod_search_active:
+                return
             elif event.key == pygame.K_SPACE:
                 step = self._current_step_data()
                 if step and step["id"] not in self.completed_steps:
@@ -484,7 +539,7 @@ class CraftingApp:
             elif event.key == pygame.K_l:
                 self._open_save_load("load")
             elif event.key == pygame.K_b:
-                self._back_to_selection()
+                self._back_one_step()
             elif event.key == pygame.K_1: self._go_to_phase(0)
             elif event.key == pygame.K_2: self._go_to_phase(1)
             elif event.key == pygame.K_3: self._go_to_phase(2)
@@ -550,11 +605,16 @@ class CraftingApp:
                     self.confirm_btn_rect = hitboxes.get("confirm_btn")
                     self.back_btn_rect = hitboxes.get("back_btn")
                     self.choice_btn_rects = hitboxes.get("choice_btns", [])
-                    draw_price_panel(
+                    price_hitboxes = draw_price_panel(
                         self.screen, step, prices_available(),
                         running_total=self.total_estimated_cost,
                         category=self.selected_category,
+                        mod_search_query=self.mod_search_query,
+                        mod_search_active=self.mod_search_active,
+                        item_type=self.selected_subtype,
                     )
+                    if price_hitboxes:
+                        self.mod_search_rect = price_hitboxes.get("mod_search_rect")
                 else:
                     self.confirm_btn_rect = None
                     self.back_btn_rect = None
@@ -580,31 +640,46 @@ class CraftingApp:
 
     def _draw_startup_screen(self):
         self.screen.fill((8, 4, 2))
-        cx, cy = WIDTH // 2, HEIGHT // 2
+        cx = WIDTH // 2
 
-        # Title
-        draw_text(self.screen, "PoE2 Mirror Crafter", cx, cy - 140, TEXT_GOLD, "title", centered=True)
+        title_h = get_font("title").get_height()
+        subtitle_h = get_font("medium").get_height()
+        esc_h = get_font("tiny").get_height()
+        btn_h = _s(50)
 
-        # Subtitle
-        draw_text(self.screen, "Weapons  |  Armour  |  Jewellery", cx, cy - 50, TEXT_WHITE, "medium", centered=True)
+        title_to_sub_gap = _s(90)
+        sub_to_btn1_gap = _s(50)
+        btn1_to_btn2_gap = _s(20)
+        btn2_to_esc_gap = _s(80)
 
-        # New Craft button
-        btn_w, btn_h = 300, 50
-        new_btn = pygame.Rect(cx - btn_w // 2, cy, btn_w, btn_h)
+        total_h = (
+            title_h + title_to_sub_gap + subtitle_h + sub_to_btn1_gap
+            + btn_h + btn1_to_btn2_gap + btn_h + btn2_to_esc_gap + esc_h
+        )
+        base_y = HEIGHT // 2 - total_h // 2
+
+        draw_text(self.screen, "PoE2 Mirror Crafter", cx, base_y, TEXT_GOLD, "title", centered=True)
+
+        draw_text(self.screen, "Weapons  |  Armour  |  Jewellery",
+                  cx, base_y + title_to_sub_gap, TEXT_WHITE, "medium", centered=True)
+
+        btn_new_y = base_y + title_to_sub_gap + subtitle_h + sub_to_btn1_gap
+        btn_w = _s(300)
+        new_btn = pygame.Rect(cx - btn_w // 2, btn_new_y, btn_w, btn_h)
         draw_rect(self.screen, new_btn, (50, 20, 10), radius=6)
         draw_rect(self.screen, new_btn, BORDER_GOLD, border=2, radius=6)
-        draw_text(self.screen, "[N]  NEW CRAFT", cx, cy + 12, (220, 200, 120), "large", centered=True)
+        draw_text(self.screen, "[N]  NEW CRAFT", cx, btn_new_y + _s(12), (220, 200, 120), "large", centered=True)
 
-        # Resume button
-        resume_btn = pygame.Rect(cx - btn_w // 2, cy + 70, btn_w, btn_h)
+        btn_resume_y = btn_new_y + btn_h + btn1_to_btn2_gap
+        resume_btn = pygame.Rect(cx - btn_w // 2, btn_resume_y, btn_w, btn_h)
         draw_rect(self.screen, resume_btn, (20, 10, 40), radius=6)
         draw_rect(self.screen, resume_btn, BORDER_GOLD_DIM, border=2, radius=6)
-        draw_text(self.screen, "[L]  RESUME CRAFT", cx, cy + 82, TEXT_GOLD, "large", centered=True)
+        draw_text(self.screen, "[L]  RESUME CRAFT", cx, btn_resume_y + _s(12), TEXT_GOLD, "large", centered=True)
 
-        # Footer
-        draw_text(self.screen, "ESC to quit", cx, cy + 150, TEXT_DIM, "tiny", centered=True)
+        draw_text(self.screen, "ESC to quit", cx, btn_resume_y + btn_h + btn2_to_esc_gap, TEXT_DIM, "tiny", centered=True)
+        from main import __version__
+        draw_text(self.screen, f"v{__version__}", WIDTH - _s(12), HEIGHT - _s(12), TEXT_DIM, "tiny", centered=False)
 
-        # Store button hitboxes for click handling
         self.selection_hitboxes = {
             "category_panels": {},
             "subtype_items": {},
@@ -614,22 +689,29 @@ class CraftingApp:
         }
 
     def _draw_help_bar(self):
-        from renderer import WIDTH as win_w
-        y = max(22, HEIGHT - 22)
-        draw_rect(self.screen, (0, y, win_w, 22), BG_HEADER)
-        draw_rect(self.screen, (0, y, win_w, 22), BORDER_GOLD_DIM, border=1)
+        from renderer import WIDTH as win_w, _truncate_to_fit
+        bar_h = _s(22)
+        y = max(bar_h, HEIGHT - bar_h)
+        draw_rect(self.screen, (0, y, win_w, bar_h), BG_HEADER)
+        draw_rect(self.screen, (0, y, win_w, bar_h), BORDER_GOLD_DIM, border=1)
         help_text = (
             "[SPACE] Confirm | [Enter] Next | [Tab] Skip Phase | "
-            "[1-0] Phase | [S] Save | [L] Load | [B] Back | [Esc] Reset"
+            "[1-0] Phase | [/] Search Mods | [S] Save | [L] Load | [B] Back | [Esc] Reset"
         )
-        draw_text(self.screen, help_text, 8, y + 4, TEXT_DIM, "tiny")
+        tiny_f = get_font("tiny")
+        max_w = win_w - _s(16)
+        if tiny_f.size(help_text)[0] >= max_w:
+            help_text = _truncate_to_fit(help_text, tiny_f, max_w)
+        draw_text(self.screen, help_text, _s(8), y + _s(4), TEXT_DIM, "tiny")
 
     def _draw_message(self):
         alpha = min(255, self.message_timer * 2)
-        s = pygame.Surface((WIDTH, 30), pygame.SRCALPHA)
+        msg_h = _s(30)
+        s = pygame.Surface((WIDTH, msg_h), pygame.SRCALPHA)
         s.fill((8, 4, 4, min(200, alpha)))
-        self.screen.blit(s, (0, HEIGHT - 52))
+        msg_y = HEIGHT - _s(56)
+        self.screen.blit(s, (0, msg_y))
         draw_text(
-            self.screen, self.message, WIDTH // 2, HEIGHT - 48,
+            self.screen, self.message, WIDTH // 2, msg_y + _s(4),
             (220, 50, min(255, alpha)), "small", centered=True,
         )

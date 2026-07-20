@@ -63,12 +63,6 @@ _JEWELLERY_ALTERNATIVES = {
             "description": "Preview sanctify outcome. If bad, modify item to change seed. Lock consumed regardless.",
         },
         {
-            "label": "YOLO Sanctify",
-            "cost": "~1 div per Divine Orb",
-            "risk": "medium",
-            "description": "13% success rate. No preview. ~7-8 attempts expected on average.",
-        },
-        {
             "label": "Use Omen of Sanctification (Guaranteed)",
             "cost": "~1.4 div (1 Divine + ~0.4 Omen)",
             "risk": "very low",
