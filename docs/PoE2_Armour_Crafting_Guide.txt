@@ -1,0 +1,1750 @@
+================================================================================
+           PATH OF EXILE 2 — UNIVERSAL ARMOUR CRAFTING GUIDE
+                    6x T1 Modifier Mirror-Tier Armour
+================================================================================
+
+This guide covers crafting rare armour pieces with all Tier 1 modifiers
+across every armour slot: Body Armour, Helmet, Gloves, Boots, and Shields.
+All strategies use Perfect-tier currency orbs for maximizing T1 outcomes.
+No essence-based strategies.
+
+Last updated: 2026-07-19
+Data sourced from: poe2db.tw
+
+================================================================================
+TABLE OF CONTENTS
+================================================================================
+
+  1. KEY DIFFERENCES — Armour vs Weapons
+  2. CURRENCY REFERENCE
+  3. OMEN REFERENCE
+  4. DESECRATION REFERENCE
+  5. REFORGING BENCH
+  6. MODIFIER MECHANICS (Prefixes vs Suffixes, ilvl, Tiers, Slot Pools)
+  7. S-TIER MOD LISTS (Per Slot Priority Rankings)
+  8. THE CRAFTING PROCESS
+     8.1  Phase 1: Acquire and Prepare the Base
+     8.2  Phase 2: Magic Stage — Perfect Transmutation & Augmentation
+     8.3  Phase 3: Regal to Rare & Isolate a T1 Mod
+     8.4  Phase 4: Fracture
+     8.5  Phase 5: Clean Up and Regal
+     8.6  Phase 6: Fill Remaining Slots with Perfect Exalts
+     8.7  Phase 7: Whittling — Replace Non-T1 Mods
+     8.8  Phase 8: Divine for Perfect Rolls
+     8.9  Phase 9: Finalize (Sockets, Runes, Quality)
+  9. QUICK-REFERENCE FLOWCHART
+ 10. COST ESTIMATION (Armour-Specific)
+ 11. ALTERNATIVE ROUTES
+     11.1 Desecration Crafting
+     11.2 Fracture-Skip Route
+     11.3 Alchemy YOLO
+ 12. COMMON MISTAKES
+ 13. GLOSSARY
+
+================================================================================
+1. KEY DIFFERENCES — ARMOUR VS WEAPONS
+================================================================================
+
+  PoE2 crafting mechanics are universal, but armour slots differ from
+  weapons in several critical ways. Understand these before you start.
+
+  ┌─────────────────────────────────────────────────────────────────┐
+  │ DIFFERENCE          │ WEAPONS              │ ARMOUR              │
+  ├─────────────────────────────────────────────────────────────────┤
+  │ Quality Currency    │ Blacksmith's         │ Armourer's Scrap    │
+  │                     │ Whetstone (×20)      │ (×20)               │
+  ├─────────────────────────────────────────────────────────────────┤
+  │ +Level to Gems      │ Universal prefix on  │ Helmets ONLY can    │
+  │                     │ all weapons          │ roll +Level of      │
+  │                     │                      │ Socketed Gems       │
+  ├─────────────────────────────────────────────────────────────────┤
+  │ Vaal Infusers       │ Can overcap quality  │ NOT available for   │
+  │                     │ past 20%             │ armour pieces       │
+  ├─────────────────────────────────────────────────────────────────┤
+  │ Socket Count        │ 1-2 sockets          │ Body: 2-3 sockets   │
+  │                     │                      │ Others: 1-2 sockets │
+  ├─────────────────────────────────────────────────────────────────┤
+  │ Movement Speed      │ N/A                  │ Boots ONLY slot     │
+  │                     │                      │ that can roll it    │
+  ├─────────────────────────────────────────────────────────────────┤
+  │ Flat Added Damage   │ Universal             │ Gloves ONLY        │
+  │ to Attacks          │                      │                     │
+  ├─────────────────────────────────────────────────────────────────┤
+  │ Block Chance        │ N/A                  │ Shields ONLY        │
+  ├─────────────────────────────────────────────────────────────────┤
+  │ Desecration Bone    │ Jawbone              │ Rib                 │
+  └─────────────────────────────────────────────────────────────────┘
+
+  Most importantly: armour crafting has NO +Level to Gems modifier
+  outside of helmets. This removes the single most expensive and rarest
+  modifier from the pool for Body Armour, Gloves, Boots, and Shields.
+  The overall RNG surface is somewhat smaller, but the Whittling phase
+  remains the dominant cost driver.
+
+  NOTE: "Armour" in this guide refers to the item slot category
+  (helmets, gloves, boots, body armour, shields), not the Armour
+  defensive stat. Where we mean the stat, we say "%Defence" or the
+  specific defence type (Armour/Evasion/Energy Shield).
+
+================================================================================
+2. CURRENCY REFERENCE
+================================================================================
+
+2.1 — RARITY UPGRADE CURRENCY
+
+  Currency              Effect
+  ────────────────────  ──────────────────────────────────────────────
+  Orb of Transmutation  Normal → Magic (+1 random affix)
+  Greater Transmutation Normal → Magic (+1 affix, higher tier bias)
+  Perfect Transmutation Normal → Magic (+1 affix, highest tier bias)
+
+  Orb of Augmentation   Magic: adds 1 random affix (max 2)
+  Greater Augmentation  Magic: adds 1 affix, higher tier bias
+  Perfect Augmentation  Magic: adds 1 affix, highest tier bias
+
+  Regal Orb             Magic → Rare (+1 random affix)
+  Greater Regal Orb     Magic → Rare (+1 affix, higher tier bias)
+  Perfect Regal Orb     Magic → Rare (+1 affix, highest tier bias)
+
+  Orb of Alchemy        Normal → Rare (4 random affixes) [no variants]
+
+  Orb of Chance         Normal → Unique OR destroys the item
+
+2.2 — RARE ITEM MODIFICATION CURRENCY
+
+  Currency              Effect                       Min Mod Lvl
+  ────────────────────  ───────────────────────────  ──────────
+  Exalted Orb           Add 1 random mod to rare            1
+  Greater Exalted Orb   Add 1 mod, higher tier bias        35
+  Perfect Exalted Orb   Add 1 mod, highest tier bias       50
+
+  Chaos Orb             Remove 1 mod, add 1 mod             1
+  Greater Chaos Orb     Remove 1, add 1, higher tier       35
+  Perfect Chaos Orb     Remove 1, add 1, highest tier      50
+
+  Orb of Annulment      Remove 1 random mod                —
+  Divine Orb            Reroll numeric values in tier      —
+  Fracturing Orb        Lock 1 random mod (needs 4+ mods)  —
+
+  Vaal Orb              Corrupts item, unpredictable       —
+
+2.3 — ARMOUR-SPECIFIC CURRENCY
+
+  Currency              Effect
+  ────────────────────  ──────────────────────────────────────────────
+  Armourer's Scrap      Improves quality of armour piece by +1%
+                        20% maximum. Use ×20 per piece.
+  Artificer's Orb       Adds a rune socket to the armour piece.
+                        Body Armour caps at 2-3 sockets.
+                        Helmet/Gloves/Boots/Shield cap at 1-2.
+
+  CRITICAL: Do NOT use Blacksmith's Whetstones on armour. They only
+  work on weapons. Armourer's Scrap is the armour equivalent.
+
+  IMPORTANT: Min Mod Level = the lowest ilvl an added mod can roll at.
+  Perfect orbs at min mod level 50 effectively filter out most low-tier
+  mods, dramatically increasing T1 probability.
+
+2.4 — ECONOMY DATA (approximate, live poe2db.tw market)
+
+  Currency               ~Divine Value   ~Chaos Value
+  ────────────────────   ─────────────   ────────────
+  Divine Orb              1.00             —
+  Perfect Chaos Orb        5.18             —
+  Perfect Exalted Orb      2.83             —
+  Greater Chaos Orb        0.38            14
+  Greater Exalted Orb      0.016           3
+  Chaos Orb                0.14            1
+  Exalted Orb              0.003           0.11
+  Orb of Annulment         0.66            25
+  Fracturing Orb          10.1             390
+  Orb of Alchemy           0.002           0.09
+
+  Perfect Chaos Orb       ≈ 38 regular Chaos Orbs
+  Perfect Exalted Orb     ≈ 967 regular Exalted Orbs
+
+================================================================================
+3. OMEN REFERENCE
+================================================================================
+
+  Omens are consumable items that modify the behavior of the NEXT
+  currency used on an item. They are consumed automatically.
+
+  Only ONE omen can be active at a time for a given action type.
+  Found in Ritual encounters and trade.
+
+3.1 — EXALTED ORB OMENS
+
+  Omen                          Effect
+  ────────────────────────────  ─────────────────────────────────────
+  Omen of Sinistral Exaltation  Next Exalted adds PREFIX only
+  Omen of Dextral Exaltation    Next Exalted adds SUFFIX only
+  Omen of Greater Exaltation    Next Exalted adds 2 AFFIXES at once
+  Omen of Homogenising          Next Exalted adds same type (prefix/
+  Exaltation                    suffix) as one already on the item
+
+3.2 — CHAOS ORB OMENS
+
+  Omen                          Effect
+  ────────────────────────────  ─────────────────────────────────────
+  Omen of Whittling             Next Chaos removes LOWEST ILVL affix
+  Omen of Sinistral Erasure     Next Chaos removes PREFIX only
+  Omen of Dextral Erasure       Next Chaos removes SUFFIX only
+
+3.3 — ANNULMENT OMENS
+
+  Omen                          Effect
+  ────────────────────────────  ─────────────────────────────────────
+  Omen of Sinistral Annulment   Next Annul removes PREFIX only
+  Omen of Dextral Annulment     Next Annul removes SUFFIX only
+  Omen of Greater Annulment     Next Annul removes 2 AFFIXES
+
+3.4 — REGAL ORB OMENS
+
+  Omen                          Effect
+  ────────────────────────────  ─────────────────────────────────────
+  Omen of Sinistral Coronation  Next Regal adds PREFIX only
+  Omen of Dextral Coronation    Next Regal adds SUFFIX only
+  Omen of Homogenising          Next Regal adds same type as existing
+  Coronation                    affix on the item
+
+3.5 — ALCHEMY OMENS
+
+  Omen                          Effect
+  ────────────────────────────  ─────────────────────────────────────
+  Omen of Sinistral Alchemy     Next Alchemy: max prefixes
+  Omen of Dextral Alchemy       Next Alchemy: max suffixes
+
+3.6 — CHANCE ORB OMENS
+
+  Omen                          Effect
+  ────────────────────────────  ─────────────────────────────────────
+  Omen of the Ancients          Next Chance: upgrades to random Unique
+                                of same base type
+  Omen of Chance                Next Chance: does not destroy the item
+
+3.7 — DESECRATION OMENS
+
+  Omen                          Effect
+  ────────────────────────────  ─────────────────────────────────────
+  Omen of Abyssal Echoes        Next Desecration: grants 1 reroll
+  Omen of Sinistral Necromancy  Next Desecration: suffix only
+  Omen of Dextral Necromancy    Next Desecration: prefix only
+  Omen of Putrefaction          Next Desecration: replaces ALL affixes
+                                with 6 desecrated mods, CORRUPTS item
+  Omen of the Blackblooded      Next Desecration: Kurgal affix (weapons
+                                and jewellery)
+  Omen of the Liege             Next Desecration: Amanamu affix (weapons
+                                and jewellery)
+  Omen of the Sovereign         Next Desecration: Ulaman affix (weapons
+                                and jewellery)
+  Omen of Light                 Next Annulment removes Desecrated mods
+                                only
+  Omen of Sinistral             Next Perfect/Corrupted Essence removes
+  Crystallisation               a PREFIX
+  Omen of Dextral               Next Perfect/Corrupted Essence removes
+  Crystallisation               a SUFFIX
+
+  NOTE: Blackblooded, Liege, and Sovereign omens work on weapons and
+  jewellery only — they do NOT apply to armour desecration. Armour
+  desecration uses a different abyssal mod pool.
+
+3.8 — APPROXIMATE OMEN PRICES
+
+  Omen                                ~Divine Value
+  ────────────────────────────────    ────────────
+  Omen of Whittling                    ~15
+  Omen of Sinistral Annulment          ~14
+  Omen of Dextral Annulment            ~14
+  Omen of Sinistral Erasure            ~10
+  Omen of Dextral Erasure              ~10
+  Omen of Sinistral Exaltation         ~6
+  Omen of Dextral Exaltation           ~6
+  Omen of Greater Exaltation           ~1
+  Omen of Abyssal Echoes               ~20
+  Omen of Greater Annulment            ~5
+
+================================================================================
+4. DESECRATION REFERENCE
+================================================================================
+
+  Desecration is an alternative crafting system using Abyss bone
+  currency. It replaces or adds desecrated modifiers to items.
+
+4.1 — DESECRATION CURRENCY
+
+  Currency               Target Item Type         Effect
+  ────────────────────   ───────────────────────  ───────────────────
+  Ancient Collarbone     Rare Necklace/Ring/Belt  Applies Desecration
+  Preserved Collarbone   Rare Necklace/Ring/Belt  Applies Desecration
+  Gnawed Collarbone      Rare Necklace/Ring/Belt  Applies Desecration
+
+  Ancient Jawbone        Rare Weapon/Quiver       Applies Desecration
+  Preserved Jawbone      Rare Weapon/Quiver       Applies Desecration
+  Gnawed Jawbone         Rare Weapon/Quiver       Applies Desecration
+
+  Ancient Rib            Rare Armour              Applies Desecration
+  Preserved Rib          Rare Armour              Applies Desecration
+  Gnawed Rib             Rare Armour              Applies Desecration
+
+  Preserved Cranium      Rare Jewel               Applies Desecration
+
+  For armour crafting via desecration, you will only ever use Rib
+  currency. The Desecration Omen system applies identically — use
+  Sinistral/Dextral Necromancy to target prefix or suffix, Abyssal
+  Echoes for a reroll, and Omen of Light to safely annul desecrated
+  mods if you make a mistake.
+
+  WARNING: Blackblooded, Liege, and Sovereign omens target Kurgal/
+  Amanamu/Ulaman abyssal affix families which are weapon- and jewellery-
+  specific. These do NOT function with armour Rib desecration. Armour
+  desecration draws from a different pool of abyssal modifiers.
+
+4.2 — DESECRATION AFFIX TYPES
+
+  For armour Rib desecration, the available modifier pool includes
+  generic abyssal armour affixes (not the named abyss lord families).
+
+  IMPORTANT: Desecration is an advanced niche route. General mirror-tier
+  armour crafting should use the standard (non-desecration) process
+  described in Section 8.
+
+================================================================================
+5. REFORGING BENCH
+================================================================================
+
+  The Reforging Bench allows you to sacrifice 3 rare items of the same
+  base type to create 1 new rare item of that base type with random
+  modifiers.
+
+  This is the primary way to recycle failed crafts. It is NOT a
+  deterministic crafting method — the result is entirely random.
+
+  Usage: 3x failed Rare Armour bases → 1x new Rare item of same base
+
+  Example: 3x failed Rare Praetor Crowns → 1x new Rare Praetor Crown
+
+================================================================================
+6. MODIFIER MECHANICS
+================================================================================
+
+6.1 — PREFIXES VS SUFFIXES
+
+  A rare item can have a maximum of:
+    - 3 Prefixes
+    - 3 Suffixes
+    - 6 Total affixes
+
+  You can see which mods are prefixes/suffixes by holding ALT while
+  hovering the item in-game.
+
+6.2 — ITEM LEVEL (ilvl)
+
+  The item level determines which tiers of modifiers can roll on an
+  item. Higher ilvl = access to higher tiers.
+
+  Key ilvl thresholds (approximate, varies by mod):
+    ilvl 1-20   : Lowest tiers only
+    ilvl 21-40  : Mid tiers unlock
+    ilvl 41-60  : High tiers unlock
+    ilvl 61-75  : T2-T1 tiers unlock
+    ilvl 76-81  : Most T1 mods available
+    ilvl 82-84+ : ALL T1 mods available
+
+  RECOMMENDATION: Always start with ilvl 82+ for mirror-tier crafts.
+  ilvl 84+ is ideal if you can afford the base. Body armour and shields
+  benefit especially from ilvl 84+ due to high-ilvl defence prefixes.
+
+6.3 — MODIFIER TIERS
+
+  Each modifier has multiple tiers (T1 = highest). The game rolls a
+  random tier within the available range for the item's ilvl.
+
+  Perfect orbs have a minimum mod level of 50, meaning they CANNOT
+  roll mods that require ilvl <50. This filters out the worst tiers
+  but does not guarantee T1 — it only removes the bottom ~half of
+  possible tiers from the pool.
+
+6.4 — ARMOUR-SPECIFIC MOD POOLS BY SLOT
+
+  Unlike weapons, armour mod pools vary DRAMATICALLY between slots.
+  Each slot has unique mods unavailable on other slots. Know your
+  slot before you start.
+
+  ┌──────────────────────────────────────────────────────────────────┐
+  │ BODY ARMOUR                                                      │
+  ├──────────────────────────────────────────────────────────────────┤
+  │ PREFIXES:                                                        │
+  │   • % Increased Armour/Evasion/Energy Shield (defence type)      │
+  │   • + to Maximum Life                                           │
+  │   • + to Maximum Energy Shield                                   │
+  │   • Hybrid: % Increased Defence + Maximum Life                   │
+  │   • Hybrid: % Increased Defence + Stun Threshold                │
+  │   • % Increased Armour and Evasion (dual-defence bases)         │
+  │   • % Increased Armour and Energy Shield (dual-defence bases)   │
+  │   • % Increased Evasion and Energy Shield (dual-defence bases)  │
+  ├──────────────────────────────────────────────────────────────────┤
+  │ SUFFIXES:                                                        │
+  │   • +% to Fire Resistance                                       │
+  │   • +% to Cold Resistance                                       │
+  │   • +% to Lightning Resistance                                  │
+  │   • +% to Chaos Resistance                                      │
+  │   • + to Strength / Dexterity / Intelligence                    │
+  │   • #% reduced Attribute Requirements                           │
+  │   • #% increased Life Recovery Rate                             │
+  │   • Thorns damage (reflects # physical damage to attackers)     │
+  └──────────────────────────────────────────────────────────────────┘
+
+  ┌──────────────────────────────────────────────────────────────────┐
+  │ HELMET                                                           │
+  ├──────────────────────────────────────────────────────────────────┤
+  │ PREFIXES:                                                        │
+  │   • +X to Level of all Socketed Skill Gems (RARE — this is the   │
+  │     ONLY armour slot with a +gem level modifier)                 │
+  │   • % Increased Defence (Armour/Evasion/ES)                      │
+  │   • + to Maximum Life                                           │
+  │   • + to Maximum Energy Shield                                   │
+  │   • Hybrid: % Increased Defence + Maximum Life                   │
+  ├──────────────────────────────────────────────────────────────────┤
+  │ SUFFIXES:                                                        │
+  │   • +% to Fire/Cold/Lightning/Chaos Resistance                   │
+  │   • + to Strength / Dexterity / Intelligence                     │
+  │   • #% increased Rarity of Items found                           │
+  │   • #% increased Mana Regeneration Rate                          │
+  │   • #% increased Critical Hit Chance (global)                    │
+  │   • #% increased Light Radius                                   │
+  └──────────────────────────────────────────────────────────────────┘
+
+  ┌──────────────────────────────────────────────────────────────────┐
+  │ GLOVES                                                           │
+  ├──────────────────────────────────────────────────────────────────┤
+  │ PREFIXES:                                                        │
+  │   • % Increased Defence (Armour/Evasion/ES)                      │
+  │   • + to Maximum Life                                           │
+  │   • + to Maximum Energy Shield                                   │
+  │   • Adds # to # Physical Damage to Attacks (flat added phys)    │
+  │   • Adds # to # Fire Damage to Attacks                          │
+  │   • Adds # to # Cold Damage to Attacks                          │
+  │   • Adds # to # Lightning Damage to Attacks                     │
+  │   • Adds # to # Chaos Damage to Attacks                         │
+  ├──────────────────────────────────────────────────────────────────┤
+  │ SUFFIXES:                                                        │
+  │   • #% increased Attack Speed (global)                           │
+  │   • +% to Fire/Cold/Lightning/Chaos Resistance                   │
+  │   • + to Strength / Dexterity / Intelligence                     │
+  │   • +# to Melee Strike Range                                     │
+  │   • #% increased Rarity of Items found                           │
+  └──────────────────────────────────────────────────────────────────┘
+
+  ┌──────────────────────────────────────────────────────────────────┐
+  │ BOOTS                                                            │
+  ├──────────────────────────────────────────────────────────────────┤
+  │ PREFIXES:                                                        │
+  │   • % Increased Defence (Armour/Evasion/ES)                      │
+  │   • + to Maximum Life                                           │
+  │   • + to Maximum Energy Shield                                   │
+  │   • Hybrid: % Increased Defence + Maximum Life                   │
+  ├──────────────────────────────────────────────────────────────────┤
+  │ SUFFIXES:                                                        │
+  │   • #% increased Movement Speed (BOOTS ONLY — CRITICAL)          │
+  │   • +% to Fire/Cold/Lightning/Chaos Resistance                   │
+  │   • + to Strength / Dexterity / Intelligence                     │
+  │   • #% increased Rarity of Items found                           │
+  │   • #% chance to gain Onslaught on Kill                          │
+  └──────────────────────────────────────────────────────────────────┘
+
+  ┌──────────────────────────────────────────────────────────────────┐
+  │ SHIELD                                                           │
+  ├──────────────────────────────────────────────────────────────────┤
+  │ PREFIXES:                                                        │
+  │   • % Increased Defence (Armour/Evasion/ES)                      │
+  │   • + to Maximum Life                                           │
+  │   • + to Maximum Energy Shield                                   │
+  │   • Hybrid: % Increased Defence + Maximum Life                   │
+  ├──────────────────────────────────────────────────────────────────┤
+  │ SUFFIXES:                                                        │
+  │   • #% increased Block Chance (SHIELD ONLY)                      │
+  │   • #% increased Spell Block Chance (SHIELD ONLY)                │
+  │   • +% to Fire/Cold/Lightning/Chaos Resistance                   │
+  │   • + to Strength / Dexterity / Intelligence                     │
+  │   • #% increased Block Recovery                                  │
+  │   • Thorns damage (reflects # physical damage to attackers)     │
+  └──────────────────────────────────────────────────────────────────┘
+
+6.5 — CHECKING MOD POOLS
+
+  Go to https://poe2db.tw/us/ and navigate to your armour type:
+    - Body Armour
+    - Helmets
+    - Gloves
+    - Boots
+    - Shields
+
+  Each page has a "Modifiers Calc" section showing the available
+  prefixes and suffixes for that specific armour slot. Always verify
+  the current mod pool before starting a craft — PoE2 is updated
+  regularly and mod pools can shift.
+
+================================================================================
+7. S-TIER MOD LISTS
+================================================================================
+
+  These are the priority rankings for each armour slot. "S-Tier" means
+  you should KEEP the item at the magic stage if you hit these mods.
+  Everything else is TRASH — throw away the base and start over.
+
+  NOTE: Unlike weapons, there is NO universal "+Level to Gems" prefix
+  across all armour slots. Helmets are the sole exception.
+
+7.1 — BODY ARMOUR S-TIER PRIORITY
+
+  ┌──────────────────────────────────────────────────────────────────┐
+  │ PRIORITY │ MOD TYPE           │ TIER TO KEEP                     │
+  ├──────────────────────────────────────────────────────────────────┤
+  │ 1 (HIGH) │ % Increased Defence│ T1-T2 (%Defence is the highest   │
+  │          │                    │ value prefix on body armour)     │
+  │          │                    │                                  │
+  │ 2        │ + to Maximum Life  │ T1-T2 (life is always valuable)  │
+  │          │                    │                                  │
+  │ 3        │ + to Maximum ES    │ T1-T2 (for ES builds)            │
+  │          │                    │                                  │
+  │ 4        │ Hybrid %Def+Life   │ T1-T2 (flex option)              │
+  │          │                    │                                  │
+  │ 5        │ +% Chaos Res       │ T1-T2 (rarest resist, highest    │
+  │          │                    │ value suffix)                    │
+  │          │                    │                                  │
+  │ 6        │ +% Ele Resists     │ T1-T2 (Fire/Cold/Lightning)      │
+  │          │                    │                                  │
+  │ 7        │ +Attributes        │ T1 only, AND only if your build  │
+  │          │ (Str/Dex/Int)      │ needs that specific stat         │
+  │          │                    │                                  │
+  │ TRASH    │ Stun Threshold     │ Never keep unless niche build    │
+  │          │ Reduced Attr Reqs  │ Never keep (crafted item assumes │
+  │          │                    │ you already meet requirements)   │
+  │          │ Thorns             │ Never keep (reflect is niche)    │
+  │          │ Light Radius       │ Never keep (dead mod)            │
+  │          │ Life Recovery Rate │ Never keep (too low value)       │
+  └──────────────────────────────────────────────────────────────────┘
+
+7.2 — HELMET S-TIER PRIORITY
+
+  ┌──────────────────────────────────────────────────────────────────┐
+  │ PRIORITY │ MOD TYPE           │ TIER TO KEEP                     │
+  ├──────────────────────────────────────────────────────────────────┤
+  │ 1 (HIGH) │ +Level of Socketed │ ANY tier (T3+ is acceptable at   │
+  │          │ Skill Gems         │ magic stage — this mod is so     │
+  │          │                    │ rare it's always worth keeping)  │
+  │          │                    │                                  │
+  │ 2        │ % Increased Defence│ T1-T2                            │
+  │          │                    │                                  │
+  │ 3        │ + to Maximum Life  │ T1-T2                            │
+  │          │                    │                                  │
+  │ 4        │ + to Maximum ES    │ T1-T2                            │
+  │          │                    │                                  │
+  │ 5        │ +% Chaos Res       │ T1-T2                            │
+  │          │                    │                                  │
+  │ 6        │ +% Ele Resists     │ T1-T2                            │
+  │          │                    │                                  │
+  │ 7        │ +% Crit Chance     │ T1-T2 (if crit build)            │
+  │          │                    │                                  │
+  │ 8        │ +% Rarity          │ T1 (if MF build)                 │
+  │          │                    │                                  │
+  │ TRASH    │ Light Radius       │ Never keep                       │
+  │          │ % Mana Regen       │ Never keep (too low value)       │
+  └──────────────────────────────────────────────────────────────────┘
+
+  HELMET WARNING: +Level of Socketed Gems is the rarest armour mod
+  in the entire game. If you hit it at the magic stage, KEEP THE ITEM
+  even if the tier is T4-T5. You can Whittling-upgrade it later. Do
+  NOT throw away a helmet with +gem levels at the Transmutation step.
+
+7.3 — BOOTS S-TIER PRIORITY
+
+  ┌──────────────────────────────────────────────────────────────────┐
+  │ PRIORITY │ MOD TYPE           │ TIER TO KEEP                     │
+  ├──────────────────────────────────────────────────────────────────┤
+  │ 1 (HIGH) │ % Movement Speed   │ ANY TIER (MANDATORY — boots      │
+  │          │                    │ without MS are BRICKED)          │
+  │          │                    │                                  │
+  │ 2        │ +% Chaos Res       │ T1-T2                            │
+  │          │                    │                                  │
+  │ 3        │ +% Ele Resists     │ T1-T2                            │
+  │          │                    │                                  │
+  │ 4        │ + to Maximum Life  │ T1-T2                            │
+  │          │                    │                                  │
+  │ 5        │ % Increased Defence│ T1-T2                            │
+  │          │                    │                                  │
+  │ 6        │ + to Maximum ES    │ T1-T2 (if ES build)              │
+  │          │                    │                                  │
+  │ 7        │ Onslaught on Kill  │ T1 (niche, strong for clear)     │
+  │          │                    │                                  │
+  │ TRASH    │ +Attributes        │ Never keep at magic stage        │
+  │          │ +% Rarity          │ Never keep at magic stage        │
+  │          │ (unless you        │                                  │
+  │          │ already have MS)   │                                  │
+  └──────────────────────────────────────────────────────────────────┘
+
+  BOOTS RULE: Movement Speed is NOT optional. A pair of mirror-tier
+  boots without Movement Speed is worthless. If your magic-stage boots
+  have two amazing T1-T2 mods but NEITHER is Movement Speed, you
+  TRASH them. MS is the first thing you look for on boots. Period.
+
+7.4 — GLOVES S-TIER PRIORITY
+
+  ┌──────────────────────────────────────────────────────────────────┐
+  │ PRIORITY │ MOD TYPE           │ TIER TO KEEP                     │
+  ├──────────────────────────────────────────────────────────────────┤
+  │ 1 (HIGH) │ Adds # to # Phys   │ T1-T2 (flat phys is the most     │
+  │          │ Damage to Attacks  │ valuable gloves prefix for       │
+  │          │                    │ attack builds)                   │
+  │          │                    │                                  │
+  │ 2        │ Adds # to # Ele    │ T1-T2 (match your build's        │
+  │          │ Damage to Attacks  │ element)                         │
+  │          │                    │                                  │
+  │ 3        │ % Attack Speed     │ T1-T2 (global attack speed,      │
+  │          │                    │ second most valuable mod)        │
+  │          │                    │                                  │
+  │ 4        │ + to Maximum Life  │ T1-T2                            │
+  │          │                    │                                  │
+  │ 5        │ % Increased Defence│ T1-T2                            │
+  │          │                    │                                  │
+  │ 6        │ +% Chaos Res       │ T1-T2                            │
+  │          │                    │                                  │
+  │ 7        │ +% Ele Resists     │ T1-T2                            │
+  │          │                    │                                  │
+  │ TRASH    │ +Melee Strike Range│ Never keep at magic stage        │
+  │          │ +Attributes        │ Never keep unless you already    │
+  │          │                    │ have flat added damage + AS      │
+  │          │ +% Rarity          │ Never keep at magic stage        │
+  └──────────────────────────────────────────────────────────────────┘
+
+  GLOVES NOTE: For caster builds, ignore priority 1-3 (attack mods)
+  and focus on %Defence, +Life/+ES, and resists instead. The mod pool
+  is build-dependent. Know your build before deciding what's S-tier.
+
+7.5 — SHIELD S-TIER PRIORITY
+
+  ┌──────────────────────────────────────────────────────────────────┐
+  │ PRIORITY │ MOD TYPE           │ TIER TO KEEP                     │
+  ├──────────────────────────────────────────────────────────────────┤
+  │ 1 (HIGH) │ % Block Chance     │ T1-T2 (this is THE shield mod —  │
+  │          │                    │ if you don't have it, the shield  │
+  │          │                    │ isn't worth mirroring)           │
+  │          │                    │                                  │
+  │ 2        │ % Spell Block      │ T1-T2 (second most valuable      │
+  │          │ Chance             │ shield mod)                      │
+  │          │                    │                                  │
+  │ 3        │ % Increased Defence│ T1-T2                            │
+  │          │                    │                                  │
+  │ 4        │ + to Maximum Life  │ T1-T2                            │
+  │          │                    │                                  │
+  │ 5        │ + to Maximum ES    │ T1-T2 (if ES build)              │
+  │          │                    │                                  │
+  │ 6        │ +% Chaos Res       │ T1-T2                            │
+  │          │                    │                                  │
+  │ 7        │ +% Ele Resists     │ T1-T2                            │
+  │          │                    │                                  │
+  │ TRASH    │ Block Recovery     │ Never keep at magic stage        │
+  │          │ +Attributes        │ Never keep unless you already    │
+  │          │                    │ have Block Chance                │
+  │          │ Thorns             │ Never keep                       │
+  └──────────────────────────────────────────────────────────────────┘
+
+================================================================================
+8. THE CRAFTING PROCESS
+================================================================================
+
+  This is the main method. It assumes you are targeting a 6x T1 rare
+  armour piece and have an effectively unlimited budget. Adjust for
+  lower budgets by accepting T2-T3 mods at the Whittling stage.
+
+  The process is structurally identical to weapon crafting. Refer to
+  the differences noted in this section for armour-specific decisions.
+
+================================================================================
+8.1 — PHASE 1: ACQUIRE AND PREPARE THE BASE
+================================================================================
+
+  Step 1: Choose the right base type
+  ────────────────────────────────────
+    Pick the base with the best implicit for your build:
+      - Highest base defence values (%Armour, %Evasion, %ES)
+      - Best implicit mod (resistances, attributes, block, etc.)
+      - Correct attribute requirements
+      - Correct defence archetype (pure armour, pure evasion, pure ES,
+        armour/evasion hybrid, armour/ES hybrid, evasion/ES hybrid)
+
+    Example body armour bases:
+      - Astral Plate (high armour, STR req): top-tier armour body
+      - Vaal Regalia (high ES, INT req): top-tier ES body
+      - Zodiac Leather (evasion, DEX req): top-tier evasion body
+      - Assassin's Garb (evasion/ES hybrid): popular hybrid base
+      - Triumphant Lamellar (armour/evasion hybrid): popular hybrid
+
+    Check poe2db.tw for all base variants of your armour type.
+    Base type matters — the implicit cannot be changed.
+
+  Step 2: Check item level
+  ─────────────────────────
+    Hold ALT while hovering the item. The ilvl is displayed at the
+    bottom. You need ilvl 82+. ilvl 84+ is ideal.
+
+    Buy from trade if needed. High ilvl bases drop from:
+      - Tier 15+ Waystones
+      - Breachstones
+      - Simulacrum
+      - Pinnacle bosses
+      - Ritual encounters
+
+  Step 3: Apply quality
+  ──────────────────────
+    Use Armourer's Scraps (up to 20 times) to reach 20% quality.
+    This improves the base defence values of the armour piece.
+
+    CRITICAL: Do NOT use Blacksmith's Whetstones on armour. They
+    are weapon-only currency. Using a Whetstone on armour does
+    nothing and destroys the currency.
+
+    Unlike weapons, armour CANNOT overcap quality past 20% — there
+    are no Vaal Infusers for armour pieces.
+
+================================================================================
+8.2 — PHASE 2: MAGIC STAGE — PERFECT TRANSMUTATION & AUGMENTATION
+================================================================================
+
+  This is the most critical filter step. By using Perfect orbs at the
+  magic stage, you front-load your T1 odds before the item is even rare.
+  If you don't hit S-tier T1 mods now, you TRASH the base and start
+  over. This saves you from sinking hundreds of divines into a dead item.
+
+8.2.1 — Why the Magic Stage Matters
+────────────────────────────────────────────────────────────────────
+
+  A white base is cheap. A fractured rare with bad mods is expensive
+  to recover. The magic stage lets you:
+
+    a) See 2 mods before committing to rare status
+    b) Use Perfect orbs for maximum tier bias on those 2 mods
+    c) Immediately trash the base if those 2 mods aren't S-tier
+
+  This is the most cost-efficient filter in the entire crafting process.
+
+8.2.2 — The Perfect Transmutation → Perfect Augmentation Loop
+────────────────────────────────────────────────────────────────────
+
+  Step 1: Perfect Transmutation Orb
+  ──────────────────────────────────
+    Apply a Perfect Transmutation Orb to the ilvl 82+ white base.
+    This turns it into a 1-mod Magic item.
+
+    Perfect Transmutation has min mod level 50, so the single mod it
+    adds CANNOT be below ilvl 50. This filters out all low-tier trash.
+
+    Cost: ~0.02 div per attempt (bulk).
+
+  Step 2: Check the mod — TRASH CRITERIA
+  ────────────────────────────────────────
+    After the Perfect Transmutation, you have a 1-mod magic item.
+
+    Use the S-Tier lists from Section 7 for your specific armour slot:
+
+      ┌─────────────────────────────────────────────────────────┐
+      │ ARMOUR-SPECIFIC S-TIER KEEP RULES (1-mod magic):        │
+      │                                                         │
+      │ BODY ARMOUR:                                            │
+      │   KEEP: %Defence T1-T2, +Life T1-T2, +ES T1-T2          │
+      │   KEEP: %Chaos Res T1-T2 (if suffix)                    │
+      │   KEEP: %Ele Res T1-T2 (acceptable, not ideal)          │
+      │   TRASH: Everything else — start over                   │
+      │                                                         │
+      │ HELMET:                                                 │
+      │   KEEP: +Level of Socketed Gems (ANY TIER — instant      │
+      │          keep, do not throw this away)                  │
+      │   KEEP: %Defence T1-T2, +Life T1-T2, +ES T1-T2          │
+      │   KEEP: %Chaos Res T1-T2 (if suffix)                    │
+      │   TRASH: Everything else — start over                   │
+      │                                                         │
+      │ BOOTS:                                                  │
+      │   KEEP: %Movement Speed (ANY TIER — mandatory)          │
+      │   KEEP: %Chaos Res T1-T2, %Ele Res T1-T2                │
+      │   KEEP: +Life T1-T2 (acceptable standalone)             │
+      │   TRASH: Everything without Movement Speed — start over │
+      │                                                         │
+      │ GLOVES:                                                 │
+      │   KEEP: Flat added phys/ele damage to attacks T1-T2     │
+      │   KEEP: %Attack Speed T1-T2                             │
+      │   KEEP: +Life T1-T2 (acceptable standalone)             │
+      │   TRASH: Everything else — start over                   │
+      │                                                         │
+      │ SHIELD:                                                 │
+      │   KEEP: %Block Chance T1-T2 (any tier — this is THE     │
+      │          shield mod)                                    │
+      │   KEEP: %Spell Block T1-T2                              │
+      │   KEEP: %Defence T1-T2, +Life T1-T2                     │
+      │   TRASH: Everything else — start over                   │
+      └─────────────────────────────────────────────────────────┘
+
+    IF THE MOD IS TRASH → throw away the base. Do NOT proceed.
+    Buy another base. Perfect Transmutation is cheap enough that
+    you can do this dozens of times.
+
+    Expected: ~5-20 Perfect Transmutations to find a keeper.
+
+  Step 3: Perfect Augmentation Orb
+  ──────────────────────────────────
+    Apply a Perfect Orb of Augmentation to the keeper magic item.
+    This adds a 2nd mod. Magic items cap at 2 mods (1 prefix + 1 suffix
+    or 2 of the same type).
+
+    Perfect Augmentation has min mod level 50 (same tier filtering).
+
+    Cost: ~0.02 div per attempt.
+
+  Step 4: Check both mods — TRASH CRITERIA
+  ──────────────────────────────────────────
+    Now you have a 2-mod magic item. Evaluate BOTH mods:
+
+      ┌─────────────────────────────────────────────────────────┐
+      │ S-TIER (PROCEED TO REGAL):                              │
+      │   Both mods are T1-T2, AND both are desirable for your  │
+      │   build. At least one should be T1.                     │
+      │                                                         │
+      │ KEEP (CONSIDER):                                        │
+      │   One S-tier T1 mod + one T2-T3 mod that's still usable │
+      │   (not complete trash). This is marginal — you may       │
+      │   still want to trash it and keep rolling.              │
+      │                                                         │
+      │ TRASH (THROW AWAY BASE, START OVER):                    │
+      │   • Either mod is below T3                              │
+      │   • Either mod is completely useless for your build     │
+      │   • BOOTS: Either mod is NOT Movement Speed and the     │
+      │     first mod wasn't MS — instant trash                │
+      │   • SHIELD: Neither mod is %Block Chance or %Spell Block│
+      │     and the first wasn't either — strongly consider     │
+      │     trashing                                           │
+      │   • HELMET: You have +gem levels AND the second mod is  │
+      │     trash → KEEP anyway. +gem levels is too rare to     │
+      │     throw away.                                        │
+      └─────────────────────────────────────────────────────────┘
+
+    IF THE ITEM IS TRASH → throw it away. Base + Transmute + Augment
+    are all cheap. Do NOT proceed with a mediocre magic item.
+
+    Expected: ~10-40 Perfect Augmentations to find a double-keeper
+    (depends on how strict your S-tier criteria are).
+
+8.2.3 — Perfect Magic Orb Details
+────────────────────────────────────────────────────────────────────
+
+  Perfect Orb of Transmutation:
+    Effect:   Upgrades a Normal item to Magic with 1 random modifier
+    Min Mod Level: 50
+    Stack:    1/10
+    Drop Level: 79
+    Market:   ~0.02 div
+
+  Perfect Orb of Augmentation:
+    Effect:   Adds 1 random modifier to a Magic item
+    Min Mod Level: 50
+    Stack:    1/10
+    Drop Level: 79
+    Market:   ~0.02 div
+
+  Both orbs use min mod level 50, meaning:
+    - Cannot roll any mod with an ilvl requirement below 50
+    - This removes roughly the bottom 50-60% of mod tiers from the pool
+    - Not a guaranteed T1, but eliminates all low-tier garbage
+    - Combined with your ilvl 82+ base, the mod pool is heavily
+      weighted toward T1-T3 results
+
+8.2.4 — Why This Beats Alchemy
+────────────────────────────────────────────────────────────────────
+
+  Alchemy Orb:
+    - Costs 1 attempt per base (can't scour)
+    - Gives 4 mods you CANNOT see before committing
+    - All 4 mods are random, no min mod level filter
+    - If 3/4 are trash, you're starting Chaos spam already behind
+
+  Perfect Transmute + Perfect Augment:
+    - Costs ~0.04 div per attempt
+    - You see EACH mod before proceeding
+    - Both mods filtered through min mod level 50
+    - You arrive at the Regal stage with 2 verified high-tier mods
+    - Trash decision costs you the base + 2 cheap orbs (negligible)
+
+  The Alchemy route can work, but for mirror-tier crafting where you
+  want a specific starting point, the magic stage filtering is far
+  more efficient in total currency spent.
+
+8.2.5 — Magic Stage Summary Flow
+────────────────────────────────────────────────────────────────────
+
+  ┌──────────────────────┐
+  │ ilvl 82+ White Base  │
+  └──────────┬───────────┘
+             ▼
+  ┌──────────────────────────────────────┐
+  │ Perfect Transmutation Orb            │
+  │ → 1-mod Magic item                   │
+  └──────────┬───────────────────────────┘
+             ▼
+  ┌──────────────────────────────────────┐
+  │ CHECK: Is the mod S-tier T1-T2?      │
+  │   NO  → TRASH base, buy new base     │
+  │   YES → Continue                     │
+  └──────────┬───────────────────────────┘
+             ▼
+  ┌──────────────────────────────────────┐
+  │ Perfect Augmentation Orb             │
+  │ → 2-mod Magic item                   │
+  └──────────┬───────────────────────────┘
+             ▼
+  ┌──────────────────────────────────────┐
+  │ CHECK: Are BOTH mods T1-T2, useful?  │
+  │   NO  → TRASH base, buy new base     │
+  │   YES → Proceed to Phase 3 (Regal)   │
+  └──────────────────────────────────────┘
+
+================================================================================
+8.3 — PHASE 3: REGAL TO RARE & ISOLATE A T1 MOD
+================================================================================
+
+  You now have a 2-mod magic item with verified high-tier mods from
+  Phase 2. Time to upgrade to rare and set up for fracturing.
+
+8.3.1 — Regal the Item
+────────────────────────────────────────────────────────────────────
+
+  Apply a Perfect Regal Orb to upgrade from Magic → Rare, adding 1
+  additional modifier (3 total).
+
+    Perfect Regal Orb:
+      Min Mod Level: 50
+      Market: ~0.1 div
+
+  Use with a Coronation Omen to control direction:
+    - Omen of Sinistral Coronation → Regal adds PREFIX only
+    - Omen of Dextral Coronation  → Regal adds SUFFIX only
+
+  Strategy: Look at your current 2 mods.
+    - If you have 1P + 1S already (balanced): skip the omen, let Regal
+      add either side randomly. If it adds a bad mod, you can annul it.
+    - If you have 2 prefixes: use Dextral Coronation to force a suffix.
+    - If you have 2 suffixes: use Sinistral Coronation to force a prefix.
+
+  After Regal, you have a 3-mod rare.
+
+8.3.2 — Identify Targets
+────────────────────────────────────────────────────────────────────
+
+  Goal: End up with a rare that has your most desired T1 mod AND
+  at least 3 other mods (total 4+ for Fracturing Orb requirement).
+
+  Know which mod is your #1 priority for the fracture:
+
+    Body Armour:   %Increased Defence T1 (highest value prefix)
+    Helmet:        +Level of Socketed Gems (if present — lock it)
+    Boots:         %Movement Speed (if present — lock it)
+    Gloves:        Flat Added Physical Damage T1
+    Shield:        %Block Chance T1
+
+  If your #1 mod is already on the item from the magic stage: skip to
+  8.3.4 (Annul).
+  If not, and you want to try to find it: proceed to 8.3.3.
+
+8.3.3 — Perfect Chaos Spam to Find Your #1 T1
+────────────────────────────────────────────────────────────────────
+
+  Use Perfect Chaos Orbs to repeatedly remove 1 and add 1 until
+  you hit a T1 version of your #1 desired mod.
+
+  Why Perfect Chaos instead of regular Chaos? Perfect Chaos has
+  min mod level 50, so the ADDED mod is biased toward high tier.
+  Regular Chaos can add an ilvl 1 mod, wasting the attempt.
+
+  Use with Erasure Omens for directional control:
+    - Omen of Sinistral Erasure → Chaos removes PREFIX only
+    - Omen of Dextral Erasure   → Chaos removes SUFFIX only
+
+  This protects the opposite side from being touched by Chaos.
+
+  WARNING: Each Perfect Chaos costs ~5.18 div. You may burn
+  through dozens before finding the mod you want. If your two
+  magic-stage mods were both strong, sometimes it's better to
+  skip this sub-phase and accept one of them as your fracture target.
+
+8.3.4 — Annul Unwanted Mods
+────────────────────────────────────────────────────────────────────
+
+  Once you have your desired T1 mod, use Annulment Orbs to remove
+  the mods you don't want.
+
+  USE OMENS FOR DIRECTION:
+    - If your T1 is a prefix and you want to protect it while
+      removing a suffix: use Dextral Annulment Omen + Annul
+    - If your T1 is a suffix: use Sinistral Annulment Omen + Annul
+
+  Without omens, Annul is random and can hit your T1. Protecting
+  it with an omen is expensive (~14 div per Sinistral/Dextral Annulment
+  omen) but prevents restarting from scratch.
+
+8.3.5 — Ensure 4+ Mods for Fracturing
+────────────────────────────────────────────────────────────────────
+
+  The Fracturing Orb requires the item to have at least 4 affixes.
+  If you've annulled down to fewer than 4, use Perfect Exalted Orbs
+  (ideally with the opposite direction omen to fill the other side
+  first) to bring the total back up to 4+.
+
+  Example: You have a T1 prefix and 2 suffixes (3 total).
+  → Use Sinistral Exaltation Omen + Perfect Exalted to add a prefix.
+  → Now you have 4 mods and can fracture (Phase 4).
+
+
+  SUMMARY: After Phase 3, you should have:
+    - A rare item with 4+ mods
+    - At least 1 mod is a T1 version of your desired affix
+    - Ideally 2+ of your magic-stage mods are still present
+
+================================================================================
+8.4 — PHASE 4: FRACTURE
+================================================================================
+
+  Step 1: Apply Fracturing Orb
+  ─────────────────────────────
+    Use a Fracturing Orb on the rare item. It will randomly select
+    ONE of the existing mods and lock it permanently (it becomes
+    a "Fractured" modifier that cannot be removed by any means).
+
+    Current market: ~10 div per Fracturing Orb.
+
+  Step 2: Evaluate result
+  ─────────────────────────
+    If it fractured your desired T1 mod:
+      → Proceed to Phase 5. This is the best outcome.
+
+    If it fractured a different mod:
+      → The item is now a brick for your purposes. The fractured mod
+        is permanent. You can:
+          a) Use the Reforging Bench (3 of these → 1 new roll)
+          b) Sell it if the fractured mod has value to someone else
+          c) Use it for a different craft
+      → Start over from Phase 1 with a new base.
+
+  The Fracturing Orb picks randomly from all mods. With 4 mods and
+  1 desired, you have a 25% chance. With 5 mods and 1 desired, 20%.
+  With 6, ~17%.
+
+  STRATEGY: The fewer mods on the item (minimum 4), the better your
+  odds. After hitting your T1, annul down to exactly 4 mods before
+  fracturing to maximize the 25% chance.
+
+  ARMOUR-SPECIFIC FRACTURE TARGETS:
+    If you have 2+ desirable T1 mods on an armour piece (for example,
+    %Block Chance AND %Spell Block on a shield), your fracture odds
+    are 50% (2/4) instead of 25%. Armour pieces more commonly have
+    multiple desirable mods on the same piece than weapons do (where
+    +gem levels is a single-must-hit mod). This makes armour fracturing
+    somewhat less punishing than weapon fracturing.
+
+================================================================================
+8.5 — PHASE 5: CLEAN UP AND REGAL
+================================================================================
+
+  After a successful fracture, you have a rare with 1 fractured T1
+  mod and 3+ other (mostly junk) mods.
+
+  Step 1: Annul everything except the fractured mod
+  ───────────────────────────────────────────────────
+    Use targeted Annulment Omens to remove the non-fractured mods.
+    The fractured mod is locked and cannot be removed, so you're safe.
+
+    If all remaining mods are on one side:
+      - All suffixes to remove: Sinistral Annulment Omen + Annul
+      - All prefixes to remove: Dextral Annulment Omen + Annul
+
+    You cannot annul a fractured mod. Annulment Orbs skip fractured
+    mods automatically.
+
+  Step 2: You now have a rare with only the fractured mod
+  ─────────────────────────────────────────────────────────
+    The item is still rare (it retains its rarity from the original
+    crafting) even with only 1 mod. This is fine — it just means you
+    can use Exalted Orbs directly without needing to Regal first.
+
+    In PoE2, a rare with 1 mod is valid.
+
+  Step 3 (Optional): Regal for control
+  ─────────────────────────────────────
+    If you want to add a mod in a specific direction first:
+      - Use Sinistral/Dextral Coronation Omen + Perfect Regal Orb
+      - This adds exactly 1 mod on your chosen side
+
+    This step is optional — you can also go straight to Exalting.
+
+================================================================================
+8.6 — PHASE 6: FILL REMAINING SLOTS WITH PERFECT EXALTS
+================================================================================
+
+  Goal: Reach 6 mods (3 prefixes, 3 suffixes) using Perfect Exalted
+  Orbs with directional Omens to maximize T1 probability.
+
+  The fractured mod occupies 1 slot. You need to fill the other 5.
+
+  Strategy:
+  ──────────
+    1. Count your current prefix/suffix split
+       Example: Fractured prefix = 1P/0S. Need 2 more P, 3 S.
+
+    2. Fill suffixes first (usually easier to target):
+       Omen of Dextral Exaltation + Perfect Exalted Orb
+       Repeat 3 times for 3 suffixes.
+
+    3. Fill remaining prefixes:
+       Omen of Sinistral Exaltation + Perfect Exalted Orb
+       Repeat for remaining prefix slots.
+
+  Why fill one side first?
+  ─────────────────────────
+    If you alternate, you might fill one side to 3 and then the
+    next Perfect Exalted with the wrong omen direction will fail
+    (because that side is full). Filling one side completely first
+    avoids this.
+
+  ARMOUR NOTE: Unlike weapons where the prefixes are generally more
+  valuable (damage mods, +gem levels), armour pieces frequently have
+  more desirable suffixes (%Movement Speed, resists, %Block Chance,
+  %Attack Speed). For armour, filling suffixes first is almost always
+  correct — the suffix pool contains many of the critical mods.
+
+  If a Perfect Exalt adds a low-tier mod:
+  ───────────────────────────────────────────
+    DO NOT annul it immediately if it's on the correct side.
+    Wait until all 6 slots are filled, then use Whittling (Phase 7).
+    Annulling now wastes the Perfect Exalted.
+
+    Exception: If the mod is completely useless (Light Radius,
+    Wrong Attribute, Stun Threshold), annul it with a directional omen.
+
+  Using Greater Exaltation Omen:
+  ──────────────────────────────
+    Omen of Greater Exaltation makes the next Exalted add 2 mods
+    at once. This is faster but you lose directional control (you
+    can't combine with Sinistral/Dextral). The 2 mods could be:
+      - 2 prefixes
+      - 2 suffixes
+      - 1 prefix + 1 suffix
+
+    Use this when you have multiple empty slots on both sides
+    and want to speed things up. ~1 div per omen.
+
+================================================================================
+8.7 — PHASE 7: WHITTLING — REPLACE NON-T1 MODS
+================================================================================
+
+  This is the most expensive phase and where most people go broke.
+  You now have 6 mods, but some are below T1. Whittling replaces
+  the lowest-ilvl mod one at a time.
+
+  How Whittling Works:
+  ────────────────────
+    Omen of Whittling + Perfect Chaos Orb:
+      1. The omen forces the Chaos to remove the LOWEST ilvl-requirement
+         mod on the item.
+      2. Perfect Chaos then adds a new mod at min mod level 50 (high
+         tier bias).
+
+    This means:
+      - If you have 1 non-T1 mod and it's the lowest ilvl: Whittling
+        targets it every time.
+      - If you have multiple non-T1 mods with the same ilvl: Whittling
+        picks randomly among them.
+      - T1 mods have high ilvl requirements, so they're usually safe
+        from being removed.
+
+  The Whittling Loop:
+  ───────────────────
+    WHILE any mod on the item is NOT T1:
+      1. Activate Omen of Whittling
+      2. Use Perfect Chaos Orb
+      3. Check the result:
+         a. If the removed mod was non-T1 and replacement is T1:
+            → Progress! Continue loop.
+         b. If the removed mod was non-T1 but replacement is also
+            non-T1 (even lower tier):
+            → Net neutral or worse. Continue loop.
+         c. If Whittling accidentally removes a T1 mod:
+            → This happens when all mods are T1 except one that
+              rolled a T1-tier mod with a low ilvl requirement.
+            → Stop. You may need a different approach.
+
+  Why Perfect Chaos (not regular)?
+  ─────────────────────────────────
+    Regular Chaos adds at min mod level 1 — it could replace a T2
+    with a T8, wasting the Whittling omen. Perfect Chaos at min
+    level 50 has a much better chance of adding T1-T3.
+
+  Cost per Whittling attempt:
+    Omen of Whittling: ~15 div
+    Perfect Chaos Orb:  ~5 div
+    TOTAL:              ~20 div per attempt
+
+  ARMOUR WHITTLING vs WEAPON WHITTLING:
+    Some armour slots (gloves, boots) have smaller mod pools than
+    weapons. Fewer possible mods = higher chance of hitting T1 per
+    Whittling attempt. Body armour has the largest mod pool among
+    armour pieces and will take the most attempts.
+
+    Shields and helmets have medium-sized pools. Gloves and boots
+    are generally the fastest to Whittling-complete.
+
+  Alternative: Budget Whittling
+  ─────────────────────────────
+    If you can't afford Omen of Whittling, use Perfect Chaos without
+    omens. It removes a RANDOM mod (could be your T1) and adds a high-
+    tier mod. This is gambling and can destroy your craft, but it's
+    ~5 div per attempt instead of ~20 div.
+
+================================================================================
+8.8 — PHASE 8: DIVINE FOR PERFECT ROLLS
+================================================================================
+
+  Once all 6 modifiers are the correct T1 affixes, the numeric values
+  within those tiers still vary.
+
+  Step 1: Identify the roll ranges
+  ─────────────────────────────────
+    Hold ALT over the item to see the tier and the possible range
+    for each mod.
+
+  Step 2: Use Divine Orbs
+  ─────────────────────────
+    Divine Orbs reroll ALL numeric values on the item simultaneously.
+    Each mod rerolls independently within its tier range.
+    (~1 div per Divine Orb)
+
+    Keep using Divine Orbs until all mods are at or near their
+    maximum values. This can take 10-200+ Divines depending on
+    how many mods have wide ranges.
+
+  Step 3: Know when to stop
+  ──────────────────────────
+    Some mods have very tight T1 ranges (e.g. 95-100%). Others span
+    50-100%. Prioritize the mods that matter most to your build.
+
+    ARMOUR NOTE: On armour pieces, %Defence rolls have moderate
+    ranges (e.g. T1 might be 85-100%). +Life and +ES rolls can have
+    very wide ranges on body armour (e.g. 80-119 life). Resist rolls
+    are typically 40-48% for T1. Plan your divine budget accordingly.
+
+    A "perfect" item with all max rolls is exponentially rarer than
+    one with "good enough" rolls. For mirror service, perfect is
+    expected. For personal use, 95th percentile is usually fine.
+
+================================================================================
+8.9 — PHASE 9: FINALIZE
+================================================================================
+
+  Step 1: Sockets
+  ────────────────
+    Use Artificer's Orbs to add rune sockets to the armour piece.
+
+    Maximum sockets by slot:
+      Body Armour:   2-3 sockets (varies by base type)
+      Helmet:        1-2 sockets
+      Gloves:        1-2 sockets
+      Boots:         1-2 sockets
+      Shield:        1-2 sockets
+
+    Check your base type to know the exact socket cap. Artificer's
+    Orbs consume themselves on use — you cannot remove or reposition
+    sockets once added, so socket the correct number.
+
+  Step 2: Runes
+  ──────────────
+    Insert appropriate runes into sockets. Rune recommendations
+    per slot:
+
+    BODY ARMOUR:
+      - Stone Rune:        #% increased Armour
+      - Iron Rune:         adds #% additional Physical Damage Reduction
+      - Soul Rune:         #% increased Energy Shield
+      - Elemental Runes:   +#% to Fire/Cold/Lightning Resistance
+
+    HELMET:
+      - Soul Rune:         #% increased maximum Mana / Energy Shield
+      - Elemental Runes:   +#% to Fire/Cold/Lightning Resistance
+      - Mind Rune:         +#% increased Mana Regeneration Rate
+
+    BOOTS:
+      - Elemental Runes:   +#% to Fire/Cold/Lightning Resistance
+      - Quartz/Silver effects (if available runes grant movement-
+        adjacent bonuses)
+      - Soul Rune:         #% increased Energy Shield
+
+    GLOVES:
+      - Iron Rune:         adds # to # Physical Damage to Attacks
+      - Elemental Runes:   adds # to # Fire/Cold/Lightning Damage
+      - Soul Rune:         #% increased Energy Shield
+
+    SHIELD:
+      - Iron Rune:         adds #% additional Physical Damage Reduction
+      - Stone Rune:        #% increased Armour
+      - Elemental Runes:   +#% to Fire/Cold/Lightning Resistance
+      - Soul Rune:         #% increased Energy Shield
+
+    Use Perfect-tier Runes for maximum effect if budget allows.
+
+  Step 3: Quality (if not already done)
+  ──────────────────────────────────────
+    Ensure 20% quality with Armourer's Scraps if not done in Phase 1.
+    Quality can be applied at any stage of crafting.
+
+    As noted earlier, armour CANNOT overcap quality past 20% — there
+    are no Vaal Infusers for armour.
+
+================================================================================
+9. QUICK-REFERENCE FLOWCHART
+================================================================================
+
+  ┌─────────────────────────────────────────────────────────┐
+  │ PHASE 1: PREPARE BASE                                    │
+  │   ilvl 82+ white armour base → 20% Armourer's Scrap     │
+  └──────────────────────────┬──────────────────────────────┘
+                             ▼
+  ┌─────────────────────────────────────────────────────────┐
+  │ PHASE 2: MAGIC STAGE                                     │
+  │   Perfect Transmutation → 1 mod magic                    │
+  │   TRASH if mod not S-tier per slot (Section 7)           │
+  │   Perfect Augmentation → 2 mod magic                     │
+  │   TRASH if both mods not T1-T2 + useful                  │
+  │   SPECIAL: Boots without MS = INSTANT TRASH              │
+  │   SPECIAL: Helmet with +gem levels = INSTANT KEEP        │
+  └──────────────────────────┬──────────────────────────────┘
+                             ▼
+  ┌─────────────────────────────────────────────────────────┐
+  │ PHASE 3: REGAL & ISOLATE T1                              │
+  │   Perfect Regal (w/ Coronation Omen) → 3 mod rare        │
+  │   Perfect Chaos (w/ Erasure Omens) if #1 T1 missing      │
+  │   Targeted Annul (w/ omens) to remove junk               │
+  │   Ensure 4+ mods remain for Fracturing                   │
+  └──────────────────────────┬──────────────────────────────┘
+                             ▼
+  ┌─────────────────────────────────────────────────────────┐
+  │ PHASE 4: FRACTURE                                        │
+  │   Fracturing Orb → 25% chance to lock your T1            │
+  │   (Or higher if multiple desirable T1s on armour)        │
+  │   Miss? → Reforge or sell, start over from Phase 1       │
+  └──────────────────────────┬──────────────────────────────┘
+                             ▼
+  ┌─────────────────────────────────────────────────────────┐
+  │ PHASE 5: CLEAN UP                                        │
+  │   Annul all non-fractured mods                           │
+  │   Optional: Regal with Coronation Omen for direction     │
+  └──────────────────────────┬──────────────────────────────┘
+                             ▼
+  ┌─────────────────────────────────────────────────────────┐
+  │ PHASE 6: FILL SLOTS                                      │
+  │   Sinistral/Dextral Exaltation Omens + Perfect Exalts    │
+  │   Fill suffixes first (armour suffixes are high value)   │
+  │   Fill to 6/6 mods (3P + 3S)                             │
+  └──────────────────────────┬──────────────────────────────┘
+                             ▼
+  ┌─────────────────────────────────────────────────────────┐
+  │ PHASE 7: WHITTLING                                       │
+  │   Omen of Whittling + Perfect Chaos                      │
+  │   Repeat until all 6 mods are T1                         │
+  │   ~20 div per attempt                                    │
+  │   Gloves/Boots: fewer attempts (smaller mod pools)       │
+  │   Body Armour: most attempts (largest mod pool)          │
+  └──────────────────────────┬──────────────────────────────┘
+                             ▼
+  ┌─────────────────────────────────────────────────────────┐
+  │ PHASE 8: DIVINE                                          │
+  │   Divine Orb until numeric values are perfect            │
+  └──────────────────────────┬──────────────────────────────┘
+                             ▼
+  ┌─────────────────────────────────────────────────────────┐
+  │ PHASE 9: FINALIZE                                        │
+  │   Artificer's Orbs (sockets) → Runes → Done              │
+  │   Body: 2-3 sockets, Others: 1-2 sockets                 │
+  └─────────────────────────────────────────────────────────┘
+
+================================================================================
+10. COST ESTIMATION (ARMOUR-SPECIFIC)
+================================================================================
+
+  These are VERY rough estimates. RNG is the dominant factor.
+  Costs vary by slot. Body armour is the most expensive. Gloves and
+  boots are generally the cheapest mirror-tier armour to craft.
+
+  ┌──────────────────────────────────────────────────────────────────┐
+  │ BODY ARMOUR — Most Expensive Armour Slot                         │
+  ├──────────────────────────────────────────────────────────────────┤
+  │ Line Item                          ~Cost (Div)   Notes           │
+  │ ──────────────────────────────      ───────────   ────────────── │
+  │ ilvl 84 white body bases (×~20)         5-80      Astral Plates  │
+  │                                                   are expensive  │
+  │ Armourer's Scraps (×20)                 <1        Trivial        │
+  │ PHASE 2: Perfect Trans/Aug (~30 att)    ~1        ~0.04 div each │
+  │ PHASE 3: Perfect Regal                  <1                       │
+  │ PHASE 3: Coronation Omen                ~2                       │
+  │ PHASE 3: Perfect Chaos (finding T1)    50-300     Varies wildly  │
+  │ PHASE 3: Erasure Omens (×~10)          ~100       ~10 div each   │
+  │ PHASE 3: Annulments + Omens            20-50                     │
+  │ PHASE 4: Fracturing Orbs (×~4)          40        Expected ~4    │
+  │                    attempts                                   │
+  │ PHASE 5: Cleanup Annuls + Omens        10-30                     │
+  │ PHASE 6: Perfect Exalts (×5)            14                       │
+  │ PHASE 6: Directional Exalt Omens (×5)   30                       │
+  │ PHASE 7: Whittling (×~25 attempts)     500        ~20 div each   │
+  │ PHASE 8: Divine Orbs (×~50)             50                       │
+  │ PHASE 9: Sockets + Runes                3-5                      │
+  │ ──────────────────────────────────────────────────────────────  │
+  │ BODY ARMOUR TOTAL (ROUGH)        ~800-1,200+ div                 │
+  └──────────────────────────────────────────────────────────────────┘
+
+  ┌──────────────────────────────────────────────────────────────────┐
+  │ HELMET — Medium-High Cost                                         │
+  ├──────────────────────────────────────────────────────────────────┤
+  │ Similar to body armour but with +Level of Socketed Gems as an     │
+  │ additional target. If you're chasing +gem levels, add 100-300 div │
+  │ to the Perfect Chaos phase. The mod is extremely rare.            │
+  │                                                                   │
+  │ HELMET TOTAL (ROUGH)            ~600-1,000+ div                   │
+  └──────────────────────────────────────────────────────────────────┘
+
+  ┌──────────────────────────────────────────────────────────────────┐
+  │ BOOTS — Lower Cost                                                │
+  ├──────────────────────────────────────────────────────────────────┤
+  │ Movement Speed is mandatory and MUST be locked at fracture.       │
+  │ Smaller suffix pool means faster Whittling completion.            │
+  │                                                                   │
+  │ BOOTS TOTAL (ROUGH)             ~400-700 div                      │
+  └──────────────────────────────────────────────────────────────────┘
+
+  ┌──────────────────────────────────────────────────────────────────┐
+  │ GLOVES — Lower Cost                                               │
+  ├──────────────────────────────────────────────────────────────────┤
+  │ Small mod pool, especially if crafting for attack builds (only    │
+  │ need to hit flat damage + attack speed). Caster gloves focus on   │
+  │ defence/life/resists and are even cheaper.                        │
+  │                                                                   │
+  │ GLOVES TOTAL (ROUGH)            ~300-600 div                      │
+  └──────────────────────────────────────────────────────────────────┘
+
+  ┌──────────────────────────────────────────────────────────────────┐
+  │ SHIELD — Medium Cost                                              │
+  ├──────────────────────────────────────────────────────────────────┤
+  │ %Block Chance and %Spell Block are both desirable fracture        │
+  │ targets — having 2/4 valuable mods raises fracture odds to 50%.   │
+  │ But shield bases can be expensive at ilvl 84+.                    │
+  │                                                                   │
+  │ SHIELD TOTAL (ROUGH)            ~500-900 div                      │
+  └──────────────────────────────────────────────────────────────────┘
+
+  ┌──────────────────────────────────────────────────────────────────┐
+  │ FULL ARMOUR SET TOTAL — ALL 5 SLOTS                               │
+  │ ~2,600-4,800+ div (mirror-tier all 6x T1 across all slots)       │
+  └──────────────────────────────────────────────────────────────────┘
+
+  This assumes everything goes reasonably well. Bad RNG on fracture
+  or Whittling can multiply costs. A single piece of armour can cost
+  2,000+ divines if your Whittling luck is poor.
+
+================================================================================
+11. ALTERNATIVE ROUTES
+================================================================================
+
+11.1 — DESECRATION CRAFTING
+────────────────────────────────────────────────────────────────────
+
+  Desecration offers an alternative mod pool for armour via Rib
+  currency (Ancient Rib, Preserved Rib, Gnawed Rib).
+
+  Basic Process:
+    1. Start with a rare armour piece (6 mods or fewer)
+    2. Use Rib currency to apply Desecration
+    3. This replaces or adds modifiers from the desecrated pool
+    4. Use Desecration Omens to control outcomes:
+       - Sinistral/Dextral Necromancy: target prefix or suffix
+       - Abyssal Echoes: grants a reroll on the desecration outcome
+       - Putrefaction: replace ALL mods, corrupt the item
+
+  WARNING:
+    - Desecrated mods are different from normal armour mods
+    - Omen of Light is the only way to safely remove desecrated mods
+      (forces Annul to target desecrated mods only)
+    - Putrefaction corrupts the item, making it unmodifiable
+    - Blackblooded/Liege/Sovereign omens do NOT work on armour
+      (they are weapon/jewellery-specific abyssal lord affixes)
+    - Armour Rib desecration draws from generic abyssal armour mods
+
+  This route is highly specialized and not recommended for general
+  T1-mod mirror crafting. It is for niche builds chasing specific
+  abyssal modifiers that cannot be obtained through normal crafting.
+
+11.2 — FRACTURE-SKIP ROUTE
+────────────────────────────────────────────────────────────────────
+
+  If Fracturing Orbs are too expensive or unavailable, you can skip
+  the fracture step entirely. The trade-off is that you have no locked
+  mod, so every Annul and Chaos endangers your T1 mods.
+
+  Adjusted Process (no fracture):
+    1. Base → Perfect Transmute → Perfect Augment → Perfect Regal
+    2. Perfect Chaos spam until you have 2+ T1 mods + random others
+    3. Fill remaining slots with Perfect Exalts + directional omens
+    4. Whittling to upgrade non-T1 mods
+    5. Divine
+
+  Without a fractured anchor, Whittling can accidentally remove your
+  best mod. This increases the expected cost substantially and may
+  never produce a true 6x T1 item.
+
+  For armour, this route is slightly more viable than for weapons
+  because armour pieces don't have a single irreplaceable mod like
+  +Level to Gems (except helmets). If Whittling removes your T1
+  %Defence on body armour, you might roll it back during subsequent
+  Whittling attempts. Still, this is gambling.
+
+11.3 — ALCHEMY YOLO
+────────────────────────────────────────────────────────────────────
+
+  The "skip everything" approach: roll Alchemy Orbs on high ilvl
+  bases and hope for a usable 4-mod starting point.
+
+  Basic Process:
+    1. Orb of Alchemy on ilvl 82+ white base
+    2. If mods are mostly T3+: keep and proceed to Phase 6 (Exalt fill)
+    3. If mods are trash: throw base into Reforging Bench
+
+  Pros:
+    - Very fast
+    - Uses cheap currency (Alchemy is ~0.002 div)
+    - No Perfect Transmutation/Augmentation grind
+
+  Cons:
+    - You start at 4 mods with min mod level 1 (no tier filtering)
+    - Most Alchemy results are 3-4 bad mods
+    - You'll burn through bases at a high rate
+    - Efficient only if you have hundreds of high ilvl bases stockpiled
+
+  This route is viable for mid-tier crafting (T2-T3 goal) but is NOT
+  recommended for mirror-tier 6x T1 armour. The lack of tier filtering
+  at the start means your Whittling costs will be astronomical —
+  you'll be replacing 4+ bad mods instead of 2-3.
+
+================================================================================
+12. COMMON MISTAKES
+================================================================================
+
+   1. USING REGULAR ORBS INSTEAD OF PERFECT
+      Regular Exalted/Chaos have min mod level 1. They can add the
+      worst possible tiers to your item. For mirror-tier crafting,
+      always use Perfect or at minimum Greater orbs.
+
+   2. ANNULLING WITHOUT OMENS
+      A random Annul can delete your T1 mod. Always use Sinistral or
+      Dextral Annulment Omens to control which side gets annulled.
+
+   3. FRACTURING WITH 6+ MODS
+      More mods = lower chance of fracturing your desired mod.
+      Annul down to exactly 4 before fracturing for maximum 25% odds.
+
+   4. FORGETTING THE FRACTURING ORB REQUIRES 4+ MODS
+      If you annul down to fewer than 4 mods, you cannot apply the
+      Fracturing Orb. You'll need to Exalt back up to 4+.
+
+   5. WHITTLING WITH REGULAR CHAOS
+      Regular Chaos can add a T8 mod, completely wasting the ~15 div
+      Whittling omen. Always use Perfect Chaos with Whittling.
+
+   6. NOT CHECKING ILVL BEFORE STARTING
+      If the base is ilvl 75, you literally cannot roll T1 versions
+      of mods that require ilvl 82+. Check first.
+
+   7. DIVINING BEFORE FINISHING WHITTLING
+      Divine Orbs reroll all numeric values. If you divine early and
+      then Whittling replaces a mod, you'll need to divine again.
+
+   8. FORGETTING MOVEMENT SPEED ON BOOTS — ARMOUR-SPECIFIC
+      This is the #1 armour crafting mistake. Boots that roll without
+      Movement Speed are a BRICK. Always check for MS at the magic
+      stage. If your Perfect Transmutation hits a T1 resist on boots
+      but you proceed without MS, you will never get it. Boots cannot
+      be saved without MS — you must have it as a fractured or
+      Exalted mod at some point. If you reach 6/6 mods on boots and
+      none are Movement Speed, the item is irreversibly bricked.
+
+   9. USING THE WRONG QUALITY CURRENCY — ARMOUR-SPECIFIC
+      Blacksmith's Whetstones are for WEAPONS only. Armourer's Scraps
+      are for ARMOUR only. Using the wrong one on the wrong item type
+      does nothing and destroys the currency. This sounds obvious but
+      happens constantly in practice.
+
+  10. NOT CHECKING DEFENCE TYPE ON THE BASE — ARMOUR-SPECIFIC
+      PoE2 has pure and hybrid defence bases:
+        - Pure Armour (STR): scales with % Increased Armour
+        - Pure Evasion (DEX): scales with % Increased Evasion
+        - Pure ES (INT): scales with % Increased Energy Shield
+        - Hybrid Armour/Evasion: scales with both types
+        - Hybrid Armour/ES: scales with both types
+        - Hybrid Evasion/ES: scales with both types
+
+      If you craft %Increased Armour on a pure Evasion base, the mod
+      is completely useless. Check the base's implicit defence types
+      before committing to a craft. The defence type determines which
+      %Defence mods are valuable.
+
+  11. EXPECTING A DETERMINISTIC OUTCOME
+      PoE2 crafting is gambling. There is NO way to guarantee any
+      specific mod or tier. You control direction with omens but the
+      outcome is always RNG.
+
+  12. PROCEEDING WITH BAD MAGIC STAGE MODS
+      The biggest mistake (shared with weapon crafting). If your
+      Perfect Transmutation or Perfect Augmentation results aren't
+      S-tier T1-T2, TRASH THE BASE. Do not Regal a mediocre magic
+      item — you will waste exponentially more currency downstream.
+
+  13. USING REGULAR TRANSMUTATION/AUGMENTATION INSTEAD OF PERFECT
+      Regular Transmutation and Augmentation have min mod level 1.
+      They can add the worst possible tiers. The entire point of the
+      magic stage is to filter through min mod level 50. Using regular
+      versions defeats the purpose.
+
+================================================================================
+13. GLOSSARY
+================================================================================
+
+  Affix       A modifier on an item (prefix or suffix)
+  Annul       Short for Orb of Annulment
+  AS          Attack Speed
+  Base        The white (normal) version of an item
+  Block       Chance to block incoming attacks/hits (shield mechanic)
+  Brick       An item that can no longer be improved
+  Chaos       Short for Chaos Orb
+  Chaos Res   Chaos Resistance
+  Def/Defence Armour, Evasion, or Energy Shield (defensive stats)
+  Div/Divine  Short for Divine Orb
+  ES          Energy Shield
+  Evasion     Evasion Rating (defensive stat — evade attacks)
+  Ex/Exalt    Short for Exalted Orb
+  Fracture    To lock a mod permanently with Fracturing Orb
+  ilvl        Item Level — determines what mod tiers can roll
+  MS          Movement Speed (boots-only suffix)
+  P/S         Prefix / Suffix
+  Perfect X   The highest tier currency orb variant
+  Reforge     Using the Reforging Bench (3 items → 1 new item)
+  Res/Resist  Resistance (Fire, Cold, Lightning, Chaos)
+  RNG         Random Number Generator (luck)
+  Scour       Scouring Orb (DOES NOT EXIST in PoE2)
+  Slam        Using an Exalted Orb (slang)
+  Spell Block Chance to block incoming spell damage (shield mechanic)
+  T1          Tier 1 — the highest possible tier of a modifier
+  Trash       To throw away an item and start fresh (no scour orbs)
+  Whittling   Using Omen of Whittling + Chaos Orb to remove lowest
+              ilvl mod
+
+===============================================================================
+14. SANCTIFY — PHASE 10
+===============================================================================
+
+   Sanctifying is the final, most powerful upgrade available. It allows you
+   to push a modifier beyond its normal T1 ceiling — for example, turning a
+   T1 +Level to Gems into a T0 version with +1 extra level.
+
+   This phase is OPTIONAL. It is extremely expensive and carries risk.
+
+   Success rate per Divine Orb: ~13%.
+   Expected attempts: ~7-8 Divine Orbs per successful sanctify.
+
+14.1 — HOW SANCTIFYING WORKS
+   ───────────────────────────────────────────────────
+
+   When you Sanctify an item with a Divine Orb:
+     1. The game randomly selects ONE modifier on the item
+     2. That modifier has a ~13% chance to be UPGRADED to a higher tier
+        (e.g. T1 → T0, +4 skills → +5 skills)
+     3. If the attempt fails, the item is UNCHANGED — you can try again
+
+   Sanctified mods appear with a special visual indicator on the item.
+   They stack multiplicatively with quality bonuses (whetstones/catalysts).
+
+14.2 — HINEKORA’S LOCK (STRONGLY RECOMMENDED)
+   ───────────────────────────────────────────────────────
+
+   Hinekora's Lock is a consumable that PREVIEWS the outcome of your
+   next Sanctify attempt without consuming it.
+
+   Process with Hinekora's Lock:
+     1. Use Hinekora's Lock on the item
+     2. The game shows you which mod WOULD be upgraded and to what tier
+     3. If the preview is good → use a Divine Orb to lock it in
+     4. If the preview is bad → modify the item in ANY way (e.g. change
+        a socket, swap a rune) to REROLL the seed
+     5. Use another Lock and check again
+
+   Hinekora's Lock cost: ~150 div each.
+   This is expensive but protects your multi-thousand-divine item from
+   bricking on a bad sanctify target.
+
+14.3 — SANCTIFY CHECKLIST
+   ──────────────────────────────────────────────────
+
+   Before attempting to Sanctify:
+     [ ] All 6 mods are T1 (completed Whittling, Phase 7)
+     [ ] All numeric rolls are satisfactory (completed Divining, Phase 8)
+     [ ] Runes are socketed, quality is capped (completed Finalize, Phase 9)
+     [ ] You have enough Divine Orbs for ~8 attempts per desired upgrade
+     [ ] You have Hinekora's Locks if protecting a high-value craft
+
+   Do NOT Sanctify if any prior step is incomplete. Sanctifying before
+   finishing Divining means the divine rerolls after sanctify could
+   lose your perfect rolls.
+
+14.4 — WHEN TO SANCTIFY
+   ──────────────────────────────────────────────────
+
+   Sanctify is recommended when:
+     - The item is already 6x T1 with good rolls
+     - You have one specific mod you want to push to T0 (e.g. +Gem Level)
+     - You can afford the Locks + Divine Orbs (~1,200+ div total)
+     - The item is worth enough that the sanctify investment is justified
+
+   Sanctify is NOT recommended when:
+     - The item still has non-T1 mods (Whittling first)
+     - The item has bad rolls (Divine first)
+     - You are on a tight budget
+     - The mod you’d want to sanctify isn’t on the item yet
+
+14.5 — SANCTIFIED MOD EXAMPLES
+   ──────────────────────────────────────────────────
+
+   The exact T0 ranges vary by mod. Check poe2db.tw for the specific
+   T0 values of your target modifier.
+
+   +Level of Gems mods typically gain +1 extra level when sanctified.
+   Damage/speed mods gain a new higher-ceiling T0 roll range.
+
+14.6 — COST ESTIMATION
+   ──────────────────────────────────────────────────
+
+   Sanctify attempt cost:
+     Divine Orb:                       ~1 div per attempt
+     Hinekora's Lock (if using):       ~150 div per preview
+     Expected Divine Orbs to hit:      ~8 (at 13% success rate)
+
+   WITH Lock (recommended for mirror-tier):
+     ~5 Lock previews needed on average before the right mod is targeted:
+       5 Locks x 150 div + 1 Divine Orb = ~751 div
+
+   Sanctifying a single mod with Locks: ~500-1,000+ div.
+   Sanctifying ALL 6 mods: astronomical, rarely attempted.
+
+
+================================================================================
+                               END OF GUIDE
+================================================================================
